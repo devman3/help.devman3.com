@@ -1,0 +1,537 @@
+﻿<!doctype html>
+<!-- saved from url=(0027)http://www.helpxplain.com/ -->
+<!--
+
+Hey!
+Glad you take a look into the source, Dude... :-)
+
+                 This slideshow was made with
+.__           .__           ____  ___      .__         .__
+|  |__   ____ |  | ______   \   \/  /_____ |  | _____  |__| ____
+|  |  \_/ __ \|  | \____ \   \     /\____ \|  | \__  \ |  |/    \
+|   Y  \  ___/|  |_|  |_> >  /     \|  |_> >  |__/ __ \|  |   |  \
+|___|  /\___  >____/   __/  /___/\  \   __/|____(____  /__|___|  /
+     \/     \/     |__|           \_/__|             \/        \/
+
+HelpXplain is the cutting-edge graphics software, that
+creates interactive HTML5 and Javascript slideshows
+for the Web. No Flash here, believe us! Just standards-
+compliant HTML5 & CSS & Javascript. 100% responsive and
+100% cross-platform.
+
+Visit our website, download the trial and give it a run!
+You'll love it, promise.
+
+http://www.helpxplain.com
+
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Enter the title of your presentation</title>
+<meta name="description" content="A short description of this presentation. When you share it on social media sites, this text will describe the link." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:title" content="Enter the title of your presentation" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A short description of this presentation. When you share it on social media sites, this text will describe the link." />
+<meta property="og:image" content="./invoiceissue/preview.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="960" />
+<meta property="og:image:height" content="510" />
+<meta property="og:image:alt" content="Enter the title of your presentation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Enter the title of your presentation" />
+<meta property="twitter:description" content="A short description of this presentation. When you share it on social media sites, this text will describe the link." />
+<meta property="twitter:image" content="./invoiceissue/preview.jpg" />
+
+<link rel="icon" href="./invoiceissue/favicon.png" type="image/png" />
+<style type="text/css" media="screen">
+body {
+  font-family: Arial,sans-serif;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+a { color: #0070C0 }
+
+p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3 {
+  line-height: 1.2em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+ul {
+  margin: 0 0 0 0.9em;
+  padding: 0;
+}
+ol {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+li {
+  line-height: 1.2em;
+}
+
+body {
+  font-family: Calibri;
+  font-size: 13px;
+}
+h1,h2,h3 {
+  font-family: Calibri;
+  font-size: 13px;
+}
+
+
+div.fallback {
+  position: absolute;
+  top: 20%;
+  background: #FFF;
+  opacity: 0.9;
+  font-size: 2em;
+  padding: 1em;
+  line-height: 1em
+}
+
+div#xplplayercontrols {
+	 position: fixed;
+	 left: 0px;
+	 bottom: 0;
+	 width: 100%;
+	 height: 24pt;
+	 background: rgba(0,0,0,0.50);
+	 opacity: 1;
+	 
+	 padding: 0;
+	 margin: 0;
+	 text-align: center;
+}
+
+div#xplplayerprogress {
+	 width: 100%;
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+}
+div#xplplayerprogress div {
+	height: 4pt;
+	width: 0%;
+	background: #1072C5;
+}
+
+div#xplplayercontrols a {
+	text-decoration: none;
+}
+
+div#xplplayercontrols .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  width: 5%;
+  min-width: 40pt;
+  height: 20pt;
+  border-radius: 3pt;
+}
+
+div#xplplayercontrols .disabled {
+  display: none;
+}
+div#xplplayerprev.disabled, div#xplplayernext.disabled {
+  opacity: 0.3;
+  display: inline-block;
+}
+
+div#xplplayercontrols .button:hover {
+  background: #1072C5;
+}
+div#xplplayercontrols .disabled:hover {
+  background: none;
+}
+	
+
+div#xplplayershare {
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	width: 36pt;
+}
+div#xplplayersharepopup {
+	position:fixed;
+	right: 0;
+	bottom: 20pt;
+	width: auto;
+	height: auto;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+div#xplplayershare:hover > div#xplplayersharepopup {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+div#xplplayersharepopup a {
+	cursor: pointer;
+}
+
+div#xplplayercontrols svg {
+	height:95%;
+	width: auto;
+	vertical-align: top;
+}
+
+div#xplplayercontrols path {
+  fill: #FFFFFF;
+  stroke: none;
+  stroke-width: 0px;
+}
+div#xplplayerloading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20vH;
+  height: 20vH;
+  margin: -10vH 0 0 -10vH;
+}
+div#xplplayerloading.disabled {
+  display: none;	
+}
+svg.xplspinner {
+  animation: rotate 2s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+svg.xplspinner > circle {
+    stroke: #1072C5;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+</style>
+</head>
+<body style="background-color:#1A1A1A;position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden">
+<div id="xplbase" style="display:none;position:absolute;top:50%;left:50%;transform-origin:left top" data-width="960" data-height="510">
+<div id="xplcanvas" style="position:absolute">
+<div class="xplitem frame xplframe" id="slide1" data-scale="1" data-rotate="0" data-frameindex="0" data-framew="960" data-frameh="510" data-framecx="-1728.1899" data-framecy="-1836.2" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-2208.1899px;top:-2091.2px;width:960px;height:510px">
+<div class="xplitem image" id="capture1" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture1.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor1" data-scale="1" data-rotate="0" data-frameout="0,movefrom,480,255,0.5,0,Power1.easeOut,false" style="position:absolute;left:363.747px;top:17.3213px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="0,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight1" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="0,movefrom,-21120.1797,-11212.1299,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21236.4336px;top:-11449.8086px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21536.447265625,11467.1298828125 C21536.447265625,11431.9306640625 21564.98046875,11403.396484375 21600.1796875,11403.396484375 C21635.37890625,11403.396484375 21663.9140625,11431.9306640625 21663.9140625,11467.1298828125 C21663.9140625,11502.3291015625 21635.37890625,11530.86328125 21600.1796875,11530.86328125 C21564.98046875,11530.86328125 21536.447265625,11502.3291015625 21536.447265625,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text41" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide2" data-scale="1" data-rotate="0" data-frameindex="1" data-framew="960" data-frameh="510" data-framecx="-576.0699" data-framecy="-1836.21" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-1056.0699px;top:-2091.21px;width:960px;height:510px">
+<div class="xplitem image" id="capture2" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture2.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor2" data-scale="1" data-rotate="0" data-frameout="1,movefrom,363.7471,17.3213,0.5404,0,Power1.easeOut,false" style="position:absolute;left:71.2838px;top:44.6357px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="1,flash,0,0,0.3,0.5404,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight2" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="1,movefrom,-21236.4336,-11449.8086,0.5404,0,Power1.easeOut,false;1,scale,0.8986,1,0.5404,0,Power1.easeOut,false" style="position:absolute;left:-21528.8965px;top:-11422.4951px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21529.25390625,11467.130859375 C21529.25390625,11427.9580078125 21561.0078125,11396.203125 21600.1796875,11396.203125 C21639.353515625,11396.203125 21671.109375,11427.9580078125 21671.109375,11467.130859375 C21671.109375,11506.302734375 21639.353515625,11538.05859375 21600.1796875,11538.05859375 C21561.0078125,11538.05859375 21529.25390625,11506.302734375 21529.25390625,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text40" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide3" data-scale="1" data-rotate="0" data-frameindex="2" data-framew="960" data-frameh="510" data-framecx="576.0625" data-framecy="-1836.2" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:96.0625px;top:-2091.2px;width:960px;height:510px">
+<div class="xplitem image" id="capture3" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture3.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor3" data-scale="1" data-rotate="0" data-frameout="2,movefrom,71.2838,44.6357,0.5,0,Power1.easeOut,false" style="position:absolute;left:18.6537px;top:129.91px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="2,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight3" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="2,movefrom,-21528.8965,-11422.4951,0.5,0,Power1.easeOut,false;2,scale,1.386,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21553.0605px;top:-11329.9307px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21549.005859375,11467.130859375 C21549.005859375,11438.8671875 21571.91796875,11415.9560546875 21600.1796875,11415.9560546875 C21628.443359375,11415.9560546875 21651.35546875,11438.8671875 21651.35546875,11467.130859375 C21651.35546875,11495.3935546875 21628.443359375,11518.3056640625 21600.1796875,11518.3056640625 C21571.91796875,11518.3056640625 21549.005859375,11495.3935546875 21549.005859375,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text39" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide4" data-scale="1" data-rotate="0" data-frameindex="3" data-framew="960" data-frameh="510" data-framecx="1728.14" data-framecy="-1836.23" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:1248.14px;top:-2091.23px;width:960px;height:510px">
+<div class="xplitem image" id="capture4" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture4.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor4" data-scale="1" data-rotate="0" data-frameout="3,movefrom,18.6537,129.91,0.5,0,Power1.easeOut,false" style="position:absolute;left:218.515px;top:185.205px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="3,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight4" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="3,movefrom,-21553.0605,-11329.9307,0.5,0,Power1.easeOut,false;3,scale,0.4668,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21381.6641px;top:-11281.9258px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21490.5546875,11467.130859375 C21490.5546875,11406.5869140625 21539.63671875,11357.5068359375 21600.1796875,11357.5068359375 C21660.72265625,11357.5068359375 21709.802734375,11406.5869140625 21709.802734375,11467.130859375 C21709.802734375,11527.673828125 21660.72265625,11576.7548828125 21600.1796875,11576.7548828125 C21539.63671875,11576.7548828125 21490.5546875,11527.673828125 21490.5546875,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text38" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide5" data-scale="1" data-rotate="0" data-frameindex="4" data-framew="960" data-frameh="510" data-framecx="-1728.1899" data-framecy="-1224.13" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-2208.1899px;top:-1479.13px;width:960px;height:510px">
+<div class="xplitem image" id="capture5" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture5.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor5" data-scale="1" data-rotate="0" data-frameout="4,movefrom,218.515,185.205,0.5,0,Power1.easeOut,false" style="position:absolute;left:77.9459px;top:82.6093px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="4,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight5" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:-1.4193px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="4,movefrom,-21381.6641,-11280.5068,0.5,0,Power1.easeOut,false;4,scale,2.0733,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21547.4297px;top:-11381.043px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21547.306640625,11467.130859375 C21547.306640625,11437.9296875 21570.978515625,11414.2568359375 21600.1796875,11414.2568359375 C21629.3828125,11414.2568359375 21653.0546875,11437.9296875 21653.0546875,11467.130859375 C21653.0546875,11496.33203125 21629.3828125,11520.00390625 21600.1796875,11520.00390625 C21570.978515625,11520.00390625 21547.306640625,11496.33203125 21547.306640625,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text37" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide6" data-scale="1" data-rotate="0" data-frameindex="5" data-framew="960" data-frameh="510" data-framecx="-576.0699" data-framecy="-1224.14" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-1056.0699px;top:-1479.14px;width:960px;height:510px">
+<div class="xplitem image" id="capture6" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture6.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor6" data-scale="1" data-rotate="0" data-frameout="5,movefrom,77.9458,82.6093,0.5,0,Power1.easeOut,false" style="position:absolute;left:58.626px;top:113.255px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="5,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight6" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="5,movefrom,-21547.4297,-11382.4619,0.5,0,Power1.easeOut,false;5,scale,0.7779,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21541.5547px;top:-11353.875px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21532.20703125,11467.1298828125 C21532.20703125,11429.5888671875 21562.640625,11399.15625 21600.1796875,11399.15625 C21637.72265625,11399.15625 21668.154296875,11429.5888671875 21668.154296875,11467.1298828125 C21668.154296875,11504.6708984375 21637.72265625,11535.103515625 21600.1796875,11535.103515625 C21562.640625,11535.103515625 21532.20703125,11504.6708984375 21532.20703125,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text36" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide7" data-scale="1" data-rotate="0" data-frameindex="6" data-framew="960" data-frameh="510" data-framecx="576.0625" data-framecy="-1224.13" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:96.0625px;top:-1479.13px;width:960px;height:510px">
+<div class="xplitem image" id="capture7" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture7.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor7" data-scale="1" data-rotate="0" data-frameout="6,movefrom,58.626,113.255,0.9888,0,Power1.easeOut,false" style="position:absolute;left:552.283px;top:325.774px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="6,flash,0,0,0.3,0.9888,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight7" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="6,movefrom,-21541.5547,-11353.875,0.9888,0,Power1.easeOut,false;6,scale,1.0175,1,0.9888,0,Power1.easeOut,false" style="position:absolute;left:-21023.668px;top:-11141.166px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21533.373046875,11467.1298828125 C21533.373046875,11430.234375 21563.283203125,11400.32421875 21600.1796875,11400.32421875 C21637.07421875,11400.32421875 21666.984375,11430.234375 21666.984375,11467.1298828125 C21666.984375,11504.025390625 21637.07421875,11533.935546875 21600.1796875,11533.935546875 C21563.283203125,11533.935546875 21533.373046875,11504.025390625 21533.373046875,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text35" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide8" data-scale="1" data-rotate="0" data-frameindex="7" data-framew="960" data-frameh="510" data-framecx="1728.14" data-framecy="-1224.16" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:1248.14px;top:-1479.16px;width:960px;height:510px">
+<div class="xplitem image" id="capture8" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture8.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor8" data-scale="1" data-rotate="0" data-frameout="7,movefrom,552.2831,325.774,0.5,0,Power1.easeOut,false" style="position:absolute;left:644.885px;top:324.441px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="7,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight8" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="7,movefrom,-21023.668,-11141.166,0.5,0,Power1.easeOut,false;7,scale,1.314,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-20955.2949px;top:-11142.6895px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21549.337890625,11467.130859375 C21549.337890625,11439.05078125 21572.1015625,11416.2880859375 21600.1796875,11416.2880859375 C21628.259765625,11416.2880859375 21651.0234375,11439.05078125 21651.0234375,11467.130859375 C21651.0234375,11495.2099609375 21628.259765625,11517.97265625 21600.1796875,11517.97265625 C21572.1015625,11517.97265625 21549.337890625,11495.2099609375 21549.337890625,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text34" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide9" data-scale="1" data-rotate="0" data-frameindex="8" data-framew="960" data-frameh="510" data-framecx="-1728.1899" data-framecy="-612.066" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-2208.1899px;top:-867.066px;width:960px;height:510px">
+<div class="xplitem image" id="capture9" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0.0001px;width:960px;height:509.646px"><img src="./invoiceissue/capture9.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight9" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-framein="8,moveby,0,0,0.5,0.5,,false" style="position:absolute;left:-21203.918px;top:-11280.2559px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21411.4140625,11467.130859375 C21411.4140625,11362.8779296875 21495.927734375,11278.365234375 21600.1796875,11278.365234375 C21704.43359375,11278.365234375 21788.9453125,11362.8779296875 21788.9453125,11467.130859375 C21788.9453125,11571.3837890625 21704.43359375,11655.896484375 21600.1796875,11655.896484375 C21495.927734375,11655.896484375 21411.4140625,11571.3837890625 21411.4140625,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem shape" id="shape3" data-scale="1" data-rotate="159.598" data-framein="8,movetop,0,0,0.5,0,,false" style="position:absolute;left:295.499px;top:118.746px;width:109.286px;height:27.6763px;transform: rotate(159.598deg)"><svg style="position:absolute;overflow:visible" width="109" height="28" viewBox="0 0 109 28"><path class="xplsvgpath" fill="#8CB4D2" fill-rule="evenodd" stroke-width="1" stroke="#8CB4D2" d="M0,0 M109.286003112793,27.6763000488281 M3.78483510017395,0.500851392745972 C4.2204704284668,4.03415107727051 5.8282322883606,7.23832225799561 8.70067977905273,10.089394569397 C11.4906549453735,12.8583736419678 15.9987497329712,15.0327463150024 22.9552764892578,16.6949882507324 C43.098014831543,21.5078220367432 82.3438720703125,18.7317218780518 82.3438720703125,18.7317218780518 L80.5502319335938,14.6952686309814 L108.786003112793,19.9527435302734 L86.0957336425781,27.1763000488281 L84.604866027832,23.8207225799561 C84.604866027832,23.8207225799561 45.7478561401367,26.0979633331299 21.1364898681641,19.5337772369385 C6.5539083480835,15.6444387435913 0.5,9.20745849609375 1.15828442573547,0.61159348487854 C1.26128697395325,0.581235647201538 2.98909115791321,0.5 3.7848436832428,0.500858902931213 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text3" data-scale="1" data-rotate="0" data-framein="8,typetext,0,0,4,1,,false;8,wait,0,0,7,0,,false" style="position:absolute;left:386.333px;top:132.218px;width:201.346px;height:32px"><div style="position:absolute;left:0px;top:0px;width:201.346px;height:32px;"><p><span style="color: #234B69">You can change the date and/or the amount of the invoice here if needed.</span></p></div>
+</div>
+<div class="xplitem text" id="text33" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide18" data-scale="1" data-rotate="0" data-frameindex="9" data-framew="960" data-frameh="510" data-framecx="-576.0699" data-framecy="-612.073" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-1056.0699px;top:-867.073px;width:960px;height:510px">
+<div class="xplitem image" id="capture18" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture9.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor18" data-scale="1" data-rotate="0" data-frameout="9,movefrom,644.885,324.441,1.1245,0,Power1.easeOut,false" style="position:absolute;left:81.2769px;top:87.9389px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="9,flash,0,0,0.3,1.1245,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight18" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="9,movefrom,-21203.918,-11280.2559,1.1245,0,Power1.easeOut,false;9,scale,3.1717,1,1.1245,0,Power1.easeOut,false" style="position:absolute;left:-21538.8672px;top:-11381.0244px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21540.6640625,11467.1298828125 C21540.6640625,11434.2607421875 21567.310546875,11407.6142578125 21600.1796875,11407.6142578125 C21633.05078125,11407.6142578125 21659.6953125,11434.2607421875 21659.6953125,11467.1298828125 C21659.6953125,11500 21633.05078125,11526.6455078125 21600.1796875,11526.6455078125 C21567.310546875,11526.6455078125 21540.6640625,11500 21540.6640625,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text32" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide10" data-scale="1" data-rotate="0" data-frameindex="10" data-framew="960" data-frameh="510" data-framecx="576.0625" data-framecy="-612.066" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:96.0625px;top:-867.066px;width:960px;height:510px">
+<div class="xplitem image" id="capture10" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture10.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor10" data-scale="1" data-rotate="0" data-frameout="10,movefrom,81.2769,87.9389,0.5,0,Power1.easeOut,false" style="position:absolute;left:38.6398px;top:105.926px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="10,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight10" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="10,movefrom,-21538.8672,-11381.0244,0.5,0,Power1.easeOut,false;10,scale,0.9873,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21544.5449px;top:-11362.5742px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21539.896484375,11467.1298828125 C21539.896484375,11433.8359375 21566.88671875,11406.8466796875 21600.1796875,11406.8466796875 C21633.474609375,11406.8466796875 21660.46484375,11433.8359375 21660.46484375,11467.1298828125 C21660.46484375,11500.423828125 21633.474609375,11527.4140625 21600.1796875,11527.4140625 C21566.88671875,11527.4140625 21539.896484375,11500.423828125 21539.896484375,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text31" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide11" data-scale="1" data-rotate="0" data-frameindex="11" data-framew="960" data-frameh="510" data-framecx="1728.14" data-framecy="-612.094" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:1248.14px;top:-867.094px;width:960px;height:510px">
+<div class="xplitem image" id="capture11" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture11.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor11" data-scale="1" data-rotate="0" data-frameout="11,movefrom,38.6398,105.926,0.5405,0,Power1.easeOut,false" style="position:absolute;left:255.822px;top:303.789px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="11,flash,0,0,0.3,0.5405,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight11" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="11,movefrom,-21544.5449,-11362.5742,0.5405,0,Power1.easeOut,false;11,scale,0.8336,1,0.5405,0,Power1.easeOut,false" style="position:absolute;left:-21344.3574px;top:-11163.3418px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21527.86328125,11467.130859375 C21527.86328125,11427.19140625 21560.240234375,11394.8134765625 21600.1796875,11394.8134765625 C21640.119140625,11394.8134765625 21672.49609375,11427.19140625 21672.49609375,11467.130859375 C21672.49609375,11507.0703125 21640.119140625,11539.447265625 21600.1796875,11539.447265625 C21560.240234375,11539.447265625 21527.86328125,11507.0703125 21527.86328125,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text30" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide12" data-scale="1" data-rotate="0" data-frameindex="12" data-framew="960" data-frameh="510" data-framecx="-1728.1899" data-framecy="0" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-2208.1899px;top:-255px;width:960px;height:510px">
+<div class="xplitem image" id="capture12" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture12.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor12" data-scale="1" data-rotate="0" data-frameout="12,movefrom,255.822,303.789,0.5,0,Power1.easeOut,false" style="position:absolute;left:341.096px;top:324.441px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="12,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight12" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="12,movefrom,-21344.3574,-11163.3418,0.5,0,Power1.easeOut,false;12,scale,1.5745,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21266.3828px;top:-11144.707px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21554.25,11467.1298828125 C21554.25,11441.7626953125 21574.814453125,11421.19921875 21600.181640625,11421.19921875 C21625.548828125,11421.19921875 21646.11328125,11441.7626953125 21646.11328125,11467.1298828125 C21646.11328125,11492.4970703125 21625.548828125,11513.060546875 21600.181640625,11513.060546875 C21574.814453125,11513.060546875 21554.25,11492.4970703125 21554.25,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text29" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide13" data-scale="1" data-rotate="0" data-frameindex="13" data-framew="960" data-frameh="510" data-framecx="-576.0699" data-framecy="-0.006" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-1056.0699px;top:-255.006px;width:960px;height:510px">
+<div class="xplitem image" id="capture13" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture13.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor13" data-scale="1" data-rotate="0" data-frameout="13,movefrom,341.0959,324.441,0.5,0,Power1.easeOut,false" style="position:absolute;left:257.821px;top:337.765px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="13,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight13" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="13,movefrom,-21266.3828,-11144.707,0.5,0,Power1.easeOut,false;13,scale,0.5014,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21328.8145px;top:-11119.877px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21508.57421875,11467.1298828125 C21508.57421875,11416.537109375 21549.587890625,11375.5244140625 21600.1796875,11375.5244140625 C21650.7734375,11375.5244140625 21691.78515625,11416.537109375 21691.78515625,11467.1298828125 C21691.78515625,11517.72265625 21650.7734375,11558.7353515625 21600.1796875,11558.7353515625 C21549.587890625,11558.7353515625 21508.57421875,11517.72265625 21508.57421875,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text28" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide19" data-scale="1" data-rotate="0" data-frameindex="14" data-framew="960" data-frameh="510" data-framecx="576.0625" data-framecy="0" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:96.0625px;top:-255px;width:960px;height:510px">
+<div class="xplitem image" id="capture19" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture13.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight19" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="14,moveby,0,0,0.5,0,,false" style="position:absolute;left:-21211.0137px;top:-11185.1641px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21393.1796875,11467.1298828125 C21393.1796875,11352.806640625 21485.857421875,11260.1298828125 21600.1796875,11260.1298828125 C21714.501953125,11260.1298828125 21807.1796875,11352.806640625 21807.1796875,11467.1298828125 C21807.1796875,11581.453125 21714.501953125,11674.1298828125 21600.1796875,11674.1298828125 C21485.857421875,11674.1298828125 21393.1796875,11581.453125 21393.1796875,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem shape" id="shape1" data-scale="1" data-rotate="117.216" data-framein="14,moveright,0,0,0.5,0,,false" style="position:absolute;left:224.53px;top:260.677px;width:90.1241px;height:66.706px;transform: rotate(117.216deg)"><svg style="position:absolute;overflow:visible" width="90" height="67" viewBox="0 0 90 67"><path class="xplsvgpath" fill="#8CB4D2" fill-rule="evenodd" stroke-width="1" stroke="#8CB4D2" d="M0,0 M90.1240997314453,66.7060012817383 M3.20356273651123,0.502097010612488 C3.5621063709259,9.20491695404053 4.88536500930786,17.0970630645752 7.2495174407959,24.1195011138916 C9.5457820892334,30.9397373199463 13.2561388015747,36.2954025268555 18.9816627502441,40.3896560668945 C35.5600318908691,52.2440757751465 67.8610534667969,45.4062805175781 67.8610534667969,45.4062805175781 L66.3848037719727,35.4641571044922 L89.6240997314453,48.4137878417969 L70.948974609375,66.2060012817383 L69.7219467163086,57.9409446716309 C69.7219467163086,57.9409446716309 37.7409324645996,63.5499954223633 17.4847240447998,47.3818206787109 C5.48262786865234,37.8020401000977 0.5,21.9472179412842 1.04179668426514,0.774864196777344 C1.1265721321106,0.700090348720551 2.5486307144165,0.5 3.20356822013855,0.502115547657013 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text1" data-scale="1" data-rotate="0" data-framein="14,typetext,0,0,5,0.5,,false" style="position:absolute;left:260.723px;top:222.351px;width:388.884px;height:32px"><div style="position:absolute;left:0px;top:0px;width:388.884px;height:32px;"><p><span style="color: #234B69"><b>Select Email and send directly to the donor from DevMan.</b></span></p><p><span style="color: #234B69"><b>Choose the appropriate template and stationery, then click email.</b></span></p></div>
+</div>
+<div class="xplitem text" id="text2" data-scale="1" data-rotate="0" data-framein="14,typetext,0,0,5,5.5,,false" style="position:absolute;left:268.525px;top:291.191px;width:366.888px;height:16px"><div style="position:absolute;left:0px;top:0px;width:366.888px;height:16px;"><p><b><span style="color: #234B69">Select View/Download if you wish to print a copy of the invoice.</span></b></p></div>
+</div>
+<div class="xplitem shape" id="shape2" data-scale="1" data-rotate="0" data-framein="14,moveright,0,0,0.5,10.5,,false;14,wait,0,0,15,0,,false" style="position:absolute;left:316.783px;top:303.255px;width:120.64px;height:43.9966px"><svg style="position:absolute;overflow:visible" width="121" height="44" viewBox="0 0 121 44"><path class="xplsvgpath" fill="#8CB4D2" fill-rule="evenodd" stroke-width="1" stroke="#8CB4D2" d="M0,0 M120.639999389648,43.9966011047363 M116.510765075684,0.501372218132019 C116.029449462891,6.19631052017212 114.253089904785,11.360767364502 111.079475402832,15.9560947418213 C107.996978759766,20.4191112518311 103.016159057617,23.9237403869629 95.3302383422852,26.6029262542725 C73.0755004882813,34.3602066040039 29.7146663665771,29.8857040405273 29.7146663665771,29.8857040405273 L31.696361541748,23.3797912597656 L0.5,31.8537425994873 L25.5694313049316,43.4966011047363 L27.2165718078613,38.0881233215332 C27.2165718078613,38.0881233215332 70.1478424072266,41.7585372924805 97.3397598266602,31.1784572601318 C113.451293945313,24.90966796875 120.139999389648,14.5346002578735 119.412742614746,0.67986524105072 C119.298919677734,0.630934834480286 117.389915466309,0.5 116.510719299316,0.501384377479553 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text27" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide14" data-scale="1" data-rotate="0" data-frameindex="15" data-framew="960" data-frameh="510" data-framecx="1728.1899" data-framecy="0" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:1248.1899px;top:-255px;width:960px;height:510px">
+<div class="xplitem image" id="capture14" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture14.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor14" data-scale="1" data-rotate="0" data-frameout="15,movefrom,257.821,337.765,0.5661,0,Power1.easeOut,false" style="position:absolute;left:83.9417px;top:83.9417px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="15,flash,0,0,0.3,0.5661,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight14" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="15,movefrom,-21211.0137,-11185.1641,0.5661,0,Power1.easeOut,false;15,scale,3.3103,1,0.5661,0,Power1.easeOut,false" style="position:absolute;left:-21531.7656px;top:-11379.6035px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21537.6484375,11467.130859375 C21537.6484375,11432.5947265625 21565.64453125,11404.59765625 21600.1796875,11404.59765625 C21634.716796875,11404.59765625 21662.712890625,11432.5947265625 21662.712890625,11467.130859375 C21662.712890625,11501.666015625 21634.716796875,11529.6630859375 21600.1796875,11529.6630859375 C21565.64453125,11529.6630859375 21537.6484375,11501.666015625 21537.6484375,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text26" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide15" data-scale="1" data-rotate="0" data-frameindex="16" data-framew="960" data-frameh="510" data-framecx="-1728.24" data-framecy="612.039" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-2208.24px;top:357.039px;width:960px;height:510px">
+<div class="xplitem image" id="capture15" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture15.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor15" data-scale="1" data-rotate="0" data-frameout="16,movefrom,83.9417,83.9417,0.5,0,Power1.easeOut,false" style="position:absolute;left:71.2838px;top:127.245px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="16,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight15" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="16,movefrom,-21531.7656,-11379.6035,0.5,0,Power1.easeOut,false;16,scale,1.279,1,0.5,0,Power1.easeOut,false" style="position:absolute;left:-21551.6875px;top:-11338.459px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21551.2890625,11467.1298828125 C21551.2890625,11440.12890625 21573.1796875,11418.240234375 21600.1796875,11418.240234375 C21627.181640625,11418.240234375 21649.0703125,11440.12890625 21649.0703125,11467.1298828125 C21649.0703125,11494.130859375 21627.181640625,11516.01953125 21600.1796875,11516.01953125 C21573.1796875,11516.01953125 21551.2890625,11494.130859375 21551.2890625,11467.1298828125 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text25" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide16" data-scale="1" data-rotate="0" data-frameindex="17" data-framew="960" data-frameh="510" data-framecx="-576.0601" data-framecy="612.066" data-framer="0" data-frametrans="0" data-frameshow="2" data-frameposition="fit" style="position:absolute;left:-1056.0601px;top:357.066px;width:960px;height:510px">
+<div class="xplitem image" id="capture16" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture16.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor16" data-scale="1" data-rotate="0" data-frameout="17,movefrom,71.2837,127.245,0.6984,0,Power1.easeOut,false" style="position:absolute;left:167.883px;top:494.323px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="17,flash,0,0,0.3,0.6984,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight16" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="17,movefrom,-21551.6875,-11338.459,0.6984,0,Power1.easeOut,false;17,scale,0.4479,1,0.6984,0,Power1.easeOut,false" style="position:absolute;left:-21505.5273px;top:-11036.8477px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21491.013671875,11467.130859375 C21491.013671875,11406.83984375 21539.888671875,11357.96484375 21600.1796875,11357.96484375 C21660.46875,11357.96484375 21709.345703125,11406.83984375 21709.345703125,11467.130859375 C21709.345703125,11527.421875 21660.46875,11576.296875 21600.1796875,11576.296875 C21539.888671875,11576.296875 21491.013671875,11527.421875 21491.013671875,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem text" id="text24" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide17" data-scale="1" data-rotate="0" data-frameindex="18" data-framew="960" data-frameh="510" data-framecx="576.0503" data-framecy="612.06" data-framer="0" data-frametrans="0" data-frameshow="0" data-frameposition="fit" style="position:absolute;left:96.0503px;top:357.06px;width:960px;height:510px">
+<div class="xplitem image" id="capture17" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px"><img src="./invoiceissue/capture17.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor17" data-scale="1" data-rotate="0" data-frameout="18,movefrom,167.883,494.3231,0,0,Power1.easeOut,false" style="position:absolute;left:162.206px;top:482.968px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="18,flash,0,0,0.3,0,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./invoiceissue/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem spotlight" id="spotlight17" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:960px;height:509.646px;overflow:hidden"><svg class="xplitem" data-frameout="18,movefrom,-21505.5273,-11036.8477,0,0,Power1.easeOut,false;18,scale,1.0394,1,0,0,Power1.easeOut,false" style="position:absolute;left:-21369.2637px;top:-11036.8496px;width:43200px;height:22934.0703px" viewBox="0 0 43200 22934.0703"><path class="xplsvgpath" fill="#808080" fill-opacity="0.502" fill-rule="evenodd" stroke="none" d="M21495.15234375,11467.130859375 C21495.15234375,11409.1259765625 21542.17578125,11362.103515625 21600.1796875,11362.103515625 C21658.18359375,11362.103515625 21705.20703125,11409.1259765625 21705.20703125,11467.130859375 C21705.20703125,11525.1357421875 21658.18359375,11572.158203125 21600.1796875,11572.158203125 C21542.17578125,11572.158203125 21495.15234375,11525.1357421875 21495.15234375,11467.130859375 M0,0 L43200,0 L43200,22934.0703125 L0,22934.0703125 Z "></path></svg>
+</div>
+<div class="xplitem shape" id="close" data-scale="1" data-rotate="0" data-framein="18,typetext,0,0,2,0,,false" style="position:absolute;left:865.881px;top:26.0229px;width:70.3002px;height:57.03px"><svg style="position:absolute;overflow:visible" width="70" height="57" viewBox="0 0 70 57"><rect class="xplsvgpath" fill="#8CB4D2" fill-rule="evenodd" stroke-width="1" stroke="#8CB4D2" x="0.5" y="0.5" rx="15" ry="15" width="69" height="56"></rect></svg><div style="position:absolute;left:1px;top:12.515px;width:68.3002px;height:32px;"><p style="text-align:center">Click to close.</p></div>
+<div class="xplitem line" id="line6" data-scale="1" data-rotate="132.941" style="position:absolute;left:60.0655px;top:-12.1823px;width:41.3081px;height:2px;transform: rotate(132.941deg)"><svg style="position:absolute;overflow:visible" width="41" height="2" viewBox="0 0 41 2"><path fill="none" stroke-width="1" stroke="#8CB4D2" stroke-linecap="square" d="M22,1 L41.3081016540527,1 "></path><path data-type="startcap" fill="#8CB4D2" stroke=none" d="M0,1 L22,12 L22,-10 Z "></path></svg>
+</div>
+</div>
+<div class="xplitem text" id="text23" data-scale="1" data-rotate="0" style="position:absolute;left:836.238px;top:5.2957px;width:106.128px;height:16px"><div style="position:absolute;left:0px;top:0px;width:106.128px;height:16px;"><p><span style="color: #808080;">Invoice a donor</span></p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="xplviewportmask1" style="position:fixed;top:0;left:0;background:#1A1A1A"></div><div id="xplviewportmask2" style="position:fixed;top:0;left:0;background:#1A1A1A"></div>
+
+
+<div id="xplplayerloading"><svg class="xplspinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></div>
+<div id="xplplayercontrols" data-overlay="1">
+<div id="xplplayerprogress"><div id="xplplayerprogressindicator"></div></div>
+	
+<div id="xplplayerprev" class="button" title="Previous Slide" onclick="xplain.navigate(-1)">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M36,0 L36,36 L0,18 "></path></svg>
+</div>
+<div id="xplplayerplay" class="button" title="Play Slideshow" onclick="xplain.play()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M18,0 C8.07480144500732,0 0,8.07480144500732 0,18 C0,27.9251976013184 8.07480144500732,36 18,36 C27.9251976013184,36 36,27.9251976013184 36,18 C36,8.07480144500732 27.9251976013184,0 18,0 Z M27.3377933502197,18.4955997467041 L14.1378002166748,27.4955959320068 C14.03639793396,27.5645980834961 13.9181985855103,27.5999984741211 13.7999973297119,27.5999984741211 C13.7039985656738,27.5999984741211 13.6073999404907,27.5771961212158 13.5197982788086,27.5303974151611 C13.3229999542236,27.4265975952148 13.1999988555908,27.2225952148438 13.1999988555908,26.9999961853027 L13.1999988555908,9 C13.1999988555908,8.77740001678467 13.3229999542236,8.57339954376221 13.5197982788086,8.46960067749023 C13.7165994644165,8.36520004272461 13.9541997909546,8.37960147857666 14.1384019851685,8.5044002532959 L27.3383960723877,17.5044002532959 C27.5015983581543,17.6159992218018 27.5999984741211,17.801399230957 27.5999984741211,18 C27.5999984741211,18.1985988616943 27.5015983581543,18.3840026855469 27.3377933502197,18.4955997467041 Z "></path></svg>
+</div>
+<div id="xplplayerstop" class="button disabled" title="Stop Slideshow" onclick="xplain.stop()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M18,0 C8.09999942779541,0 0,8.09999942779541 0,18 C0,27.8999996185303 8.09999942779541,36 18,36 C27.8999996185303,36 36,27.8999996185303 36,18 C36,8.09999942779541 27.8999996185303,0 18,0 Z M16.1999988555908,25.1999950408936 L12.5999975204468,25.1999950408936 L12.5999975204468,10.8000001907349 L16.1999988555908,10.8000001907349 L16.1999988555908,25.1999950408936 Z M23.3999996185303,25.1999950408936 L19.8000030517578,25.1999950408936 L19.8000030517578,10.8000001907349 L23.3999996185303,10.8000001907349 L23.3999996185303,25.1999950408936 Z "></path></svg>
+</div>
+<div id="xplplayerreload" class="button disabled" title="Reload" onclick="xplain.reload()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M4.80981111526489,28.3467464447021 C4.6999773979187,28.2292633056641 4.59349775314331,28.1051006317139 4.48701810836792,27.9810352325439 L9.43570709228516,23.873254776001 C9.53872871398926,23.994140625 9.64520835876465,24.1181926727295 9.75504302978516,24.2389602661133 C13.3335380554199,28.1344928741455 19.5631294250488,28.5328922271729 23.6600856781006,25.1304340362549 C27.7535839080811,21.7279930114746 28.17258644104,15.8078641891479 24.5941944122314,11.9123401641846 C21.118824005127,8.1311092376709 15.1432762145996,7.65109777450562 11.0463199615479,10.7466297149658 L16.503303527832,16.6862812042236 L0.5,15.6609811782837 L1.57140040397644,0.55221563577652 L1.63323414325714,0.5 L6.72267389297485,6.04124975204468 C13.5463933944702,0.679573059082031 23.6772727966309,1.42734527587891 29.5394287109375,7.80456066131592 C35.5011405944824,14.2960729598999 34.8039932250977,24.1606483459473 27.9802722930908,29.8292503356934 C21.1497402191162,35.5011405944824 10.7716302871704,34.8349723815918 4.80981111526489,28.3467464447021 Z"></path></svg>
+</div>
+<div id="xplplayernext" class="button" title="Next Slide" onclick="xplain.navigate(1)">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M0,0 L0,36 L36,18 "></path></svg>
+</div>
+
+<div id="xplplayershare" class="button" style="display:block" title="Share">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M29.6664352416992,25.2563343048096 C28.18869972229,25.2563343048096 26.85671043396,25.7746276855469 25.8456344604492,26.6092643737793 L11.9915761947632,19.3088550567627 C12.0984897613525,18.9135246276855 12.1665735244751,18.5006542205811 12.1665735244751,18.0789699554443 C12.1665735244751,17.6572856903076 12.0984897613525,17.2444133758545 11.9915761947632,16.8490829467773 L25.699800491333,9.61892604827881 C26.7400417327881,10.497462272644 28.1303653717041,11.0421104431152 29.6664352416992,11.0421104431152 C32.8844985961914,11.0421104431152 35.4997253417969,8.67894840240479 35.4997253417969,5.77105522155762 C35.4997253417969,2.86316227912903 32.8844985961914,0.5 29.6664352416992,0.5 C26.4483757019043,0.5 23.8331470489502,2.86316227912903 23.8331470489502,5.77105522155762 C23.8331470489502,6.19273996353149 23.9012355804443,6.60561180114746 24.0081462860107,7.00094032287598 L10.2999229431152,14.2310161590576 C9.25968360900879,13.3524799346924 7.86935615539551,12.8078317642212 6.33328676223755,12.8078317642212 C3.11522674560547,12.8078317642212 0.5,15.1709928512573 0.5,18.0788860321045 C0.5,20.986780166626 3.11522674560547,23.3499412536621 6.33328676223755,23.3499412536621 C7.86935567855835,23.3499412536621 9.25968265533447,22.8052940368652 10.2999229431152,21.9267559051514 L24.1539821624756,29.227165222168 C24.0567283630371,29.5961418151855 23.9983940124512,29.9826583862305 23.9983940124512,30.377986907959 C23.9983940124512,33.2068138122559 26.5358753204346,35.4997253417969 29.6664352416992,35.4997253417969 C32.7970008850098,35.4997253417969 35.3344764709473,33.2068138122559 35.3344764709473,30.377986907959 C35.3344764709473,27.5491561889648 32.7970008850098,25.2563323974609 29.6664352416992,25.2563323974609 Z"></path></svg>
+
+<div id="xplplayersharepopup">
+<a id="xplShareFacebook" class="sharebutton" style="display:block" title="Share on Facebook" onclick="xplain.share('facebook')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<rect width="32" height="32" style="fill:#3B5998;stroke:none"></rect>
+<path d="M22,32V20h4l1-5h-5v-2c0-2,1.002-3,3-3h2V5c-1,0-2.24,0-4,0c-3.675,0-6,2.881-6,7v3h-4v5h4v12H22z" style="fill:#FFFFFF;stroke:none"></path>
+</svg>
+</a>
+<a id="xplShareTwitter" class="sharebutton" style="display:block" title="Share on Twitter" onclick="xplain.share('twitter')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#00ACED;stroke:none"></rect>
+<path d="M25.987,9.894c-0.736,0.322-1.525,0.537-2.357,0.635c0.85-0.498,1.5-1.289,1.806-2.231   c-0.792,0.461-1.67,0.797-2.605,0.978C22.083,8.491,21.017,8,19.838,8c-2.266,0-4.1,1.807-4.1,4.038   c0,0.314,0.036,0.625,0.104,0.922c-3.407-0.172-6.429-1.779-8.452-4.221c-0.352,0.597-0.556,1.29-0.556,2.032   c0,1.399,0.726,2.635,1.824,3.36c-0.671-0.022-1.304-0.203-1.856-0.506c-0.001,0.017-0.001,0.034-0.001,0.052   c0,1.955,1.414,3.589,3.29,3.96c-0.343,0.09-0.705,0.142-1.081,0.142c-0.264,0-0.52-0.024-0.77-0.072   c0.52,1.604,2.034,2.771,3.828,2.805C10.67,21.594,8.9,22.24,6.979,22.24c-0.33,0-0.658-0.018-0.979-0.056   c1.814,1.145,3.971,1.813,6.287,1.813c7.541,0,11.666-6.154,11.666-11.491c0-0.173-0.005-0.35-0.012-0.521   C24.741,11.414,25.438,10.703,25.987,9.894z" style="fill:#FFFFFF;stroke:none"></path>
+</g>
+</svg>
+</a>
+<a id="xplShareLinkedin" class="sharebutton" style="display:block" title="Share on LinkedIn" onclick="xplain.share('linkedin')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#007BB6;stroke:none"></rect>
+<rect height="14" width="4" x="7" y="11" style="fill:#FFFFFF;stroke:none"></rect>
+<path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7 C25,14,24.479,11,20.499,11z" style="fill:#FFFFFF;stroke:none"></path>
+<circle cx="9" cy="8" r="2" style="fill:#FFFFFF;stroke:none"></circle>
+</g>
+</svg>
+</a>
+<a id="xplShareLinkedin" class="sharebutton" style="display:none" title="Share on Xing" onclick="xplain.share('xing')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#174F50;stroke:none"></rect>
+<path d="M6.018,20.18l3.668-6.04L6.934,9.292h4.655l2.752,4.848l-3.667,6.04H6.018z M23.374,26.57h-4.938 l-4.729-8.288l7.338-12.854h4.938l-7.336,12.854L23.374,26.57z" style="fill:#FFFFFF;stroke:none"></path>
+</g>
+</svg>
+</a>
+<a id="xplShareEmail" class="sharebutton" style="display:block" title="Share by Email" onclick="xplain.share('email')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#DD4B39;stroke:none"></rect>
+<path d="M15.5,17 L26.5,6 L4.5,6 L15.5,17 Z M12.5,16 L15.5,19 L18.5,16 L26.5,25 L4.5,25 L12.5,16 Z M4.5,24 L4.5,7 L11.5,15 L4.5,24 Z M27.5,25 L27.5,6 L19.5,15 L27.5,25 Z" style="fill:#FFFFFF;stroke:none"></path>
+</g>
+</svg>
+</a>
+<a class="sharebutton" title="Made with HelpXplain" href="http://helpxplain.com" target="_blank">
+<img src="./invoiceissue/favicon.png" style="width:36px;height:36px;background:#404040;padding:7px"/>
+</a>
+</div>
+</div>
+</div>
+<div id="fallbackmessage" style="display:none;margin:0 auto">
+<img src="./invoiceissue/preview.jpg" style="width:100%" />
+<div class="fallback">We are sorry, but your browser does not support HelpXplain. Please use a decent browser and turn Javascript on.</div>
+</div>
+<script src="js/xplainAni.js" type="text/javascript"></script>
+<script src="js/xplainCss.js" type="text/javascript"></script>
+<script src="js/xplainTime.js" type="text/javascript"></script>
+<script src="js/xplainEase.js" type="text/javascript"></script>
+<script src="js/xplainType.js" type="text/javascript"></script>
+<script src="js/xplain.js" type="text/javascript"></script>
+<script>
+xplain = initXplain(true,false,false,1);
+
+</script>
+<noscript><div style="margin: 0 auto; text-align:center">
+<img src="./invoiceissue/preview.jpg" style="width:100%" />
+<div class="fallback">We are sorry, but your browser does not support HelpXplain. Please use a decent browser and turn Javascript on.</div>
+</div></noscript>
+</body>
+</html>
