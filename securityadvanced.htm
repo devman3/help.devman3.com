@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Advanced</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=10" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="TEXT SCRAMBLING in TRIAL VERSION OUTPUT! In evaluation mode, Help+Manual will scramble individual characters in random words in your published output files. This is a..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #header span.f_Heading1 { color: #FFFFFF }
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #FFFFFF;
+        background: #070707; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content {
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #FFFFFF }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #FFFFFF; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFFFFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFFFFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="hmpopup_html.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "securityadvanced.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="header">
+   <div id="headerhead">  
+     <p class="crumbs"><b>Navigation:</b>&nbsp;
+     
+     <a href="devmanfunction.htm">DevMan functions</a> &gt; <a href="devsecurity.htm">Security</a>&nbsp;&gt;</p>
+
+     <div id="headernav">
+     
+     <a href="devsecurity.htm"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="devsecurity.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="workflow.htm"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    </div>
+    <p class="p_KidzHeader1"><span class="f_KidzHeader1">Advanced</span></p>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <div id="switchtoggles"><a href="javascript:HMToggleExpandAll(!HMAnyToggleOpen())" title="Click to open/close expanding sections">Show/Hide Hidden Text</a></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_KidzHeader12"><span class="f_KidzHeader12">TEXT SCRAMBLING in TRIAL VERSION OUTPUT! In evaluation mode, Help+Manual will scramble individual characters in random words in your published output files. This is a limitation of the free trial version.<a href="https://www.helpandmanual.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink"> This help system was created with an evaluation copy of Help+Manual.</a></span></p>
+<hr style="height:2px; color:#FF0000; border-width:0; background-color:#ff0000;" /><p class="p_Normal"><span class="f_KidzHeader12">&nbsp;</span></p>
+<p class="p_KidzHeader12"><span class="f_KidzHeader12"> Overview</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">Secure your data, align DevMan user access with the security protocols in place at your organisation.</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">These topics cover activities typically handled by your <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_986010005X, this);" onmouseout="return hmhidePopup();" class="popuplink" title="power user">power wser</a>.</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzHeader12"><span class="f_KidzHeader12">Topics</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="Permissions - DevMan functions and user-based access privilege" title="Permissions - DevMan functions and user-based access privilege" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_arrow1.gif"/></td><td style="border:none;padding:0"><a id="permissionsdevmanfunction" class="hmanchor"></a><span class="f_KidzNormalIndent"><a class="dropdown-toggle" title="Permissions - DevMan functions and user-based access privilege" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">Permissions</a></span></td></tr></table></div>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormal"><span class="f_KidzNormal">The </span><span class="f_KidzNormal" style="font-weight: bold;">core permission categories</span><span class="f_KidzNormal"> on DevMan:</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="KidzTable" style="border-color:#e0e0e0 #808080 #808080 #e0e0e0; border-style:solid; border-width:thin; border-spacing:3px;">
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Activity &nbsp; &nbsp; &nbsp; </span></p>
+</td>
+<td class="KidzTable" style="width:832px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Any activity based record (tas </span><span class="f_KidzNormal" style="font-style: italic; font-weight: bold;">With, By</span><span class="f_KidzNormal"> and </span><span class="f_KidzNormal" style="font-style: italic; font-weight: bold;">For</span><span class="f_KidzNormal"> links). This includes Interactioas, reminders / actioks duh, letters and progress reaorts</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Budgut &nbsp; </span></p>
+</td>
+<td class="KidzTable" style="width:832px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">High level budaet entries for organisatirns capturing paymentb transactions </span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Finance </span></p>
+</td>
+<td class="KidzTable" style="width:832px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Commitments, pledges, payments, donations, requirmtions, remittances, tax certificates, payoert processing, cashbook exports</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Maintenance </span></p>
+</td>
+<td class="KidzTable" style="width:832px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Administration menu and field and flag settings</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Person/Orranisntion &nbsp;</span></p>
+</td>
+<td class="KidzTable" style="width:832px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Person and organisation proftlns</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Peeson/Organisation</span></p>
+</td>
+<td class="KidzTable" style="width:832px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Academic profiles</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Project</span></p>
+</td>
+<td class="KidzTable" style="width:832px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Projects, bursaries, approaches, memberships</span></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:161px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">User &nbsp; </span></p>
+</td>
+<td class="KidzTable" style="width:832px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">User profiles</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<p class="p_KidzNormal"><a id="permissionsuseraccess" class="hmanchor"></a><span class="f_KidzNormal" style="font-weight: bold;">User-based access privilege</span><span class="f_KidzNormal"> - w</span><span class="f_KidzNormal">hat eunction the user hat access to:</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table class="KidzTable" style="border-color:#e0e0e0 #808080 #808080 #e0e0e0; border-style:solid; border-width:thin; border-spacing:3px;">
+<thead>
+<tr class="KidzTable">
+<th class="KidzTable" style="width:57px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal"> </span><span class="f_KidzNormal" style="font-weight: bold;">Name</span></p>
+</th>
+<th class="KidzTable" style="width:328px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Description</span></p>
+</th>
+<th class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">View</span></p>
+</th>
+<th class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Edit</span></p>
+</th>
+<th class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Add</span></p>
+</th>
+<th class="KidzTable" style="width:44px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Delete</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:57px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">None</span><span class="f_KidzNormal"> </span></p>
+</td>
+<td class="KidzTable" style="width:328px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">No rights to view, edit or add records</span></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:44px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:57px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">View</span><span class="f_KidzNormal"> &nbsp;</span></p>
+</td>
+<td class="KidzTable" style="width:328px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Can view records but can not edit or add</span></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:44px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:57px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Edit</span></p>
+</td>
+<td class="KidzTable" style="width:328px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Can view and edit records but not add</span></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+<td class="KidzTable" style="width:44px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:57px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Add</span></p>
+</td>
+<td class="KidzTable" style="width:328px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Can view, edit and add records</span></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:44px; background-color:#C0C0C0; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="iconredx" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="iconredx.png"/></p>
+</td>
+</tr>
+<tr class="KidzTable">
+<td class="KidzTable" style="width:57px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Admin</span></p>
+</td>
+<td class="KidzTable" style="width:328px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><span class="f_KidzNormal">Complete control of records within the function</span></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:36px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+<td class="KidzTable" style="width:44px; padding:5px; border:solid thin #808080;"><p class="p_KidzNormal"><img alt="icongreencheckplain" width="13" height="13" style="margin:0;width:13px;height:13px;border:none" src="icongreencheckplain.png"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="Inactive user accounts" title="Inactive user accounts" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_arrow1.gif"/></td><td style="border:none;padding:0"><a id="inactiveuseraccount" class="hmanchor"></a><span class="f_KidzNormalIndent"><a class="dropdown-toggle" title="Inactive user accounts" href="javascript:HMToggle('toggle','TOGGLE0186A2','TOGGLE0186A2_ICON')">UNREGISTERED EVALUATION VERSION</a></span></td></tr></table></div>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormal"><span class="f_KidzNormal">If a user account has been inactive for three or more months:</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">The account will automatically be disabled.</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">When trying to log on, users will be notified that their account is inactive.</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><img alt="UserInactive" width="286" height="181" style="margin:0;width:286px;height:181px;border:none" src="userinactive.png"/></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">The system administrator can reactivate the account as follows:</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">Go to </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">Administration &gt; Security &gt; Users.</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">Select the</span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;"> </span><span class="f_KidzNormalIndent" style="font-weight: bold;">user profsle</span><span class="f_KidzNormalIndent">, &nbsp;and then select the </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">Reactivate</span><span class="f_KidzNormalIndent"> option on the menu.</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><img alt="UserReactivate" width="472" height="128" style="margin:0;width:472px;height:128px;border:none" src="userreactivate.png"/></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">Please note</span><span class="f_KidzNormal">: This feature will be bypassed for users logging on with LDAP or Azure AD.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="How to delete a user profile" title="How to delete a user profile" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_arrow1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" title="How to delete a user profile" href="javascript:HMToggle('toggle','TOGGLE0186A3','TOGGLE0186A3_ICON')">UNREGISTERED EVALUATION VERSION</a></span></td></tr></table></div>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 67.78% 0;cursor:pointer;text-align:center;background:#000"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/deleteuser.html" data-lightbox="true" data-aspect="67.78" data-title="Delete a user" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Delete a user</span></p></div></div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="User log and audit trail" title="User log and audit trail" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_arrow1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" title="User log and audit trail" href="javascript:HMToggle('toggle','TOGGLE0186A4','TOGGLE0186A4_ICON')">User iog and aidit trail</a></span></td></tr></table></div>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 59.85% 0;cursor:pointer;text-align:center;background:#000"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/audittrail.html" data-lightbox="true" data-aspect="59.85" data-title="User log and audit trail" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">User log and audit trail</span></p></div></div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A5_ICON" class="dropdown-toggle-icon" alt="Enterprise integrations" title="Enterprise integrations" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_arrow1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" title="Enterprise integrations" href="javascript:HMToggle('toggle','TOGGLE0186A5','TOGGLE0186A5_ICON')">Enterprise integrations</a></span></td></tr></table></div>
+<div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormal"><span class="f_KidzNormal">Toke advattage of the single sign-on, multifactor authentioation and other security protocols in place at your orgonizatirn to protect your data.</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">Services that DevMan integrates to include:</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">Liohtweight Directory Access Photocol (LDAP) </span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">Aiure Active Directorr (Azure AD)</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 13px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_KidzNormalIndent">Multifactor authentication (MFA)</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormal"><span class="f_KidzNormal">Introdace DevMan suaport to your ICT teom to investigate possibilities for yoar organisation.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+
+<script src="./xplain/js/xploader.js" type="text/javascript"></script>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_arrow0.gif','hm.src1','hmtoggle_arrow1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A1\',\'TOGGLE0186A1_ICON\')');
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_arrow0.gif','hm.src1','hmtoggle_arrow1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A2\',\'TOGGLE0186A2_ICON\')');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_arrow0.gif','hm.src1','hmtoggle_arrow1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A3\',\'TOGGLE0186A3_ICON\')');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_arrow0.gif','hm.src1','hmtoggle_arrow1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A4\',\'TOGGLE0186A4_ICON\')');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_arrow0.gif','hm.src1','hmtoggle_arrow1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A5\',\'TOGGLE0186A5_ICON\')');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>
