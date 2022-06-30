@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Events",
 hmDescription:"Overview  This section will guide you through the  events management module.  Topics  \tFeatures Compose invitations with appealing content and attractive and colourful graph",
-hmPrevLink:"template.html",
+hmPrevLink:"letter.html",
 hmNextLink:"subscription.html",
 hmParentLink:"communicationandevents.html",
 hmBreadCrumbs:"<a href=\"communicationandevents.html\">Communication and events<\/a>",

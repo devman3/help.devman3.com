@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Financials",
 hmDescription:"Overview   Topics  Expenditure",
-hmPrevLink:"onlineresults.html",
+hmPrevLink:"yearendrollover.html",
 hmNextLink:"grantmanagement.html",
 hmParentLink:"bursarymanagement.html",
 hmBreadCrumbs:"<a href=\"bursarymanagement.html\">Bursary management<\/a>",

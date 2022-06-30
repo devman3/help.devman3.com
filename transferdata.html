@@ -16,7 +16,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="Devman can communicate with your accounting system (such as Pastel).&nbsp;" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
-	<meta name="author" content="Is KidzAfrica (Pty) Ltd" />
+	<meta name="author" content="IS Kidz Africa Pty Ltd" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" /> 
 <!-- Insert Google web fonts references here. 
@@ -45,20 +45,6 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 */
 		var pageName = "mainPage";
 
-		// Domain error check
-		(function(){
-			let domcheck = "".replace(/ /g,"");
-			if (domcheck == "") return;
-			else {
-				let thisdomain = window.location.protocol + "//" + window.location.hostname + (location.port !== "" && location.port !== "0" ? ":" + location.port : ""),
-				domarray = domcheck.split(",");
-				if (!domarray.includes(thisdomain)) {
-					alert("Security error! Your skin is configured for cross-domain embedding and access on this site is not permitted. Only these domains are currently allowed:\r\n\r\n" + domcheck.replace(/,/g,"\r\n") + "\r\n\r\nYou must either add\r\n\r\n" + thisdomain + "\r\n\r\nto the EMBEDDED_DOMAINS variable in your skin or delete all the domains stored there for single-domain access.");
-					return;
-				}
-				
-			}
-		})();
 		
 		var hmDevice = {
 		
@@ -346,44 +332,12 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	</div>
 	<div id="headerbox_wrapper">
 	<div id="headerbox">
-
+<a id="headerlogo" href="https://www.devman3.com" title="IS Kidz Africa (Pty) Ltd" target="_blank"></a>
 <div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">DevMan Help</h1></div>
 
 
-<div id="phone_hamburger_icon" class="phone"><svg id="phone_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div>
-	</div>
+</div>
 	<div id="header_menu">
-<ul class="topnav">  
-    <li class="phone"><a href="javascript:hmWebHelp.closeTopNav();" data-target="socialsharing.js" data-path="./js/" data-title="Share This Topic" class="popuplink" title="Share this Topic">Share This Topic</a></li>
-	<li class="desk_tablet"><a href="https://www.helpandmanual.com/" target="_blank" title="Main Page">EC Software Website</a></li>	
-    <li>  
-        <a title="Tutorials for programmers">Tutorials</a>  
-        <ul class="subnav">  
-            <li><a href="https://www.helpandmanual.com/support_tutorials.html" target="_blank" title="Main Tutorials Page">Tutorials Page</a></li>
-			<li><a href="https://www.helpandmanual.com/support_tutorials.html#vb" target="_blank" title="Visual Basic tutorials">Visual Basic</a></li>  
-            <li><a href="https://www.helpandmanual.com/support_tutorials.html#dotnet" target="_blank" title=".NET language tutorials">For .NET languages</a></li>
-			<li><a href="https://www.helpandmanual.com/support_tutorials.html#ac" target="_blank" title="Microsoft Access tutorials">Microsoft Access</a></li>
-			<li><a href="https://www.helpandmanual.com/support_tutorials.html#foxpro" target="_blank" title="Visual Foxpro tutorials">Visual Foxpro</a></li>
-        </ul>  
-    </li>  
-    <li>  
-        <a title="Free resources for help authors">Resources</a>  
-        <ul class="subnav">  
-            <li><a href="https://www.helpandmanual.com/downloads_mscomp.html" target="_blank" title="Help compiler downloads">Help Compilers</a></li>  
-            <li><a href="https://www.helpandmanual.com/downloads_delphi.html" target="_blank" title="Free components for Delphi programmers">Delphi Components</a></li> 
-			<li><a href="http://www.tntscreencapture.com/" target="_blank" title="Free TNT screen capture utility">TNT Screen Capture</a></li> 			
-        </ul>  
-    </li>  
-    <li><a title="Sources for further information">Information</a>
-	<ul class="subnav">
-	    <li><a href="https://www.helpandmanual.com/company_about.html" target="_blank" title="About EC Software">About</a></li>  
-		<li><a href="https://www.helpandmanual.com/news" target="_blank" title="The EC Software news blog and RSS feed">News Blog</a></li>  
-		<li><a href="https://www.helpandmanual.com/company_contact.html" target="_blank" title="Contact addresses for feedback and support">Contact Us</a></li>
-       </ul>  		
-	</li>  
-	<li class="desktop tablet">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-</ul>
-
 	</div>
 	</div>
 	<!-- TOPIC CONTENT -->
@@ -519,9 +473,6 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 </div>
 <p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
 
-	<div class="topicfooter">
-<p class="topicfooter">Created with <a href="https://www.devman3.com/" title="DevMan Home page" target="_blank">DevMan3</a> and styled with <a href="" title="DevMan Home page" target="_blank">DevMan Version 4.8</a> &copy; by IS Kidz Africa (Pty) Ltd</p>
-</div>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
@@ -643,8 +594,6 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	  hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
-	  hmpage.topicfooter = $("div.topicfooter")[0].outerHTML;
-	  
 	  
 	
 	  /* window.navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40);
