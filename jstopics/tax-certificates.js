@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Tax certificates",
 hmDescription:"Overview  Encourage donor giving by promptly providing any documentation they need for tax benefits available in their country.  Topics  \tFeatures Issue individual tax certi",
-hmPrevLink:"cashbookexxport.html",
+hmPrevLink:"accountingsystemintegration.html",
 hmNextLink:"expenditure.html",
 hmParentLink:"income.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a> &gt; <a href=\"income.html\">Income<\/a>",
