@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Accounting system integration",
 hmDescription:"Overview  Reduce errors and increase productivity with a single point of entry. DevMan integrates to various finance and accounting systems, supporting all your business account",
-hmPrevLink:"onlinegiving.html",
+hmPrevLink:"debitorders.html",
 hmNextLink:"tax-certificates.html",
 hmParentLink:"income.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a> &gt; <a href=\"income.html\">Income<\/a>",
