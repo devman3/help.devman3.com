@@ -1,4 +1,0 @@
-hmLoadPopup({
-hmTitle:"gsyDKIM",
-hmBody:"<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\" style=\"text-decoration: underline;\">DKIM - Domain Keys Identified Mail<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">Provides an encryption key and digital signature that verifies an email message was not forged or altered.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">DKIM signs outbound emails sent on your company\'s behalf.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">These signatures give recipients confidence that the email was handled in a way that is consistent with your company\'s requirements.<\/span><\/p>\n\r"
-})
