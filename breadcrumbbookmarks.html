@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-za">
 	<head>
-	<!-- Help+Manual Premium Pack Version 4.2.1 (c) 2015-2021 by Tim Green all rights reserved -->
+	<!-- Help+Manual Premium Pack 4.4.1 (c) 2015-2022 by Tim Green all rights reserved -->
 	<title>Bookmark/Favourites</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
@@ -41,7 +41,7 @@ Delete this comment to save space after adding your references.
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
 	<script type="text/javascript">
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 		var pageName = "mainPage";
 
@@ -136,7 +136,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 					return sessionStorage.getItem(hmDevice.compilehash + sVar);
 				else return null;
 			} else 
-				return hmDevice.hmGetCookie(sVar);
+				return hmDevice.hmGetCookie(hmDevice.compilehash + sVar);
 		},
 		deletePV: function(sVar) {
 			if (this.localS)
@@ -222,8 +222,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	var hmSearchActive = true,
 		hmIndexActive = true;
 	</script>
-	<style type="text/css">.svgsprite{display:none;} 
-	div#fouc{background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10000;}
+	<style type="text/css">.svgsprite{display:none;}
 	div#noscript {display: none;}
 	</style> 
 	<style id="livestyles" type="text/css"></style>
@@ -245,7 +244,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	}
 	</style>
 	</noscript>
-	<link rel="canonical" href="https://devhelp.devman3.com/breadcrumbbookmarks.html" />
+	<link rel="canonical" href="https://www.devman3.com/breadcrumbbookmarks.html" />
 	<script id="jqscript" type="text/javascript"></script>
 </head>
 <body>
@@ -265,7 +264,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
     <path d="M21.482,17.037v-4.977h-8.877V4.977h8.877V0L30,8.519L21.482,17.037z M0,22.2l8.518,8.519v-4.977h8.877v-7.084H8.518v-4.977
 	L0,22.2z"></path>
   </g>
-<g class="svgsprite" id="toolbar_updown" width="30" height="30" viewBox="0 0 30 30">
+<g class="svgsprite" id="toolbar_updown_icon" width="30" height="30" viewBox="0 0 30 30">
     <path d="M17.038,8.518h-4.977v8.879l-7.084-0.002V8.518H0L8.519,0L17.038,8.518z M22.2,30l8.519-8.518h-4.977v-8.877l-7.084-0.002
 	v8.879h-4.977L22.2,30z"></path>
   </g>
@@ -325,14 +324,15 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	</g>
 </defs>
 </svg>
-<div id="fouc"></div><div id="noscript"><h2 id="noscriptwarning">Please enable JavaScript to view this site.</h2></div>
+<div id="fouc" style="background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:100001;"></div><div id="noscript"><h2 id="noscriptwarning">Please enable JavaScript to view this site.</h2></div>
+	<div id="helpwrapper">
 	<div id="pagewrapper">
 	<div id="toolbar_updown" class="toolwrapper phone">
-	<svg id="toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown"></use></svg>
+	<svg id="toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown_icon"></use></svg>
 	</div>
 	<div id="headerbox_wrapper">
 	<div id="headerbox">
-<a id="headerlogo" href="https://www.devman3.com" title="IS Kidz Africa (Pty) Ltd" target="_blank"></a>
+<a id="headerlogo" href="https://www.devman3.com/" title="IS Kidz Africa (Pty) Ltd" target="_blank"></a>
 <div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">DevMan Help</h1></div>
 
 
@@ -390,7 +390,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		  </div>
 		</td>
 		<td id="topicnavcell"><span>
-		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
+		<a id="atoclink" class="topicnavlink" href="javascript:void(0);" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
 		<span>Scroll</span></a> 
 		 <a id="topicnavlinkprevious" class="topicnavlink disabled"  title="This is the first topic">
@@ -402,7 +402,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		<a id="topicnavlinknext" class="topicnavlink disabled" title="This is the last topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
-		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
+		 <a id="hamburgerlink" class="topicnavlink" href="javascript:void(0);" title="Additional Functions Menu">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg>
 		 <span>More</span></a>
 		 </span>
@@ -448,16 +448,19 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 </table>
 </div>
 
+	<div class="topicfooter">
+<p class="topicfooter">Created with <a href="https://www.helpandmanual.com/products_hm_overview.html" title="Help+Manual information page" target="_blank">Help+Manual 8</a> and styled with <a href="https://www.helpandmanual.com/products_hm_pluspack.html" title="Premium Pack information page" target="_blank">Premium Pack Version 4</a> &copy; by EC Software</p>
+</div>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
 	</div><!-- topicbox -->
 	<div id="navwrapper">
-	<div id="dragwrapper" class="toolwrapper">
+	<div id="dragwrapper" class="toolwrapper" alt="Show/Hide Contents" title="Show/Hide Contents">
 	<svg id="draghandleicon" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle"></use></svg>
 	</div>
-	<div id="toolbutton_wrapper" class="toolwrapper tablet">
-	<svg id="tablet_toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown"></use></svg>
+	<div id="toolbutton_wrapper" class="toolwrapper desk_tablet" alt="Show/Hide Page Header" title="Show/Hide Page Header">
+	<svg id="tablet_toolbar_updown_button" alt="Show/Hide Page Header" title="Show/Hide Page Header" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown_icon"></use></svg>
 	</div>
 	<div id="navsplitbar"></div>
 	<img id="leftright" src="./images/leftright.png" alt="resize nav pane" width="150" height="45" border="0" />
@@ -465,9 +468,9 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	<!-- NAV TABS START -->
 	<nav id="navpane_tabs">
 	<ul id="topictabs" class="tabs">
-	<li id="contentstab" class="hmtabs current" title="Table of Contents"><a id="contentstablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#th-list"></use></svg></a></li>
-	<li id="indextab" class="hmtabs" title="Keyword Index"><a id="indextablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#key-inv"></use></svg></a></li>
-	<li id="searchtab" class="hmtabs" title="Search Topics"><a id="searchtablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#search"></use></svg></a></li>
+	<li id="contentstab" class="hmtabs current" title="Table of Contents"><a id="contentstablink" title="Contents" href="hmcontent.html"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#th-list"></use></svg></a></li>
+	<li id="indextab" class="hmtabs" title="Keyword Index"><a id="indextablink" title="Index" href="hmkwindex.html"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#key-inv"></use></svg></a></li>
+	<li id="searchtab" class="hmtabs" title="Search Topics"><a id="searchtablink" title="Search" href="hmftsearch.html"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#search"></use></svg></a></li>
 	</ul>
 	</nav>
 	<!-- NAV TABS END -->	
@@ -496,14 +499,14 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 			<td id="mob_tb_hamburger" class="mob_hamburger" align="right" valign="top"><div id="phone_mobnav_hamburger_icon" class="mobnav phone"><svg id="phone_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div></td>
 			</tr></table>
 	</div></div>
-	</div> <!-- pagewrapper --> 
+	</div> <!-- pagewrapper -->
+	</div> <!-- helpwrapper -->
 	<div id="dragsurface"></div>
 <script type="text/javascript" src="./js/xmessage.js"></script> 
 <script id="hmPageInitScript" type="text/javascript">
 var fouc=document.getElementById("fouc");
-if (!hmFlags.isEWriter) fouc.parentNode.removeChild(fouc);
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 // Reset font size with preset cookie value if available
 (function(){
@@ -532,7 +535,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmFlags.tocInitWidth = 0;
 	hmFlags.jumpHighlight = false;
 	hmFlags.hmMainPage = "index.html";
-	hmFlags.hmTrackHost = "https://devhelp.devman3.com/";
+	hmFlags.hmTrackHost = "https://www.devman3.com/";
 	hmFlags.hmProject = "DevMan Help";
 	hmFlags.hmDefaultPage = "index.html";
 	hmFlags.hmCurrentPage = "breadcrumbbookmarks.html";
@@ -569,12 +572,10 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	  hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
+	  hmpage.topicfooter = $("div.topicfooter")[0].outerHTML;
 	  
-	
-	  /* window.navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40);
-			
-			navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40)
-	  		alert("Standalone: " + navigator.standalone + "\nTouchstart: " + hmBrowser.touchstart); */
+	  
+
 	  }
 	}); // $getScript
 	}  // loadScripts()
@@ -620,7 +621,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	else if (window.attachEvent)
 	window.attachEvent("onload", initScripts);
 	else window.onload = initScripts;
-helpman_mailrecipient = 'Support <support@devman3.com>';
+helpman_mailrecipient = 'Support Staff <support@devman3.com>';
 hmGetUrlParams = function() {/*! 
 * Enter code to save URL parameters to session variables inside the if clause below.
 * This will be executed when your WebHelp is first opened and the session variables

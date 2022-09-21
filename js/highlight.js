@@ -1,4 +1,4 @@
-// Modified Version of highlight.js for Help & Manual Premium Pack Skins
+﻿// Modified Version of highlight.js for Help & Manual Premium Pack Skins
 // ----------------------------------------------------------------------------
 
 

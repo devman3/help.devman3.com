@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-za">
 <head>
 <!-- HMSKIN FILETYPE: SEARCH -->
 <title>DevMan Help</title>
@@ -50,7 +50,7 @@ div#noscript {display: none;}
 </noscript>
 <script type="text/javascript">
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 		var pageName = "searchPage";
 		var hmSetFocus = function(){
@@ -245,7 +245,7 @@ if (true) document.write("<style>div.infoline{display:none;}</style>");
 </div>
 <script type="text/javascript">
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 // Reset font size with preset cookie value if available
 (function(){
@@ -472,7 +472,7 @@ var initScripts = function() {
 				event.preventDefault();
 				args = thisref.split("?");
 				var gaquery = "";
-				if (args[1].length > 0 && hmBrowser.server && gaaccount !== "") {
+				if (args[1].length > 0 && hmBrowser.server) {
 					gaquery = "\?q" + args[1].substr(args[1].indexOf("\=")).replace(/\s/,"+");
 					} 
 				else if (args[1].length < 1) {

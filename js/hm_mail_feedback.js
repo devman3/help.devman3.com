@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Constructor
@@ -57,7 +57,7 @@ function mFb() {
 	fbbody = unQuote("Dear Support Staff,"),
 	mailsubject = function(){return(unQuote("Feedback on:" +  " " + $("h1#hm_pageheader").text() + " > " + $("p.topictitle").text()));},
 	mailrecipient = helpman_mailrecipient,
-	simplerecipient = "support@ec-software.com",
+	simplerecipient = "support@devman3.com",
 	simplesubject = "Documentation%20Feedback",
 	mailurl = "",
 	query = "" !== "" ? "" : false;
@@ -80,7 +80,9 @@ function mFb() {
 	
 	// Simplified version for problems with special character sets
 	var simplefb = false;
-	var topicReference = window.location.protocol + "%2F%2F" + window.location.hostname + window.location.pathname;
+	
+	// Reference to the topic
+	var topicReference = window.location.protocol + "%2F%2F" + window.location.hostname + encodeURIComponent(window.location.pathname);
 	
 	// Close hamburger
 	if ($("div#navigationmenu").is(":visible"))

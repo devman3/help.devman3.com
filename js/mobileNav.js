@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Set up vibration support if available
@@ -17,6 +17,7 @@ hmWebHelp.closeTopNav = function() {
 	$("ul.topnav > li > a.current").removeClass("current");
 	hmpage.$mHamMenuSub.hide();
 	hmpage.$mHamMenu.slideUp("fast");
+	$(document).off(hmBrowser.touchstart + '.closemenu');
 };
 
 // Update topic navigation links

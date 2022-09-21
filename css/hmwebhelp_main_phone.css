@@ -1,5 +1,5 @@
- /* Main Help & Manual WebHelp Page Layout CSS
-	 Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿ /* Main Help & Manual WebHelp Page Layout CSS
+	 Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 /* Reset Styles for Consistency */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -432,7 +432,7 @@ div#hmpopupbox {
 	max-width: 95%;
 	max-height: 80%;
 	box-shadow: 0.125rem 0.125rem 0.500rem 0.025rem #676767;
-	z-index: 99999;
+	z-index: 999999;
 	}
 div#hmpopuptitlebar {
 	position: absolute;
@@ -872,7 +872,28 @@ span.f_CodeSampleLink {
 span.f_CodeSampleLink:hover {
 	color: #ffffff;
 	background: silver;
-}
+	}
+
+/* SharePoint ASPX Redirect Link */
+.aspxlinkpara {
+	margin-top: 100px;
+	text-align: center;
+	}
+.aspxbutton {
+	font-family: trebuchet, helvetica, sans-serif;
+	font-weight: bold;
+	background-color: silver;
+	border: none;
+	border-radius: 5px;
+	color: black;
+	padding: 5px 18px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
 
 /* Layout of printable version for browser print function */
 @media only print {

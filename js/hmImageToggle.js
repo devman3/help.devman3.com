@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 var HMImageToggle = function($img){
 	var	$imgbox, $captionbox = false,
@@ -79,7 +79,7 @@ var HMImageToggle = function($img){
 		hmWebHelp.funcs.closeImageToggle = closeImage;
 		
 		function maximizeImage(event) {
-			event.stopPropagation();
+			
 			if ($imgbox.width() < maxdims.w) {
 				if (maxdims.w > $(window).width() || maxdims.h > $(window).height()) {
 				$("body,html").css("overflow","auto");
@@ -144,7 +144,7 @@ var HMImageToggle = function($img){
 				hOffset = cboxHeight+vBorderWidth*2;
 			}
 			if (maxdims.w > opendims.w) {
-				$("div#imagezoom").on("click",maximizeImage).show();
+				$("div#imagezoom").on("click", maximizeImage).show();
 			}
 			$imgbox.animate({width: opendims.w, height: opendims.h + hOffset, top: newTop, left: newLeft },'fast',
 			function() {

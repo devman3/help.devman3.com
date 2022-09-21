@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-za">
 <head>
 <!-- HMSKIN FILETYPE: TOC -->
 <title>DevMan Help</title>
@@ -50,7 +50,7 @@ div#noscript {display: none;}
 </noscript>
 <script type="text/javascript">
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 		var pageName = "tocPage";
 		var hmDevice = {
@@ -240,7 +240,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 </div>
 <script type="text/javascript">
 /*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Reset font size with preset cookie value if available
@@ -338,7 +338,7 @@ function tocConstructor(toc) {
    function buildTocEntry(thisItem) {			
 	
 	var newItem = document.createElement("li"),
-		newItemSpan = document.createElement("span"),
+		newItemAlink = document.createElement("a"),
 		newItemCaption = document.createTextNode(thisItem.cp),
 		nodeType = getNodeType(thisItem);
 	
@@ -356,7 +356,9 @@ function tocConstructor(toc) {
 		thisItem.i0 = ".\/images\/internet.svg";
 		thisItem.i1 = ".\/images\/internet.svg";
 		}
-newItemSpan.setAttribute("style","background-image:url('"+thisItem.i0+"')");
+	newItemAlink.setAttribute("style","background-image:url('"+thisItem.i0+"')");
+	newItemAlink.setAttribute("href",thisItem.hf);
+	
 	// Store icon images for chapters without text directly in the HTML
 	if (thisItem.hf === "") {
 		newItem.setAttribute("src0", thisItem.i0);
@@ -421,8 +423,8 @@ newItemSpan.setAttribute("style","background-image:url('"+thisItem.i0+"')");
 		});
 		
 	}
-	newItemSpan.appendChild(newItemCaption);
-	newItem.appendChild(newItemSpan);	
+	newItemAlink.appendChild(newItemCaption);
+	newItem.appendChild(newItemAlink);	
 	return newItem;
    }
    
@@ -520,7 +522,7 @@ this.displayBranch = function(branch, animate, mode) {
 		// Only auto-scroll if the TOC has not been clicked
 		if (!self.tocLinkClicked) {
 		 setTimeout(function(){
-				var target = $("span.current");
+				var target = $("a.current");
 				$("div#hmpagebody").scrollTo(target,s,{axis: 'y', offset:{top:-10}});
 			},s + 50);
 	} else {
@@ -876,6 +878,10 @@ this.findElement = function(targetRef) {
 						homeAC = parentItem.ac;
 			}
 				}
+				// Home is default topic:
+				if (!hmBrowser.parenthome) {
+					homeHF = "index.html";
+					}
 				if (!hmDevice.phone) {
 				xMessage.sendObject("parent",{action: "setnavlinks", pbs: prevBS, phf: prevHF, pac: prevAC, hbs: homeBS, hhf: homeHF, hac: homeAC, nbs: nextBS, nhf: nextHF, nac: nextAC});
 				} else {

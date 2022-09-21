@@ -1,5 +1,5 @@
- /* Main Help & Manual WebHelp Page Layout CSS
-	 Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿ /* Main Help & Manual WebHelp Page Layout CSS
+	 Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 /* Reset Styles for Consistency */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -301,8 +301,8 @@ div#dragwrapper, div#toolbutton_wrapper {
 	cursor: ew-resize;
 	opacity: 1.0;
 	overflow: visible;
-}
-
+	}
+	
 @media only screen and (orientation : portrait) {
 div#dragwrapper, div#toolbutton_wrapper {
 	box-shadow: 2px 2px 2px #676767;
@@ -777,6 +777,8 @@ a#atoclink {
 
 div#autoTocWrapper {
 	position: absolute;
+	max-height: 90%;
+	overflow-y: auto;
 	display: none;
 	z-index: 100;
 	top: 3.1rem; right: 2.1rem;
