@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Send single email</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited { color: #999; }
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "",
+   prevP: "",
+   currP: "emailsendsingle.htm",
+   defP: "welcometodevman.htm",
+   titleP: "Send single email",
+   mailsubject: "Feedback on: Help - Send single email",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "EmailSendSingle",
+   mailpath: "DevMan functions &gt; Reference &gt; Reporting an issue /",
+   mailbody: "Dear Support Staff,",
+   mailrecipient: "Support Staff <support@ec-software.com>",
+   simplerecipient: "support@ec-software.com",
+   fbtype: false,
+   header: true,
+   background: "bg.png",
+   tablesReady: false,
+   togglesReady: false
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Contents",
+   atoc_tip: "Jump to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No contents entries on this page",
+   atoc_btntip_on: "Display/hide topic directory",
+   atoc_toptip: "Jump to top of page",
+   atoc_top: "Scroll to Top of Page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click to sort on this column",
+   umlauts: "false"
+   }
+
+</script>
+
+<script type="text/javascript"> 
+$(document).ready(function() {
+var doc = document;  
+try {
+if (parent.hmWebHelp.navWidth != null) doc = parent.document;
+doc.title = $("<div/>").html("Help - Send single email").text();
+window.onunload = function() {doc.title = $("<div/>").html("Help").text();}
+} catch(err) {}
+});
+</script>
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+   <script type="text/javascript" src="hmpopup_html.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "emailsendsingle.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Send single email</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+ 
+<p class="p_KidzHeader1"><span class="f_KidzHeader1">Send single email</span></p>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No contents entries on this page" title="No contents entries on this page" />
+<br /><span>Contents</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+
+<!--ZOOMRESTART-->
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzHeader12"><span class="f_KidzHeader12">Single email</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">1.</span><span class="f_KidzNormalIndent">If needed search for the contact (make sure your contact has an email address), tick your selection and click Send and choose Email. <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_1782637718X, this);" onmouseout="return hmhidePopup();" class="popuplink">TIP</a></span></p><p class="p_KidzNormalIndent"><img alt="entEmailSelect" width="792" height="296" style="margin:0;width:792px;height:296px;border:none" src="entemailselect.png"/></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">2.</span><a id="emailsend" class="hmanchor"></a><span class="f_KidzNormalIndent">Enter the details such as the </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">From </span><span class="f_KidzNormalIndent">address and </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">Subject</span><span class="f_KidzNormalIndent"> line. &nbsp;</span><br />
+<span class="f_KidzNormalIndent">You can type your message directly into the block or you may choose a template (see <a href="mailshot.htm" class="topiclink">Mailshot templates</a>.)</span></p><p class="p_KidzNormalIndent"><img alt="entEmailEnterDetails" width="626" height="267" style="margin:0;width:626px;height:267px;border:none" src="entemailenterdetails.png"/></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">3.</span><a id="emailccbcc" class="hmanchor"></a><span class="f_KidzNormalIndent">Once you're satisfied with your email and the address is valid select </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">Send</span><span class="f_KidzNormalIndent">.</span></p><p class="p_KidzNormalIndent"><img alt="EmailSend" width="875" height="290" style="margin:0;width:875px;height:290px;border:none" src="emailsend.png"/></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">4.</span><span class="f_KidzNormalIndent">Select </span><span class="f_KidzNormalIndent" style="font-style: italic; font-weight: bold;">Communication &gt; Email &gt; View</span><span class="f_KidzNormalIndent"> to check status of items sent. &nbsp;If you wish to send an email to a group of people see <a href="mailshot.htm" class="topiclink">create a mailshot</a>.</span></p><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent" style="font-weight: bold;">Email someone directly</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: -18px; margin: 0 38px 0 56px;"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><img alt="wpEmailQuickSend" width="562" height="305" style="margin:0;width:562px;height:305px;border:none" src="wpemailquicksend.png"/></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">There are a number of ways to see if your SMS or email has been delivered.</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">1.</span><span class="f_KidzNormalIndent">Once you have sent your email or SMS you will see a new option on the menu bar. Go to View &gt; Contact log or View &gt; Contact log detail</span></p><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSContactLog" width="645" height="236" style="margin:0;width:645px;height:236px;border:none" src="smscontactlog.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">2.</span><span class="f_KidzNormalIndent">The Contact log will indicate if your message was <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_1120534402X, this);" onmouseout="return hmhidePopup();" class="popuplink">pending</a>, <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_133504774X, this);" onmouseout="return hmhidePopup();" class="popuplink">submitted</a>, <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_355784013, this);" onmouseout="return hmhidePopup();" class="popuplink">sent</a> or <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_1210552618X, this);" onmouseout="return hmhidePopup();" class="popuplink">failed</a>. &nbsp;The Contact log detail provides email address, date and time. <a href="javascript:void(0);" onmouseover="return hmshowPopup(event, popid_1435131040, this);" onmouseout="return hmhidePopup();" class="popuplink">TIP</a></span></p><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A2','TOGGLE0186A2_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSLog1" width="816" height="196" style="margin:0;width:816px;height:196px;border:none" src="smslog1.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 20px; margin-left: 38px;"><span class="f_KidzNormalIndent" style="display:inline-block;width:20px;margin-left:-20px">3.</span><span class="f_KidzNormalIndent">Once you leave this screen, you cannot go back &nbsp;to it, however you can check if your emails or SMSs have been delivered by going to Administration &gt; Contact log &gt; and choosing one of the options.</span><br />
+<span class="f_KidzNormalIndent">&nbsp;</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A3','TOGGLE0186A3_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSContactLog1" width="923" height="295" style="margin:0;width:923px;height:295px;border:none" src="smscontactlog1.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">By choosing Individual items you can see the individuals whom you SMS'd and emailed. </span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A4','TOGGLE0186A4_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSContactLog2" width="765" height="278" style="margin:0;width:765px;height:278px;border:none" src="smscontactlog2.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">Batch summary</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A5_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A5','TOGGLE0186A5_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSBatchSummary" width="678" height="298" style="margin:0;width:678px;height:298px;border:none" src="smsbatchsummary.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">Monthly summary</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:18px"><img id="TOGGLE0186A6_ICON" class="dropdown-toggle-icon" alt="hmtoggle_plus1" width="9" height="9" style="margin:0;width:9px;height:9px;border:none" src="hmtoggle_plus1.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A6','TOGGLE0186A6_ICON')">Click here to view</a></span></td></tr></table></div><div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 38px 0 38px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="SMSMontlySummary" width="913" height="315" style="margin:0;width:913px;height:315px;border:none" src="smsmontlysummary.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
+
+<!--ZOOMSTOP--> 
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A1\',\'TOGGLE0186A1_ICON\')');
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A2\',\'TOGGLE0186A2_ICON\')');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A3\',\'TOGGLE0186A3_ICON\')');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A4\',\'TOGGLE0186A4_ICON\')');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A5\',\'TOGGLE0186A5_ICON\')');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6_ICON','hm.type','dropdown','hm.state','0','hm.src0','hmtoggle_plus0.gif','hm.src1','hmtoggle_plus1.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A6\',\'TOGGLE0186A6_ICON\')');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>
