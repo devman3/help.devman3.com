@@ -151,7 +151,7 @@ var hmpage = {
 		Fem2pix: function(em) {return (em * this.FbaseFontSize());},
 		anchorX: hmBrowser.server ? "\?anchor\=" : "\!anchor\=",
 		anchorY: hmBrowser.server ? "\?" : "\!",
-		embeddedBorder: true
+		embeddedBorder: false
 	};
 // Check for correct encoding in author's project
 if (/%|pt|px/i.test(hmpage.projectBaseFontRel)) {

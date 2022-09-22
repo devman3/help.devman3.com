@@ -38,7 +38,7 @@ Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.
 		currentHelpPage: "",
 		topicChanged: false,
 		zoomOpening: false,
-		embeddedBorder: true,
+		embeddedBorder: false,
 
 		//File exists check for local projects
 		FileExists: function(url) {
