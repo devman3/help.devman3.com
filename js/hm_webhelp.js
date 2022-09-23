@@ -1097,7 +1097,7 @@ hmWebHelp.hmMainPageInit = function() {
 		  hmWebHelp.resizePanes(parseInt(setNavWidth,10));
 	   hmWebHelp.pageDimensions = new hmWebHelp.pageDims();
 	   if (hmDevice.embedded) hmWebHelp.pageDimensions.embedInit();
-	   if (((hmpage.headerclosedonopen && !hmDevice.embedded) || (true && hmDevice.embedded)) && !hmDevice.phone) {
+	   if (((hmpage.headerclosedonopen && !hmDevice.embedded) || (false && hmDevice.embedded)) && !hmDevice.phone) {
 		   hmWebHelp.pageDimensions.pageHeaderUpDown(false);
 		   $("svg#toolbar_updown_close").hide();
 	   } else { /// $$$$ ?? check this

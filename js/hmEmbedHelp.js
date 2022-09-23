@@ -469,7 +469,7 @@ Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.
 			jQuery("html").css("overflow",FWcurrentOverflowH);
 			FWfullwindow = false;
 			
-			if (!true) {
+			if (!false) {
 			xMessage.sendObject("hmhelp",{action: "callfunction", fn: "hmWebHelp.openHeaderIfClosed", domain: hmDevice.targetDomain}); 
 			} else {
 			xMessage.sendObject("hmhelp",{action: "callfunction", fn: "hmWebHelp.closeHeaderIfOpen", domain: hmDevice.targetDomain});
