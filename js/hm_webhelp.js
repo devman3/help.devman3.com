@@ -1,6 +1,6 @@
-﻿/*! Main Help & Manual WebHelp 3.0 Functions
-	Copyright (c) 2015-2022 by Tim Green. All rights reserved. 
-	Contact: https://www.helpandmanual.com
+/*! Main Help & Manual WebHelp 3.0 Functions
+	Copyright (c) 2015-2021 by Tim Green. All rights reserved. 
+	Contact: https://www.ec-software.com
 */
 
 // General variables
@@ -25,7 +25,7 @@ var hmBrowser = {};
 	})(document.createElement('rabbit'));
 	hmBrowser.Flandscape = function() {if (hmBrowser.orientation) {return (Math.abs(window.orientation)==90);} else {return (window.innerHeight < window.innerWidth);}};
 	hmBrowser.MobileFirefox = (/Android.+?Gecko.+?Firefox/i.test(navigator.userAgent));
-	hmBrowser.isaspx = (/\.aspx??$/i.test(document.location.pathname));
+
 	hmBrowser.eventType = (('onmousedown' in window && !hmBrowser.nonDeskTouch) ? "mouse" : ('ontouchstart' in window) ? "touch" : ('msmaxtouchpoints' in window.navigator || navigator.msMaxTouchPoints > 0) ? "mstouchpoints" : ('maxtouchpoints' in window.navigator || navigator.maxTouchPoints > 0) ? "touchpoints" : "mouse");
 	
 	switch(hmBrowser.eventType) {
@@ -150,8 +150,7 @@ var hmpage = {
 		Fpix2em: function(pix) {return (pix / this.FbaseFontSize());},
 		Fem2pix: function(em) {return (em * this.FbaseFontSize());},
 		anchorX: hmBrowser.server ? "\?anchor\=" : "\!anchor\=",
-		anchorY: hmBrowser.server ? "\?" : "\!",
-		embeddedBorder: false
+		anchorY: hmBrowser.server ? "\?" : "\!"
 	};
 // Check for correct encoding in author's project
 if (/%|pt|px/i.test(hmpage.projectBaseFontRel)) {
@@ -176,55 +175,6 @@ hmWebHelp.trimString = function(str){
    return str.replace(/^\s+/g, '').replace(/\s+$/g, '');  
 };
 
-	// Header closer and opener for calling to embedded help
-hmWebHelp.closeHeaderIfOpen = function() {
-	if ($("div#headerbox").is(":visible")) {
-		hmWebHelp.pageDimensions.pageHeaderUpDown(false);
-		}
-	};
-hmWebHelp.openHeaderIfClosed = function() {
-	if ($("div#headerbox").is(":hidden")) {
-		hmWebHelp.pageDimensions.pageHeaderUpDown(false);
-		}
-	};
-
-hmWebHelp.embedBorderSwitch = function(mode, winWidth) {
-	var borderWidth = "0.154rem";
-	
-	if (["zoomin", "zoomout"].includes(mode)) {
-		if (mode == "zoomout") {
-			if (!hmpage.embeddedBorder) {
-				$("div#helpwrapper").css("border", borderWidth + " solid #dcdcdc");
-				} 
-			$("div#helpwrapper").css("border-width", "0 " + borderWidth + " 0 " + borderWidth);
-			
-			// Clear borders if the window is narrower than the viewport
-				if ($('div#helpwrapper').width() < winWidth) {
-						$('div#helpwrapper').css("border-width", "0 " + borderWidth);
-					} else {
-						$('div#helpwrapper').css("border-width", "0 0");
-					}
-		} else {
-			if (hmpage.embeddedBorder) {
-				$("div#helpwrapper").css("border-width", borderWidth + " " +  borderWidth + " "  + borderWidth + " " + borderWidth);
-				} else {
-				$("div#helpwrapper").css("border-width", "0 0 0 0");	
-				} 
-		}
-	} else if (["bordersOn", "bordersOff"].includes(mode)){
-		if (mode == "bordersOn") {
-			$("div#helpwrapper").css({"border-left-width": borderWidth,  "border-right-width": borderWidth});
-		} else {
-			$("div#helpwrapper").css({"border-left-width": "0",  "border-right-width": "0"});
-		}
-	}
-}
-// Scroll to top for script link use
-   var ScrollTop = function() {
-	   hmpage.$scrollBox.scrollTo(0,600);
-   }
-
-// Function for getting topic js file from cache instead of reloading it
 jQuery.cachedScript = function( url, options ) {
 
   // Use .done(function(script,textStatus){}); for callbacks
@@ -371,7 +321,7 @@ hmWebHelp.tocNav = new function() {
 				tempslice = args[x].split(stop);
 				if (tempslice.length == 3) {
 					if (tempslice[1] !== "") {
-						bakedbread += '\<a href="javascript:void(0)" title="'+tempslice[2]+'" onclick="hmWebHelp.tocNav({action: \'set\', bs: '+tempslice[0]+', href: \''+hmWebHelp.targetCheck(tempslice[1])+'\'})"\>' + tempslice[2] + '\</a\> &gt; ';
+						bakedbread += '\<a href="javascript:void(0)" onclick="hmWebHelp.tocNav({action: \'set\', bs: '+tempslice[0]+', href: \''+hmWebHelp.targetCheck(tempslice[1])+'\'})"\>' + tempslice[2] + '\</a\> &gt; ';
 		
 					}
 					else
@@ -681,18 +631,6 @@ hmWebHelp.hmTopicPageInit = function() {
 				// Need original event for touch coordinates
 				ev = event.originalEvent,
 				phonetop = hmpage.Fem2pix(3.000) - 10;
-				
-			// Change extension for ASPX version
-			if (hmBrowser.isaspx) {
-				var newTarget = popupTarget;
-				switch (popupTarget) {
-					
-					case "_hmpermalink.html":
-						newTarget = "_hmpermalink.aspx";
-						break;
-				}
-			}
-				
 			if (typeof hmXPopup === "object") {
 				hmXPopup.clickX = hmDevice.phone ? 0 : ev.pageX;
 				hmXPopup.clickY = hmDevice.phone ? phonetop : ev.pageY;
@@ -731,11 +669,7 @@ hmWebHelp.hmTopicPageInit = function() {
 			});
 		// Printable version link in hamburger menu
 		if (!hmDevice.phone && hmBrowser.server) {
-			let printwindow = "_hm_print_window.htm?";
-			if (hmBrowser.isaspx) {
-				printwindow = "_hm_print_window.aspx?";
-			}
-			$("a#hm_printable_link").attr("href",printwindow + hmFlags.hmCurrentPage).attr("target","hm_print_window");
+			$("a#hm_printable_link").attr("href","_hm_print_window.htm?" + hmFlags.hmCurrentPage).attr("target","hm_print_window");
 			}
 
 		// Hide server-only stuff when local
@@ -768,26 +702,6 @@ hmWebHelp.hmTopicPageInit = function() {
 				$("li#showhide_toggles span").first().html("Show Expanding Text");
 			}
 			
-		}
-		
-		// Page border and Hamburger Menu entry for embedded and aspx under SharePoint
-			
-		if (hmDevice.embedded && !hmDevice.phone) {
-			
-			if (hmDevice.desktop) {
-				if (hmpage.embeddedBorder) {
-					$("div#helpwrapper").css("border", "0.154rem solid #dcdcdc");
-				}
-				else {
-					$("div#helpwrapper").css("border", "0 solid #dcdcdc");
-				}
-			}
-			
-			if (hmBrowser.isaspx ) {
-				let $hmb_zoomentry = $("a[onclick='hmWebHelp.doFullEmbedWindow(this)']");
-				$hmb_zoomentry.attr("title","Open this documentation in a new tab");
-				$hmb_zoomentry.children("span").first().text("Open in New Window");
-			}
 		}
 		
 		// Inline Text Toggles
@@ -1097,10 +1011,10 @@ hmWebHelp.hmMainPageInit = function() {
 		  hmWebHelp.resizePanes(parseInt(setNavWidth,10));
 	   hmWebHelp.pageDimensions = new hmWebHelp.pageDims();
 	   if (hmDevice.embedded) hmWebHelp.pageDimensions.embedInit();
-	   if (((hmpage.headerclosedonopen && !hmDevice.embedded) || (false && hmDevice.embedded)) && !hmDevice.phone) {
+	   if (!hmDevice.embedded && hmpage.headerclosedonopen && !hmDevice.phone) 	{
 		   hmWebHelp.pageDimensions.pageHeaderUpDown(false);
 		   $("svg#toolbar_updown_close").hide();
-	   } else { /// $$$$ ?? check this
+	   } else if (!hmDevice.embedded) { /// $$$$ ?? check this
 		   $("svg#toolbar_updown_open").hide();
 	   }
 	   if (hmpage.headerclosedonopen && hmDevice.phone)
@@ -1182,8 +1096,8 @@ hmWebHelp.hmMainPageInit = function() {
 		});
 	}
 	
-	// Button tab for show/hide toolbar
-	if (!hmDevice.phone) {
+	// Tablet button tab for show/hide toolbar
+	if (hmDevice.tablet) {
 		$("div#toolbutton_wrapper").on(hmBrowser.touchstart,function(event){
 				hmWebHelp.pageDimensions.pageHeaderUpDown(false);
 		});
@@ -1193,15 +1107,15 @@ hmWebHelp.hmMainPageInit = function() {
 	$("a#contentstablink").on(hmBrowser.touchstart,function(event){
 		event.preventDefault();
 		hmWebHelp.switchNavTab('contents');
-		}).on("click",function(event){event.preventDefault();});
+		});
 	$("a#indextablink").on(hmBrowser.touchstart,function(event){
 		event.preventDefault();
 		hmWebHelp.switchNavTab('index');
-		}).on("click",function(event){event.preventDefault();});
+		});
 	$("a#searchtablink").on(hmBrowser.touchstart,function(event){
 		event.preventDefault();
 		hmWebHelp.switchNavTab('search');
-		}).on("click",function(event){event.preventDefault();});
+		});
 
 		// Sync the TOC as soon as it's loaded
 		if (hmTocLoaded) {
@@ -1346,7 +1260,7 @@ hmWebHelp.pageDims = function() {
 				hmpage.$topicbox.animate({
 					"top": topicPosUp
 				},(animate ? 400 : 0));
-				hmpage.$headerbox.slideUp((animate ? 400 : 0), function(){
+				hmpage.$headerbox.slideUp((animate ? "400" : "0"), function(){
 				if (reset) animate = true;
 				if (hmDevice.desktop) {
 					$("svg#showhide_header_icon").find("use").attr("xlink:href","#expand");
@@ -1477,14 +1391,19 @@ hmWebHelp.pageDims = function() {
 		
 		// Init for embedded WebHelp 
 		function embedInit() {
-			if (!hmDevice.embedded && hmDevice.desktop) {
-				if (hmpage.$headerbox.is(":hidden") && !true)
+			if (hmDevice.embedded && hmDevice.desktop) {
+				if (true && hmpage.$headerbox.is(":visible")) {
+					hmWebHelp.pageDimensions.pageHeaderUpDown(true);
+					$("p#ptopic_breadcrumbs").hide();
+				  }
+			} else if (!hmDevice.embedded && hmDevice.desktop) {
+				if (hmpage.$headerbox.is(":hidden"))
 					hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 				if (hmpage.breadcrumbs)
 					$("p#ptopic_breadcrumbs").show();
-			} else if (hmDevice.embedded && (hmDevice.tablet || hmDevice.phone)) {
+			} else if (hmDevice.tablet || hmDevice.phone) {
 				parentdomain = (/^(https?:\/\/.*?)\/.*?$/i).exec(document.referrer)[1];
-				xMessage.sendObject("parent",{action: "callfunction", fn: "hmHelp.doFullWindow", domain: parentdomain});
+		xMessage.sendObject("parent",{action: "callfunction", fn: "hmHelp.doFullWindow", domain: parentdomain});
 			}
 		} // embedInit()
 	
@@ -1858,7 +1777,7 @@ hmWebHelp.loadTopic = function(newTopic) {
 		var acTarget = "";
 		$("div#topicheaderwrapper span").addClass("wraptext");
 		// Hide breadcrumb links when the help is embedded in an iFrame within a larger page
-		// if ((hmDevice.desktop && hmDevice.embedded)) $("p#ptopic_breadcrumbs").hide();
+		if ((hmDevice.desktop && hmDevice.embedded)) $("p#ptopic_breadcrumbs").hide();
 		var $scrollBox = hmDevice.phone ? $("div#topicbox") : $("div#hmpagebody_scroller");
 		if (newTopic.anchor !== ""){
 			acTarget = hmpage.anchorX + newTopic.anchor;
@@ -1959,16 +1878,14 @@ hmWebHelp.doFullEmbedWindow = function(obj) {
 		newIcon = currentIcon == "#resize-full" ? "#resize-small" : "#resize-full",
 		parentdomain = (/^(https?:\/\/.*?)\/.*?$/i).exec(document.referrer)[1];
 		
-		if (!hmBrowser.isaspx) {
-			xMessage.sendObject("parent",{action: "callfunction", fn: "hmHelp.doFullWindow", domain: parentdomain});
-			hmDevice.embedded = newIcon.indexOf("-small") < 0;
-			hmWebHelp.pageDimensions.embedInit();
-			$("svg#fullscreen_toggle").find("use").attr("xlink:href",newIcon);
-			$objCaption.text(newCaption);
-			hmWebHelp.hamburgerMenu();
-		} else {
-			window.open(document.location,"webhelp_window");
-		}
+		xMessage.sendObject("parent",{action: "callfunction", fn: "hmHelp.doFullWindow", domain: parentdomain});
+
+		// hmDevice.embedded = newIcon.indexOf("off") < 0;
+		hmDevice.embedded = newIcon.indexOf("-small") < 0;
+		hmWebHelp.pageDimensions.embedInit();
+		$("svg#fullscreen_toggle").find("use").attr("xlink:href",newIcon);
+		$objCaption.text(newCaption);
+		hmWebHelp.hamburgerMenu();
 	};
 
 // Switch between the stacked navigation panes	
@@ -2388,14 +2305,6 @@ hmpage.narrowpageX = hmpage.Fnarrowpage();
 hmpage.shortpageX = hmpage.Fshortpage();
 
 $(document).ready(function() {
-
-	/* Redirect button for ASPX in SharePoint on Phones */
-
-	if ( hmDevice.embedded && hmDevice.phone && hmBrowser.isaspx && /SharePoint for iOS|SharePoint for Android/i.test(navigator.userAgent) ) {
-		$("#fouc").prepend('<p class="aspxlinkpara"><a class="aspxbutton" href="' + document.location.href + '" target="_blank">Open WebHelp</a></p>');
-		} else if (!hmFlags.isEWriter) {
-			$("#fouc").remove();
-			}
 
 	$("div#topicheaderwrapper span").addClass("wraptext");
 		var nsDelay = hmDevice.desktop ? 0 : 800;

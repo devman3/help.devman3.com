@@ -1,4 +1,4 @@
-﻿/* Popups */
+/* Popups */
 
 div#unclicker {
 	display: none;
@@ -25,7 +25,7 @@ div.hmpopup, p.hmpopup {
 div#hmpopupbox {
 	position: absolute; 
 	display: none; 
-	border: thin solid #737373;
+	border: 0.154rem solid #737373;
 	background-color: #737373;
 	top: 1rem; left: 1rem;
 	width: 20rem;
@@ -36,7 +36,7 @@ div#hmpopupbox {
 div#hmpopuptitlebar {
 	position: absolute;
 	top: 0; left: 0; right: -2px; 
-	height: 3rem;
+	height: 1.2rem;
 	background-color: #737373;
 	padding: 0 0.3rem; 
 	color: #ffffff;
@@ -44,11 +44,11 @@ div#hmpopuptitlebar {
 }
 div#hmpopuptitlebar p.hmpopup {
 	position: absolute;
-	left: 0; top: 0.2rem; bottom: 0; right: 1.5rem;
+	left: 0; top: 0; bottom: 0; right: 1.5rem;
 	margin: 0; padding: 0.15rem 0.5rem 0 0.5rem;
 	font-size: 1rem;
 	text-align: center;
-	line-height: 0.8;
+	line-height: 1;
 	}
 div#hmpopuptitlebar  div#hmpopuptitle {
 	position: absolute;
@@ -56,7 +56,7 @@ div#hmpopuptitlebar  div#hmpopuptitle {
 	cursor: move;
 	padding-top: 0.15rem;
 }
-div#hmpopuptitlebar div#hmclosepopup {
+div#hmpopuptitlebar div#hmclosepopup{
 	position: absolute;
 	top: 0; right: 0; bottom: 0;
 	width: 1.5rem;
@@ -75,7 +75,7 @@ div#hmpopuptitlebar  div#hmclosepopup:hover {
 	}
 div#hmpopuptitlelink {
 	position: absolute;
-	top: 1.6rem; left: 0; right: 0; 
+	top: 1.2rem; left: 0; right: 0; 
 	height: 1.2rem;
 }
 p.linkheader {

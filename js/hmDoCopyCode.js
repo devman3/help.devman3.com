@@ -1,4 +1,4 @@
-﻿hmWebHelp.funcs.hmDoCopyCode = function(event) {
+hmWebHelp.funcs.hmDoCopyCode = function(event) {
 	
 	var $codeLink = $(event.srcElement || event.target), 
 		$codeLinkHTML = $codeLink.html(),

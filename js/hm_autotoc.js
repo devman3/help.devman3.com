@@ -1,5 +1,5 @@
-﻿/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
 */
 function hmatoc() {
 
@@ -213,8 +213,8 @@ function hmatoc() {
 
 	function closeMenu(speed) {
 			var animation = "fast";
-			if (typeof speed == "string" && speed == "snap") animation = 0;
-			else if (typeof speed == "number") animation = speed;
+			if (typeof speed == "string" && speed == "snap")
+				animation = 0;
 			$("div#autoTocWrapper").slideUp(animation, function(){
 			$(window).off('resize.atocResize');
 			$("div#unclicker").off(hmBrowser.touchstart).hide();

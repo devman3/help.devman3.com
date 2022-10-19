@@ -1,4 +1,4 @@
-﻿/* Reset Styles for Consistency */
+/* Reset Styles for Consistency */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -76,55 +76,53 @@ ul#toc li {
 	background-repeat: no-repeat;
 	}
 
-ul#toc li > a {
+ul#toc li > span {
 	display: block;
 	padding: 0.143rem 0.143rem 0.143rem 1.786rem;
 	background-repeat: no-repeat;
 	background-position: 0.5rem 0.1rem;
 	background-size: 1.1rem;
 	color: #dfdfdf;
-	text-decoration: none;
 	}
-ul#toc li.lv2 a {
+ul#toc li.lv2 span{
 	background-position: 1.2rem 0.1rem;
 	padding-left: 2.50rem;
 	}
 
-ul#toc li.lv3 a {
+ul#toc li.lv3 span {
 	background-position: 2rem 0.1rem;
 	padding-left: 3.214rem;
 	}
-ul#toc li.lv4 a {
+ul#toc li.lv4 span {
 	background-position: 2.70rem 0.1rem;
 	padding-left: 3.929rem;
 	}
-ul#toc li.lv5 a {
+ul#toc li.lv5 span {
 	background-position: 3.4rem 0.1rem;
 	padding-left: 4.643rem;
 	}
-ul#toc li.lv6 a {
+ul#toc li.lv6 span {
 	background-position: 4.2rem 0.1rem;
 	padding-left: 5.357rem;
 	}
-ul#toc li.lv7 a {
+ul#toc li.lv7 span {
 	background-position: 4.9rem 0.1rem;
 	padding-left: 6.071rem;
 	}
-
 ul#toc li.current {
 	z-index: 10000;
 	}
-ul#toc li a:hover {
+ul#toc li span:hover {
 	background-color: #636363;
 	color: #dfdfdf
 	}
-ul#toc li a.current {
+ul#toc li span.current {
 	background-color: #737373;
 	color: #efefef;
 	font-weight: bold;
 	outline: thin solid #dcdcdc;
 	}
-ul#toc li a.current:hover {
+ul#toc li span.current:hover {
 	background-color: #636363;
 	color: #efefef;
 	font-weight: bold;

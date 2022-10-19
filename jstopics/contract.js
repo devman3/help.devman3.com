@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Contracts",
 hmDescription:"Overview  Use this feature to manage all your contracts.  Upload, store and organise your agreement records for easy access and retrieval.  Topics  \tFeatures Store all your",
-hmPrevLink:"approach.html",
+hmPrevLink:"lead.html",
 hmNextLink:"communicationandevents.html",
 hmParentLink:"fundraising2.html",
 hmBreadCrumbs:"<a href=\"fundraising2.html\">Fundraising<\/a>",

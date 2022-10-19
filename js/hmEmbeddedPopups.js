@@ -1,5 +1,5 @@
-﻿/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
 */
 
 // Get the path to the WebHelp folder and domains for remote check
@@ -11,11 +11,7 @@ var scriptEls = document.getElementsByTagName('script'),
 var	hmTargetDomain,
 	hmLocalDomain = document.location.protocol + "\/\/" + document.location.hostname,
 	domainmatch = /((?:^https?:\/\/|^\/\/).*?)\//i,
-	match = domainmatch.exec(hmPopupPath),
-	hmIsAspx = (/\.aspx??$/i.test(document.location.pathname));
-	
-var xpopupFile = !hmIsAspx ? "_hmXpopup.htm" : "_hmXpopup.aspx",
-	xtopicFile = !hmIsAspx ? "_hmXtopic.htm" : "_hmXtopic.aspx";
+	match = domainmatch.exec(hmPopupPath);
 
 	if (match != null) {
 		hmTargetDomain = match[1];
@@ -77,7 +73,9 @@ var hmXPopup = {};
 		
 		if (typeof xMessage == "undefined") {
 		jQuery.getScript(hmPopupPath + "js/xmessage.js", function( data, textStatus, jqxhr ) {
-			xMessage = new xMsg("EMBED PARENT: ");
+			if (typeof xMessage == "undefined") {
+				xMessage = new xMsg("EMBED PARENT: ");
+				}
 			doHmXPopup();
 			});
 		} else {
@@ -337,7 +335,7 @@ var doHmXPopup = function() {
 	
 	hmXPopup.displayInlineTopic = function() {
 	
-	jQuery("div#hmpopupbody").css("top",(jQuery("div#hmpopuptitlebar").height() + 2) +"px");
+	jQuery("div#hmpopupbody").css("top","2.6rem");
 			
 			hmXPopup.$topicLinkHeader.attr("href",hmXPopup.topicTarget);
 			jQuery("div#hmpopuptitlelink").show();
@@ -426,7 +424,7 @@ var doHmXPopup = function() {
 		
 		hmXPopup.noresize = false;
 		jQuery("div#hmpopuptitlelink").hide();
-		jQuery("div#hmpopupbody").css("top","1.6rem");
+		jQuery("div#hmpopupbody").css("top","1.2rem");
 	   
 	   hmXPopup.$popup.css({"top": hmXPopup.clickY, "left": hmXPopup.clickX});
 	   hmXPopup.$popup.show();
@@ -515,7 +513,7 @@ var doHmXPopup = function() {
 			hmXPopup.topicTarget = hmXPopup.refPath + thisPopup;
 			hmXPopup.topicTargetJS = thisPopup.substr(0,thisPopup.lastIndexOf("\.")) + ".js";
 			hmXPopup.$topicLinkHeader.attr("href",hmXPopup.topicTarget);
-			hmXPopup.$popframe.attr("src", hmXPopup.refPath + xtopicFile + "?" + hmXPopup.topicTargetJS);
+			hmXPopup.$popframe.attr("src", hmXPopup.refPath + "_hmXtopic.htm?" + hmXPopup.topicTargetJS);
 			
 			if (hmXPopup.popupTitles.hasOwnProperty(hmXPopup.refPath)) {
 				hmXPopup.$popuptitle.html(hmXPopup.popupTitles[hmXPopup.refPath]);
@@ -532,7 +530,7 @@ var doHmXPopup = function() {
 			hmXPopup.remoteAccess = true;
 			jQuery("div#hmpopuptitlelink").hide();
 			jQuery("div#hmpopupbody").css("top","1.2rem");
-			hmXPopup.$popframe.attr("src", hmXPopup.refPath + xpopupFile + "?" + thisPopup);
+			hmXPopup.$popframe.attr("src", hmXPopup.refPath + "_hmXpopup.htm?" + thisPopup);
 			hmXPopup.initPopup();
 			return;
 		}
@@ -550,7 +548,7 @@ var doHmXPopup = function() {
 			hmXPopup.topicTargetJS = thisPopup.substr(0,thisPopup.lastIndexOf("\.")) + ".js";
 			
 			if (hmXPopup.popupMode != "popup") {
-					hmXPopup.$popframe.attr("src", hmXPopup.refPath + xtopicFile + "?" + hmXPopup.topicTargetJS); 
+					hmXPopup.$popframe.attr("src", hmXPopup.refPath + "_hmXtopic.htm?" + hmXPopup.topicTargetJS); 
 					
 					if (hmXPopup.popupTitles.hasOwnProperty(hmXPopup.refPath)) {
 					hmXPopup.$popuptitle.html(hmXPopup.popupTitles[hmXPopup.refPath]);
@@ -568,7 +566,7 @@ var doHmXPopup = function() {
 			} else {				 
 				jQuery("div#hmpopuptitlelink").hide();
 				jQuery("div#hmpopupbody").css("top","1.2rem");
-				hmXPopup.$popframe.attr("src", hmXPopup.refPath + xpopupFile + "?" + thisPopup); 
+				hmXPopup.$popframe.attr("src", hmXPopup.refPath + "_hmXpopup.htm?" + thisPopup); 
 				hmXPopup.initPopup();
 			}
 

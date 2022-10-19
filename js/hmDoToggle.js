@@ -1,5 +1,5 @@
-﻿/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
 */
 
 // Constructor
@@ -23,42 +23,41 @@ function hmDropDownToggles() {
 		multi = typeof mlt !== "undefined",
 		doflash = true;
 		
-		function repositionToggle() {
+		function repositionToggle($thisToggle) {
 			if (typeof hmxtoggle == "undefined")
 				hmxtoggle = false;
 			var $scrollBox = !hmxtoggle ? hmpage.$scrollBox : $("html"),
-				hdTop = hmxtoggle ? $obj.offset().top : $obj.offset().top - $scrollBox.offset().top + $scrollBox.scrollTop(),
-				bdTop =  hmxtoggle ? $target.offset().top : $target.offset().top - $scrollBox.offset().top + $scrollBox.scrollTop(),
-				
-				toggleHeight = $obj.height() + $target.height(),
+				hdTop = !hmxtoggle ? $obj.position().top : $obj.offset().top,
+				bdTop = !hmxtoggle ? $target.position().top : $target.offset().top,
+				toggleHeight = (bdTop - hdTop) + $target.height(),
 				wdHeight = !hmxtoggle ? hmpage.$scrollContainer.height() : $(window).height(),
+				toggleOffset = (hdTop + toggleHeight) - wdHeight,
 				currentScroll = !hmxtoggle ? $scrollBox.scrollTop() : $("body").scrollTop(),
-				toggleOffset = hdTop - currentScroll,
-				toggleOverlap = toggleOffset + toggleHeight - wdHeight,
-				scrollTarget = Math.round(currentScroll + toggleOverlap);
-				
-				var conditionalFlash = function() {
-					if ($obj.attr("class") == "dropdown-toggle" && !self.clicked && !hmxtoggle)
-					hmWebHelp.flashTarget($obj,3,200);
-					}
-				
-				if ((toggleOffset + toggleHeight) > wdHeight) {
-					if (toggleHeight > wdHeight) {
-						$scrollBox.scrollTo(hdTop-10,300,{axis: 'y', onAfter: conditionalFlash
-						});
-					} else {
-						$scrollBox.scrollTo((scrollTarget+30 > hdTop-10 ? hdTop-10 : scrollTarget+30),300,{axis: 'y', onAfter: conditionalFlash});
-						}
-				} else {
-					conditionalFlash();
+				scrollTarget = currentScroll + toggleOffset,
+				scrollOffset = 0,
+				noScroll = false;
+				if (scrollTarget < currentScroll) {
+					noScroll = true;
+				} else if (toggleHeight > wdHeight || scrollTarget < 0) {
+					scrollOffset = -10;
+					scrollTarget = !hmxtoggle ? $obj : hdTop + currentScroll + scrollOffset;
 				}
+			
+			if (!noScroll) {
+			$scrollBox.scrollTo(scrollTarget,300,{axis: 'y', offset:{top: scrollOffset}, onAfter: function() {
+			if ($obj.attr("class") == "dropdown-toggle" && !self.clicked && !hmxtoggle)
+				hmWebHelp.flashTarget($obj,3,200);
+			}
+			});
+			}
+			else if ($obj.attr("class") == "dropdown-toggle" && !self.clicked && !hmxtoggle)	
+				hmWebHelp.flashTarget($obj,3,200);
 		}
 		
 		function openToggle() {
 			$target.slideDown(speed,function(){
 				if (!multi) {
-					//repositionToggle($target);
-					setTimeout(repositionToggle,50);
+					repositionToggle($target);
 				}
 				});
 			$obj.attr("data-state","1");
@@ -133,10 +132,7 @@ function hmDropDownToggles() {
 		targetState = "1";
 		$scrolltarget = null;
 	}
-	
-	if (document.location.search.indexOf("anchor=") > -1 && !$scrolltarget) {
-		History.replaceState(null,null,document.location.pathname);
-		}
+History.replaceState(null,null,document.location.pathname);
 		
 	if (mode === "toggle") {
 	$theseToggles.each(function(){

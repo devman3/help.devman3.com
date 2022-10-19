@@ -1,5 +1,5 @@
-﻿/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2022 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
+/*! Help & Manual WebHelp 3 Script functions
+Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
 */
  function layouttables() {
 	
