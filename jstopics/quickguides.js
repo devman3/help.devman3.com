@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Product guides",
 hmDescription:"Overview  We\'ve provided a number of guides explaining some of the more intricate features and processes on DevMan. These can be used for training and reference purposes.   \tP",
-hmPrevLink:"faqsupport.html",
+hmPrevLink:"faqsecurity.html",
 hmNextLink:"bursarymanagement.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

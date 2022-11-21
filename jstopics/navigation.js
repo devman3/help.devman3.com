@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Navigation",
 hmDescription:"Overview  To get started with DevMan, please view the step-by-step tutorials below. They outline the main elements you will encounter throughout the system.  Topics  \tHome p",
-hmPrevLink:"gettingstarted.html",
+hmPrevLink:"whatsnew.html",
 hmNextLink:"faq.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",
