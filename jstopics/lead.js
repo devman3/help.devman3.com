@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Leads",
 hmDescription:"Overview  Use this fundraising tool to track your prospect cultivation, from identification of potential donors through to contract approval and pledging.  Topics  \tFeatures",
-hmPrevLink:"donorprofile.html",
+hmPrevLink:"projects.html",
 hmNextLink:"contract.html",
 hmParentLink:"fundraising2.html",
 hmBreadCrumbs:"<a href=\"fundraising2.html\">Fundraising<\/a>",
