@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"DevMan functions",
 hmDescription:"Working procedures",
-hmPrevLink:"subscription.html",
+hmPrevLink:"eventmanagement.html",
 hmNextLink:"devcontact.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",
