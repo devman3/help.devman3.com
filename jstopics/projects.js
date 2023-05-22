@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Projects",
 hmDescription:"Overview  Use this feature to track and report on fundraising causes – referred to as projects in DevMan. Manage fundraising workflow, donation income and documentation for thes",
-hmPrevLink:"donorprofile.html",
+hmPrevLink:"donorengagement.html",
 hmNextLink:"lead.html",
 hmParentLink:"fundraising2.html",
 hmBreadCrumbs:"<a href=\"fundraising2.html\">Fundraising<\/a>",
