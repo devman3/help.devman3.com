@@ -167,6 +167,5 @@ keywords:[{kw:"18A",hrefs:["section18areceipts.html#reissue_s18"],captions:["Sec
 {kw:"Users",hrefs:["devadministrationmine.html#userrights"],captions:["Security"],subkw:[]},
 {kw:"Validate",hrefs:["email.html#emailaddressvalidate","email.html#failedaddressvalidate"],captions:["Email","Email"],subkw:[]},
 {kw:"View",hrefs:["eventmanagement.html#targetlist"],captions:["Event management"],subkw:[]},
-{kw:"View Edit Letter",hrefs:["letter.html#letterviewedit"],captions:["Letter"],subkw:[]},
 {kw:"Web stationery",hrefs:["eventmanagement.html#eventmodulefeatures"],captions:["Event management"],subkw:[]}]}
 )
