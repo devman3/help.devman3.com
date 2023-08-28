@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"At the event",
+hmDescription:"Overview  During the event, use the Event registration module: Send a welcome message via email or SMS once the guest is marked as attended. Send an event programme if availabl",
+hmPrevLink:"beforetheevent.html",
+hmNextLink:"aftertheevent.html",
+hmParentLink:"eventmanagement.html",
+hmBreadCrumbs:"<a href=\"eventmanagement.html\">Event management<\/a>",
+hmTitlePath:"Event management > At the event",
+hmHeader:"<p class=\"p_KidzHeader1\"><span class=\"f_KidzHeader1\">At the event<\/span><\/p>\n\r",
+hmBody:"<p class=\"p_KidzHeader12\"><span class=\"f_KidzHeader12\">Overview<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\" style=\"font-weight: bold;\">During<\/span><span class=\"f_KidzNormalIndent\"> the event, use the <\/span><span class=\"f_KidzNormalIndent\" style=\"font-weight: bold;\">Event registration module<\/span><span class=\"f_KidzNormalIndent\">:<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 2.3750rem;\"><span class=\"f_KidzNormalIndent\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_KidzNormalIndent\">Send a welcome message via email or SMS once the guest is marked as attended.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 2.3750rem;\"><span class=\"f_KidzNormalIndent\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_KidzNormalIndent\">Send an event programme if available.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzHeader12\"><span class=\"f_KidzHeader12\">Topics<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzHeader12\"><span class=\"f_KidzHeader12\">&nbsp;<\/span><\/p>\n\r"
+})

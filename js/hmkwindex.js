@@ -152,7 +152,6 @@ keywords:[{kw:"18A",hrefs:["section18areceipts.html#reissue_s18"],captions:["Sec
 {kw:"Steps",hrefs:["onlineresults.html#steps"],captions:["Online results"],subkw:[]},
 {kw:"Subscription",hrefs:["mailshot.html#mailshotrecipients","eventmanagement.html#eventmodulefeatures"],captions:["Mailshot","Event management"],subkw:[]},
 {kw:"Support",hrefs:["faqsupport.html#helpandsupport"],captions:["Support"],subkw:[]},
-{kw:"Target list",hrefs:["eventmanagement.html#targetlist"],captions:["Event management"],subkw:[]},
 {kw:"Tax",hrefs:["section18areceipts.html#sars2023","section18areceipts.html#selfserviceupdate"],captions:["Section 18A receipts","Section 18A receipts"],subkw:[]},
 {kw:"Template",hrefs:[],captions:[],subkw:[{kw:"Letter",hrefs:["faqletter.html"],captions:["Letters and templates"],subkw:[]}]},
 {kw:"Time",hrefs:["textmessage.html","textmessage.html#smsfaq"],captions:["SMS","SMS"],subkw:[]},
@@ -166,6 +165,5 @@ keywords:[{kw:"18A",hrefs:["section18areceipts.html#reissue_s18"],captions:["Sec
 {kw:"User",hrefs:["devsecurity.html#userprofile","securityadvanced.html#permissionsuseraccess"],captions:["Security","Advanced"],subkw:[{kw:"Permissions",hrefs:["secuserpermission.html"],captions:["Set or change user permissions"],subkw:[]}]},
 {kw:"Users",hrefs:["devadministrationmine.html#userrights"],captions:["Security"],subkw:[]},
 {kw:"Validate",hrefs:["email.html#emailaddressvalidate","email.html#failedaddressvalidate"],captions:["Email","Email"],subkw:[]},
-{kw:"View",hrefs:["eventmanagement.html#targetlist"],captions:["Event management"],subkw:[]},
 {kw:"Web stationery",hrefs:["eventmanagement.html#eventmodulefeatures"],captions:["Event management"],subkw:[]}]}
 )
