@@ -26,7 +26,7 @@ var hmXPopup = {};
 	hmXPopup.topicExtension = "";
 	hmXPopup.visitedTopics = {}; 
 	hmXPopup.remoteAccess = hmLocalDomain !== hmTargetDomain;
-	hmXPopup.ProjectName = "DevMan Help";
+	hmXPopup.ProjectName = "DevMan Online Help";
 	hmXPopup.contentWidth = 0; 
 	hmXPopup.contentHeight = 0;
 	hmXPopup.topicWidth = 0;

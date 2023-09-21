@@ -1,12 +1,12 @@
 // Project information
 
 hmProjectInfo = {
-	title: "DevMan Help",
+	title: "DevMan Online Help",
 	author: "IS Kidz Africa Pty Ltd",
 	copyright: "© 2023 IS Kidz Africa Pty Ltd",
-	summary: "Proud authors or Devman Bursary, Fundraising and Grant-making &nbsp;web application",
-	version: "4.11.20160229",
-	date: "Wednesday, 06 September 2023",
+	summary: "Proud authors of Devman Bursary, Fundraising and Grant-making &nbsp;web application",
+	version: "",
+	date: "Thursday, 21 September 2023",
 	language: "en-za",
 	mainfile: "index.html"
 	}

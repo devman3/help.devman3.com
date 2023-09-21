@@ -51,7 +51,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		mobileSleepReload: true,
 		// Unique project ID
 		compilehash: (function () {
-		var outVal = 0, t="DevMan HelpUser-defined Project ID";
+		var outVal = 0, t="DevMan Online HelpUser-defined Project ID";
 		for (var x = 0; x < t.length; x++) {
 			outVal = outVal + (t.charCodeAt(x)*(x+2));
 		}
@@ -333,7 +333,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	<div id="headerbox_wrapper">
 	<div id="headerbox">
 <a id="headerlogo" href="https://www.devman3.com" title="IS Kidz Africa (Pty) Ltd" target="_blank"></a>
-<div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">DevMan Help</h1></div>
+<div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">DevMan Online Help</h1></div>
 
 
 </div>
@@ -531,7 +531,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmFlags.jumpHighlight = false;
 	hmFlags.hmMainPage = "index.html";
 	hmFlags.hmTrackHost = "https://devhelp.devman3.com/";
-	hmFlags.hmProject = "DevMan Help";
+	hmFlags.hmProject = "DevMan Online Help";
 	hmFlags.hmDefaultPage = "index.html";
 	hmFlags.hmCurrentPage = "merge-contacts.html";
 	hmFlags.hmTOC = "hmcontent.html";
@@ -600,11 +600,11 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 			var titleBarText = "Merge Contacts";
 			switch ("topic") {
 				case "project":
-				titleBarText = "DevMan Help";
+				titleBarText = "DevMan Online Help";
 				break;
 				
 				case "project_topic":
-				titleBarText = "DevMan Help" + " \> " + "Merge Contacts"; 
+				titleBarText = "DevMan Online Help" + " \> " + "Merge Contacts"; 
 				break;
 				}
 			titleBarText = $("<textarea/>").html(titleBarText).text();
