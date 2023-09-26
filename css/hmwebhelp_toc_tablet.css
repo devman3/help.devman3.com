@@ -17,8 +17,8 @@ html {
 html, body {
 	font-size: 110%;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	color: #dfdfdf;
-	background-color: #737373;
+	color: #000000;
+	background-color: <%GEN_BGCOLOR%>;
 	overflow: hidden;
 	}
 * {
@@ -37,7 +37,7 @@ div#hmpageheader {
 div#hmpagebody {
 	position: absolute;
 	top: 0.5rem; left: 0.5rem; right: 0.5rem; bottom: 0.5rem;
-	background-color: #444444;
+	background-color: #365c6b;
 	overflow-y: auto; overflow-x: hidden;
 	border-style: solid;
 	border-color: #dcdcdc;
@@ -92,7 +92,7 @@ ul#toc li > span {
 	background-repeat: no-repeat;
 	background-position: 0.6rem 0.2rem;
 	background-size: 1.1rem;
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 ul#toc li.lv2 span{
 	background-position: 1.3rem 0.2rem;
@@ -123,8 +123,8 @@ ul#toc li.current {
 	z-index: 10000;
 	}
 ul#toc li span.current {
-	background-color: #737373;
-	color: #efefef;
+	background-color: #37626d;
+	color: #b3cad3;
 	font-weight: bold;
 	outline: thin solid #dcdcdc;
 	}
