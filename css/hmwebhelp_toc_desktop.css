@@ -14,8 +14,8 @@ footer, header, hgroup, menu, nav, section {
 body { 
 	font-size: 100%;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	color: #dfdfdf;
-	background-color: #737373;
+	color: #b3cad3;
+	background-color: #376d6d;
 	overflow: hidden;
 	}
 div#hmpageheader {
@@ -26,7 +26,7 @@ div#hmpageheader {
 div#hmpagebody {
 	position: absolute;
 	top: 0.5rem; left: 0.5rem; right: 0.5rem; bottom: 0.5rem;
-	background-color: #444444;
+	background-color: #365c6b;
 	overflow: auto;
 	border-style: solid;
 	border-color: #dcdcdc;
@@ -82,7 +82,7 @@ ul#toc li > span {
 	background-repeat: no-repeat;
 	background-position: 0.5rem 0.1rem;
 	background-size: 1.1rem;
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 ul#toc li.lv2 span{
 	background-position: 1.2rem 0.1rem;
@@ -113,18 +113,18 @@ ul#toc li.current {
 	z-index: 10000;
 	}
 ul#toc li span:hover {
-	background-color: #636363;
-	color: #dfdfdf
+	background-color: #376d6d;
+	color: #ffffff
 	}
 ul#toc li span.current {
-	background-color: #737373;
-	color: #efefef;
+	background-color: #37626d;
+	color: #b3cad3;
 	font-weight: bold;
 	outline: thin solid #dcdcdc;
 	}
 ul#toc li span.current:hover {
-	background-color: #636363;
-	color: #efefef;
+	background-color: #376d6d;
+	color: #000000;
 	font-weight: bold;
 	}
 

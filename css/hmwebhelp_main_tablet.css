@@ -81,7 +81,7 @@ li.hmtabs {
 	border-style: solid;
 	border-color: #dcdcdc;
 	border-bottom: none;
-	background-color: #a6a6a6;
+	background-color: #9ba1b0;
 	padding: 0.3rem 0.5rem 1rem 0.5rem;
 	outline: none;
 	cursor: pointer;
@@ -97,13 +97,13 @@ li.hmtabs a {
 /* Current Tab */ 
 li.hmtabs.current {
 	border-color: #dcdcdc;
-	background-color: #737373;
+	background-color: #376d6d;
 	}
 li.hmtabs.current a {
 	color: #ffffff;
 }
 li.hmtabs.current svg.tocicon {
-	fill: #ffffff;
+	fill: #b3cad3;
 }
 	
 /* General */
@@ -180,7 +180,7 @@ h1.page_header {
 /* Drop-down menus in page header */
 div#header_menu {
 	overflow: auto;
-	background-color: #737373;
+	background-color: #365c6b;
 	overflow: visible;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 0.900rem;
@@ -197,7 +197,7 @@ ul.topnav {
 	border-width: 0.154rem;
 	border-style: solid;
 	border-color: #dcdcdc;
-	background-color: #737373;
+	background-color: #365c6b;
 	z-index: 10000;
 	}
 
@@ -206,24 +206,24 @@ ul.topnav > li {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	background-color: #737373;
+	background-color: #365c6b;
 	}
 ul.topnav > li > a {
 	padding: 0.300rem 0.325rem;
 	}
 ul.topnav > li > a.current {
-	color: #ffffff;
+	color: #b3cad3;
 	color: #eaeaea;
 	}
 ul.topnav li a{
 	text-decoration: none;
 	font-weight: bold;
-	color: #dfdfdf;
+	color: #b3cad3;
 	display: block;
 	cursor: pointer;
 	}
 ul.topnav li a:visited {
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 ul.topnav ul.subnav {
 	display: none;
@@ -231,15 +231,15 @@ ul.topnav ul.subnav {
 	position: absolute;
 	right: 0; top: 100%;
 	margin-top: 0.150rem;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-width: 0 0.154rem 0.154rem 0.154rem;
 	border-style: solid;
 	border-color: #dcdcdc;
 	}
 ul.topnav ul.subnav > li{
     width: 100.5%;
-	background-color: #444444;
-	border-bottom: thin solid #ffffff;
+	background-color: #365c6b;
+	border-bottom: thin solid #c0c0c0;
 	}
 
 ul.topnav ul.subnav li.last {
@@ -297,7 +297,7 @@ div#dragwrapper, div#toolbutton_wrapper {
 	border-width: thin thin thin 0;
 	border-color: #dcdcdc;
 	border-style: solid;
-	background-color: #444444;
+	background-color: #365c6b;
 	cursor: ew-resize;
 	opacity: 1.0;
 	overflow: visible;
@@ -335,7 +335,7 @@ div.navbox {
 	border: 0.154rem solid #dcdcdc;
 	padding: 0; margin: 0;
 	overflow: hidden;
-	background-color: #737373;
+	background-color: #365c6b;
 	-webkit-overflow-scrolling: touch;
 	}
 div.navbox.on {
@@ -346,14 +346,14 @@ div.navbox.off {
 	}		
 iframe.navframe {
 	width:100%; height: 100%; margin: 0;
-	background-color: #737373;
+	background-color: #365c6b;
 	overflow: hidden;
 	}
 
 /* Topic Pane */	
 div#topicbox {
 	position: absolute;
-	background-color: #737373;
+	background-color: #365c6b;
 	top: 5rem;
 	right: 0.0rem; bottom: 0.0rem;
 	left: 22rem;
@@ -372,7 +372,7 @@ div#hmpageheader {
 	position: absolute;
 	top: 0.3rem; left: 0.5rem; right: 0.5rem;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	background-color: #737373;
+	background-color: #365c6b;
 	overflow: hidden;
 	}
 
@@ -465,7 +465,7 @@ p.topictitle {
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: <%TOPICTITLE_FONTSIZE_TABLET%>rem;
 	font-weight: bold;
-	color: #efefef;
+	color: #b3cad3;
 	margin: 0; padding: 0;
 	}	
 
@@ -483,15 +483,15 @@ a.topicnavlink svg.navicon {
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-bottom: -0.2rem;
-	fill: #ffffff;
+	fill: #b3cad3;
 	}
 a.topicnavlink:active {
 	opacity: 1.0;
-	background-color: #a6a6a6;
+	background-color: #376d6d;
 }
 a.topicnavlink span {
 	display: block;
-	color: #efefef;
+	color: #b3cad3;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 0.9rem;
@@ -500,11 +500,11 @@ a.topicnavlink span {
 a.topicnavlink.menu {
 	display: inline-block;
 }
-a.topicnavlink.disabled {
+a.topicnavlink.disabled, a.topicnavlink.disabled svg.navicon {
 	cursor: default;
 	background-color: transparent;
 	color: initial;
-	opacity: 0.6;
+	opacity: 0.4;
 }
 
 
@@ -516,19 +516,19 @@ div#navigationmenu {
 	top: 3.1rem; right: 1.1rem;
 	border: 0.154rem solid #dcdcdc;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-top: none;
 	box-shadow: 0.125rem 0.125rem 0.225rem 0.025rem #676767;
 	}
 ul#hamburgermenu {
 	list-style-type: none;
-	background-color: #444444;
+	background-color: #365c6b;
 	}
 ul#hamburgermenu li {
 	color: #f4f4f4;
 	fill: #f4f4f4;
-	background-color: #444444;
-	border-bottom: thin solid #ffffff;
+	background-color: #365c6b;
+	border-bottom: thin solid #c0c0c0;
 	padding: 0.125rem;
 	margin-left: -1px;
 	}
@@ -593,7 +593,7 @@ div#hmpopupbox {
 	position: absolute;
 	display: none;
 	border: 0.154rem solid #dcdcdc;
-	background-color: #737373;
+	background-color: #365c6b;
 	top: 5rem; left: 13rem;
 	width: 30rem;
 	height: 3.6rem;
@@ -606,7 +606,7 @@ div#hmpopuptitlebar {
 	position: absolute;
 	top: 0; left: 0; right: 0;
 	height: 1.5rem;
-	background-color: #737373;
+	background-color: #365c6b;
 	padding: 0 0.3rem;
 	color: #ffffff;
 	font-weight: bold;
@@ -784,7 +784,7 @@ div#autoTocWrapper {
 	padding: 0;
 	margin: 0;
 	border: 0.154rem solid #dcdcdc;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-top-width: 0;
 	box-shadow: 0.125rem 0.125rem 0.225rem 0.025rem #676767;
 }
@@ -794,14 +794,14 @@ div#autoTocMiddle, div#autoTocInner {
    margin: 0;
    position: relative;
    top: 0; right: 0; bottom: 0; left: 0;
-   background-color: #444444;
+   background-color: #365c6b;
    } 
 
 div#autoTocWrapper svg.atocicon {
 	width: 1rem;
 	height: 1rem;
 	margin-bottom: -0.2rem;
-	fill: #ffffff;
+	fill: #b3cad3;
 }
 p.autoTOC {
 	font-size: 0.900rem;
@@ -826,7 +826,7 @@ p.autoTOC.subTOC {
 	padding: 0.4rem;
 	padding-left: 0;
 	cursor: pointer;
-	border-bottom: thin solid #ffffff;
+	border-bottom: thin solid #c0c0c0;
 	background-color: transparent;
 	opacity: 0.7;
 }

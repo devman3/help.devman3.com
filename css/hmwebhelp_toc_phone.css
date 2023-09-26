@@ -18,8 +18,8 @@ html, body {
 body { 
 	font-size: 100%;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	color: #dfdfdf;
-	background-color: #737373;
+	color: #b3cad3;
+	background-color: #365c6b;
 	}
 * {
     -webkit-touch-callout: none;
@@ -37,7 +37,7 @@ div#hmpageheader {
 div#hmpagebody {
 	position: absolute;
 	top: 0.2rem; left: 0.2rem; right: 0.2rem; bottom: 0.2rem;
-	background-color: #444444;
+	background-color: #365c6b;
 	overflow-y: auto; overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 	border-style: solid;
@@ -90,7 +90,7 @@ ul#toc li > span {
 	background-repeat: no-repeat;
 	background-position: 0.6rem 0.2rem;
 	background-size: 1.1rem;
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 ul#toc li.lv2 span {
 	background-position: 1.3rem 0.2rem;
@@ -120,8 +120,8 @@ ul#toc li.current {
 	z-index: 10000;
 	}
 ul#toc li span.current {
-	background-color: #737373;
-	color: #efefef;
+	background-color: #37626d;
+	color: #b3cad3;
 	font-weight: bold;
 	outline: thin solid #dcdcdc;
 	}

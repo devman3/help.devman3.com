@@ -69,12 +69,12 @@ li.hmtabs {
 	padding: 0.2rem;
 	padding-bottom: 1rem;
 	margin-left: -0.6rem;
-	background-color: #a6a6a6;
+	background-color: #9ba1b0;
 	outline: none;
 	cursor: pointer;
 	}
 li.hmtabs:hover {
-	background-color: a6a6a6;
+	background-color: 9ba1b0;
  }
 li.hmtabs:first-child {
 	margin-left: 0;
@@ -91,18 +91,18 @@ li.hmtabs svg.tocicon {
 }
 li.hmtabs:hover svg.tocicon {
 	color: #ffffff;
-	fill: #ffffff;
+	fill: #b3cad3;
 	}
 
 /* Current Tab */ 
 li.hmtabs.current {
 	border-color: #dcdcdc;
-	background-color: #737373;
+	background-color: #376d6d;
 	cursor: default;
 	}
 li.hmtabs.current a , li.hmtabs.current svg.tocicon {
 	color: #ffffff;
-	fill: #ffffff;
+	fill: #b3cad3;
 	cursor: default;
 	}
 svg.tocicon {
@@ -186,7 +186,7 @@ h1.page_header {
 
 div#header_menu {
 	overflow: auto;
-	background-color: #737373;
+	background-color: #365c6b;
 	overflow: visible;
 	font-size: 0.750rem;
 	z-index: 1001;
@@ -203,7 +203,7 @@ ul.topnav {
 	border-width: 0.154rem;
 	border-style: solid;
 	border-color: #dcdcdc;
-	background-color: #737373;
+	background-color: #365c6b;
 	z-index: 10000;
 	}
 
@@ -212,28 +212,28 @@ ul.topnav > li {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	background-color: #737373;
+	background-color: #365c6b;
 	}
 ul.topnav > li > a {
 	padding: 0.300rem 0.325rem;
 }
 ul.topnav > li > a.current {
-	color: #ffffff;
+	color: #b3cad3;
 }
 ul.topnav li a {
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	font-weight: bold;
-	color: #dfdfdf;
+	color: #b3cad3;
 	display: block;
 	cursor: pointer;
 	}
 ul.topnav li a:visited {
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 ul.topnav > li > a:hover, ul.topnav > li > a.current {
-	color: #ffffff;
-	background-color: #737373;
+	color: #b3cad3;
+	background-color: #365c6b;
 	}
 ul.topnav ul.subnav {
 	display: none;
@@ -241,7 +241,7 @@ ul.topnav ul.subnav {
 	position: absolute;
 	right: 0; top: 100%;
 	margin-top: 0.154rem;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-width: 0 0.154rem 0.154rem 0.154rem;
 	border-style: solid;
 	border-color: #dcdcdc;
@@ -249,16 +249,16 @@ ul.topnav ul.subnav {
 
 ul.topnav ul.subnav > li{
     width: 100%;
-	background-color: #444444;
-	border-bottom: thin solid #ffffff;
+	background-color: #365c6b;
+	border-bottom: thin solid #c0c0c0;
 	}
 ul.topnav ul.subnav li.last {
 	margin-bottom: 0;
 	border-bottom: none;
 	}
 ul.topnav ul.subnav li:hover {
-	background-color: #bfbfbf;
-	color: #444444;
+	background-color: #365c6b;
+	color: #ffffff;
 }
 ul.topnav ul.subnav li a {
 	display: block;
@@ -271,7 +271,7 @@ ul.topnav ul.subnav li a {
 ul.topnav ul.subnav li.last a { 
 	}
 ul.topnav ul.subnav li a:hover {
-color: #444444;
+color: #ffffff;
 } 
 	
 /* Navigation Panes */
@@ -313,7 +313,7 @@ div#dragwrapper {
 	border-width: thin thin thin 0;
 	border-color: #dcdcdc;
 	border-style: solid;
-	background-color: #444444;
+	background-color: #365c6b;
 	cursor: ew-resize;
 	opacity: 1.0;
 	z-index: 20;
@@ -335,7 +335,7 @@ div.navbox {
 	border: 0.154rem solid #dcdcdc;
 	padding: 0; margin: 0;
 	overflow: hidden;
-	background-color: #737373;
+	background-color: #365c6b;
 	-webkit-overflow-scrolling: touch;
 	z-index: 1000;
 	}
@@ -354,7 +354,7 @@ iframe.navframe {
 /* Topic Pane */	
 div#topicbox {
 	position: absolute;
-	background-color: #737373;
+	background-color: #365c6b;
 	top:  5rem;
 	right: 0.0rem; bottom: 0.0rem;
 	border: 0.154rem solid #dcdcdc;
@@ -365,7 +365,7 @@ div#hmpageheader {
 	position: absolute;
 	top: 0.3rem; left: 0.5rem; right: 0.5rem;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	background-color: #737373;
+	background-color: #365c6b;
 	overflow: hidden;
 	}
 	
@@ -487,7 +487,7 @@ p.topictitle {
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: bold;
-	color: #efefef;
+	color: #b3cad3;
 	margin: 0; padding: 0;
 	}	
 
@@ -499,21 +499,21 @@ a.topicnavlink {
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
-	opacity: 0.9;
+	opacity: 0.8;
 	padding: 0.2rem;
 	}
 a.topicnavlink svg.navicon { 
-	color: #efefef;
-	fill: #ffffff;
+	color: #b3cad3;
+	fill: #b3cad3;
 	}
 a.topicnavlink:hover {
 	opacity: 1.0;
 	color: #ffffff;
-	background-color: #a6a6a6;
+	background-color: #376d6d;
 }
 a.topicnavlink span {
 	display: block;
-	color: #efefef;
+	color: #b3cad3;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 0.7rem;
@@ -523,11 +523,11 @@ a.topicnavlink svg.navicon {
 	width: 1.1rem;
 	height: 1.1rem;
 	margin-bottom: -0.2rem;
-	fill: #ffffff;
+	fill: #b3cad3;
 }
 a.topicnavlink:hover span, a.topicnavlink:hover svg.navicon {
 	color: #ffffff;
-	fill: #ffffff;
+	fill: #b3cad3;
 	}
 
 a.topicnavlink.menu {
@@ -551,25 +551,28 @@ div#navigationmenu {
 	top: 3.1rem; right: 2.1rem;
 	border: 0.154rem solid #dcdcdc;
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-top: none;
 	box-shadow: 0.125rem 0.125rem 0.500rem 0.025rem #676767;
 	}
 ul#hamburgermenu {
 	list-style-type: none;
-	background-color: #444444;
+	background-color: #365c6b;
 	width: 100%;
 	}
 ul#hamburgermenu li {
 	color: #f4f4f4;
-	border-bottom: thin solid #ffffff;
+	fill: #f4f4f4;
+	opacity: 1;
+	background-color: #365c6b;
+	border-bottom: thin solid #c0c0c0;
 	width: 100%;
 	}
 ul#hamburgermenu li.last {
 	border-bottom: none;
 	}
 ul#hamburgermenu li:hover {
-	background-color: #bfbfbf;
+	background-color: #365c6b;
 	opacity: 1.0;
 	cursor: pointer;
 	}
@@ -589,12 +592,12 @@ ul#hamburgermenu li a:visited {
 	color: #f4f4f4;
 	}
 ul#hamburgermenu li:hover a {
-	color: #444444;
+	color: #ffffff;
 	opacity: 1.0;
 	cursor: pointer;
 	}
 ul#hamburgermenu li:hover svg.hmbicon {
-	fill: #444444;
+	fill: #ffffff;
 	opacity: 1.0;
 	}
 ul#hamburgermenu li a:last-child {
@@ -649,7 +652,7 @@ div#hmpopupbox {
 	position: absolute;
 	display: none;
 	border: 0.154rem solid #dcdcdc;
-	background-color: #737373;
+	background-color: #365c6b;
 	top: 5rem; left: 13rem;
 	width: 30rem;
 	min-width: 15rem;
@@ -664,7 +667,7 @@ div#hmpopuptitlebar {
 	position: absolute;
 	top: 0; left: 0; right: 0;
 	height: 1.5rem;
-	background-color: #737373;
+	background-color: #365c6b;
 	padding: 0 0.3rem;
 	color: #ffffff;
 	font-weight: bold;
@@ -864,7 +867,7 @@ div#autoTocWrapper {
 	padding: 0;
 	margin: 0;
 	border: 0.154rem solid #dcdcdc;
-	background-color: #444444;
+	background-color: #365c6b;
 	border-top-width: 0;
 	box-shadow: 0.125rem 0.125rem 0.225rem 0.025rem #676767;
 }
@@ -891,7 +894,7 @@ p.autoTOC {
 	display: inline-block;
 }
 p.autoTOC:hover {
-	color: #444444;
+	color: #ffffff;
 }
 p.autoTOC.subTOC {
 	font-size: 0.800rem;
@@ -902,7 +905,7 @@ ul#autoTocList {
 	margin: 0;
 	padding: 0;
 	text-indent: 0;
-	background-color: #444444;
+	background-color: #365c6b;
 }
 ul#autoTocList li svg.atocicon {
 	fill: #f4f4f4;
@@ -916,9 +919,9 @@ ul#autoTocList li.autoTOC {
 	color: #f4f4f4;
 	padding: 0.1rem 0.25rem 0.25rem 0;
 	cursor: pointer;
-	border-bottom: thin solid #ffffff;
+	border-bottom: thin solid #c0c0c0;
 	background-color: transparent;
-	opacity: 1.0;
+	opacity: 0.7;
 }
 ul#autoTocList li.autoTOC:last-child { 
 	border-bottom: none;
@@ -928,14 +931,17 @@ ul#autoTocList li.autoTOC.subTOC {
 	padding-left: 1rem;
 	}
 ul#autoTocList li:hover {
-	color: #444444;
-	fill: #444444;
-	background-color: #bfbfbf;
+	color: #ffffff;
+	fill: ##ffffff;
+	background-color: #365c6b;
 	opacity: 1.0;
 }
-ul#autoTocList li:hover p.autoTOC, ul#autoTocList li:hover svg.atocicon {
-	color: #444444;
-	fill: #444444;
+ul#autoTocList li:hover p.autoTOC {
+	color: #ffffff;
+	fill: ##ffffff;
+	}
+ul#autoTocList li:hover svg.atocicon {
+	fill: #ffffff;
 	}
 div#atocIcon {
 	position: absolute;

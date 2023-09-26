@@ -73,7 +73,7 @@ li.hmtabs {
 	border-style: solid;
 	border-color: #dcdcdc;
 	border-bottom: none;
-	background-color: #a6a6a6;
+	background-color: #9ba1b0;
 	padding-top: 0.054rem;
 	padding-bottom: 1rem;
 	}
@@ -97,12 +97,11 @@ li.hmtabs svg.tocicon {
 /* Current Tab */ 
 li.hmtabs.current {
 	border-color: #dcdcdc;
-	border-color: transparent;
-	background-color: #737373;
+	background-color: #376d6d;
 	}
 li.hmtabs.current a, li.hmtabs.current svg.tocicon {
 	color: #ffffff;
-	fill: #ffffff;
+	fill: #b3cad3;
 	font-weight: 400;
 	cursor: default;
 	}
@@ -164,7 +163,7 @@ div#headerbox_wrapper {
 	
 div#headerbox {
 	position: relative;
-	background-color: #737373;
+	background-color: #365c6b;
 	top: 0px; left: 0px; right: 0px;
 	height: 3.000rem;
 	overflow: visible;
@@ -212,7 +211,7 @@ div#phone_hamburger_icon {
 	z-index: 10000;
 }
 svg#phone_hamburger, svg#phone_hamburger_mobnav {
-	fill: #ffffff;
+	fill: #b3cad3;
 	width: 1.6rem;
 	height: 1.6rem;
 }
@@ -232,7 +231,7 @@ ul.topnav {
 	margin: 0;
 	width: auto;
 	white-space: nowrap;
-	background-color: #737373;
+	background-color: #365c6b;
 	border-color: #dcdcdc;
 	border-style: solid;
 	border-width: 0 thin thin thin;
@@ -247,13 +246,13 @@ ul.topnav li {
 ul.topnav li a {
 	text-decoration: none;
 	font-weight: bold;
-	color: #dfdfdf;
+	color: #b3cad3;
 	padding: 0.300rem 0.325rem;
 	display: block;
 	cursor: pointer;
 	}
 ul.topnav li a:visited {
-	color: #dfdfdf;
+	color: #b3cad3;
 	}
 
 ul.topnav li span { 
@@ -268,7 +267,7 @@ ul.topnav li span.subhover {
 ul.topnav li ul.subnav {
 	display: none;
 	list-style: none;
-	background-color: #444444;
+	background-color: #365c6b;
 	}
 ul.topnav li ul.subnav li{
 	margin: 0; padding: 0;
@@ -425,7 +424,7 @@ div#hmpopupbox {
 	position: absolute;
 	display: none;
 	border: 0.154rem solid #dcdcdc;
-	background-color: #737373;
+	background-color: #365c6b;
 	top: 5rem; left: 13rem;
 	width: 30rem;
 	height: 3.6rem;
@@ -438,7 +437,7 @@ div#hmpopuptitlebar {
 	position: absolute;
 	top: 0; left: 0; right: 0;
 	height: 1.5rem;
-	background-color: #737373;
+	background-color: #365c6b;
 	padding: 0 0.3rem;
 	color: #ffffff;
 	font-weight: bold;
@@ -484,7 +483,7 @@ div#hmpopupbody {
 
 div#mob_toolbar_wrapper {
 	position: absolute;
-	background-color: #737373;
+	background-color: #656f87;
 	left: 0; right: 0; bottom: 0;
 	/*height: 50px;*/
 	height: 2.100rem;
@@ -496,13 +495,13 @@ div#mob_toolbar {
 	left: 0; right: 0; bottom: 0;
 	/*height: 34px;*/
 	height: 2.100rem;
-	background-color: #737373;
+	background-color: #656f87;
 	z-index: 50000;
 	}
 table.mobtoolbar {
 	width: 100%;
 	margin: 0; padding: 0;
-	background-color: #737373;
+	background-color: #656f87;
 	}
 p.topic_breadcrumbs { 
 	display: none;
@@ -603,8 +602,8 @@ p.topictitle {
 	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: bold;
-	color: #333333;
-	background-color: #dfdfdf;
+	color: #b3cad3;
+	background-color: #365c6b;
 	padding: 0.2rem;
 	}
 table#topicheadertable {
