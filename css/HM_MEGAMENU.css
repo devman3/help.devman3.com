@@ -126,6 +126,11 @@ div#headerwrapper {
   float: left;
 }
 
+#menu-wrapper div#homebutton {
+	background:  url('../images/spacer.gif') left top no-repeat;
+	width: 10px;
+	height: 42px;
+}
 #menu-wrapper div#homebutton a {
   display: block;
   width: 100%;

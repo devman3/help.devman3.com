@@ -137,7 +137,7 @@ var hmpage = {
 			);},
 		headerclosedonopen: (function(){
 			var storedHeaderState = sessionVariable.getSV("headerState");
-			return (false || (storedHeaderState !== null && storedHeaderState === "closed"))})(),
+			return (true || (storedHeaderState !== null && storedHeaderState === "closed"))})(),
 		headerclosed: !!(this.headerclosedonopen || $("div#headerbox").is(":hidden")),
 		tocclosedonopen: (function(){
 			var storedTocState = sessionVariable.getSV("tocState");
@@ -1657,7 +1657,7 @@ hmWebHelp.pageDims = function() {
 		// Init for embedded WebHelp $$$
 		function embedInit() {
 			if (!hmDevice.embedded && hmDevice.desktop) {
-				if (hmpage.$headerbox.is(":hidden") && !false)
+				if (hmpage.$headerbox.is(":hidden") && !true)
 					hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 				if (hmpage.breadcrumbs)
 					$("p#ptopic_breadcrumbs").show();
