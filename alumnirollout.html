@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-za">
 	<head>
-	<!-- Help+Manual Premium Pack Version 4.2.1 (c) 2015-2021 by Tim Green all rights reserved -->
+	<!-- Help+Manual Premium Pack 5.1.0 (c) 2015-2023 by Tim Green. All rights reserved. -->
 	<title>Alumni roll-out</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
+	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="mobile-web-app-capable" content="yes" />
@@ -12,36 +12,21 @@
 	<meta http-equiv="Expires" content="-1" />
 	<meta http-equiv="cache-control" content="no-cache" />	
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-	<meta name="generator" content="Help &amp; Manual" />
+	<meta name="generator" content="Help+Manual" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="Alumni roll-out You’ve upgraded to Devman to enhance productivity and manage your large Alumni data. &nbsp;Will it benefit you as promised? Will it be easier, quicker and will it" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="IS Kidz Africa Pty Ltd" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" /> 
-<!-- Insert Google web fonts references here. 
-
-Get your font references at https://fonts.google.com/ 
-
-Click on the black panel shown at the bottom of the Google fonts page when 
-you have selected your fonts to get your EMBED reference. Use STANDARD, not
-@IMPORT. Then click in the top right corner and download and install the
-the fonts to your Windows computer as well so that you canuse them in your 
-project. Otherwise they won't be referenced correctly. You don't need the
-"Specify in CSS" references. That is handled by Help+Manual.
-
-Example of a font reference for Roboto light, regular and medium:
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet">
-
-See the section on Google Web Fonts in the PP help for more details.
-Delete this comment to save space after adding your references. 
-
--->
+<!--This is set up for self-hosted Google Fonts on your own web server with font files included in the skin. See the help for instructions on using fonts hosted by Google -->
+<link type="text/css" href="./css/GoogleFonts.css" rel="stylesheet" />
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
+	<link id="customstylesheet" type="text/css" href="./css/custom_topic_styles.css" rel="stylesheet" />
+	<link type="text/css" href="./css/hmwebhelp_main.css" rel="stylesheet" />
 	<script type="text/javascript">
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 		var pageName = "mainPage";
 
@@ -66,7 +51,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
 				expires = "expires="+d.toGMTString();
 			}
-			document.cookie = cname + "=" + cvalue + "; " + expires;
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";";
 		},
 
 		hmGetCookie: function(cname) {
@@ -82,7 +67,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		
 		hmDeleteCookie: function(cname) {
 			var name = cname + "=";
-			document.cookie = name + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+			document.cookie = name + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 		}
 	
 	};
@@ -103,7 +88,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		return gotStorage;
 		})();
 		
-	sessionVariable = {
+	var sessionVariable = {
 		localS: storageOK,
 		
 		fxVal: function(v) {
@@ -136,7 +121,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 					return sessionStorage.getItem(hmDevice.compilehash + sVar);
 				else return null;
 			} else 
-				return hmDevice.hmGetCookie(sVar);
+				return hmDevice.hmGetCookie(hmDevice.compilehash + sVar);
 		},
 		deletePV: function(sVar) {
 			if (this.localS)
@@ -157,8 +142,11 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	
 	/* UI Location */
 	hmDevice.page = "topicpage";
-	hmDevice.baseFontSize = 95;
+	hmDevice.baseFontSize = 100;
 	hmDevice.fontChangeMax = 20;
+	
+	/* GA Active */
+	hmDevice.GAactive = true;
 	
 	/* Source Checks */
 	hmDevice.agent = navigator.userAgent.toLowerCase();
@@ -194,21 +182,14 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmDevice.minFontSize = hmDevice.fontSize - hmDevice.fontChangeMax;
 	if (hmDevice.device !== sessionVariable.getPV("hmDevice")) {
 		sessionVariable.setPV("hmDevice", hmDevice.device);
-		sessionVariable.setPV("fontSize",hmDevice.fontSize.toString());
+		sessionVariable.setPV("hmFontSize",hmDevice.fontSize.toString());
 		} else {
-			var tempSize = sessionVariable.getPV("fontSize");
+			var tempSize = sessionVariable.getPV("hmFontSize");
 			if (tempSize !== null)
 				hmDevice.fontSize = parseInt(tempSize,10);
 			else
-				sessionVariable.setPV("fontSize",hmDevice.fontSize.toString());
+				sessionVariable.setPV("hmFontSize",hmDevice.fontSize.toString());
 		}
-		
-	/* Main Stylesheet */
-	hmDevice.cssfile = document.createElement('link');
-	hmDevice.cssfile.rel = 'stylesheet';
-	hmDevice.cssfile.type = 'text/css';
-	hmDevice.cssfile.href = hmDevice.phone ? "./css/hmwebhelp_main_phone.css" : hmDevice.tablet ? "./css/hmwebhelp_main_tablet.css" : hmDevice.desktop ? "./css/hmwebhelp_main_desktop.css" : "./css/hmwebhelp_main_default.css";
-	document.getElementsByTagName('head')[0].appendChild(hmDevice.cssfile);
 
 	// Expand to full width of container frame if help is embedded in another page
 	if (hmDevice.embedded && hmDevice.desktop) {
@@ -217,15 +198,10 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 			embedStyle.appendChild(document.createTextNode("div#helpwrapper {max-width: 100% !important}"));
 			document.getElementsByTagName("head")[0].appendChild(embedStyle);
 	}
-
-	hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
+hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	var hmSearchActive = true,
-		hmIndexActive = true;
+		hmIndexActive = false;
 	</script>
-	<style type="text/css">.svgsprite{display:none;} 
-	div#fouc{background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10000;}
-	div#noscript {display: none;}
-	</style> 
 	<style id="livestyles" type="text/css"></style>
 	<noscript><style type="text/css">
 	div#pagewrapper {display: none;}
@@ -245,8 +221,9 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	}
 	</style>
 	</noscript>
-	<link rel="canonical" href="http://www.helpandmanual.com/help/alumnirollout.html" />
+	<link rel="canonical" href="https://www.devman3.com/alumnirollout.html" />
 	<script id="jqscript" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="./css/HM_CLASSICMENU.css" />
 </head>
 <body>
 <!--ZOOMSTOP-->
@@ -261,13 +238,27 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 <g class="svgsprite" id="search" width="30" height="32" viewBox="0 0 30 32">
 <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zM29.728 29.728q0 0.928-0.704 1.6t-1.6 0.672q-0.96 0-1.6-0.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-0.992t-4-2.688-2.688-4-0.992-4.896 0.992-4.864 2.688-4.032 4-2.688 4.896-0.992 4.864 0.992 4.032 2.688 2.688 4.032 0.992 4.864q0 3.936-2.208 7.136l6.112 6.112q0.672 0.672 0.672 1.632z"></path>
 	</g>
-<g class="svgsprite" id="draghandle" width="30" height="32" viewBox="0 0 30 32">
-    <path d="M21.482,17.037v-4.977h-8.877V4.977h8.877V0L30,8.519L21.482,17.037z M0,22.2l8.518,8.519v-4.977h8.877v-7.084H8.518v-4.977
-	L0,22.2z"></path>
+<g class="svgsprite" id="draghandle_r" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M10,6L8.59,7.41,13.17,12l-4.58,4.59L10,18l6,-6z"></path>
   </g>
-<g class="svgsprite" id="toolbar_updown" width="30" height="30" viewBox="0 0 30 30">
+<g class="svgsprite" id="draghandle_l" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M15.41,7.41L14,6l-6,6,6,6,1.41,-1.41L10.83,12z"></path>
+  </g>
+<g class="svgsprite" id="draghandle_rm" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M12.8 24.896l8.096-8.096q0.352-0.352 0.352-0.8t-0.352-0.8l-8.096-8.096q-0.32-0.352-0.8-0.352t-0.8 0.352l-1.824 1.792q-0.352 0.352-0.352 0.832t0.352 0.8l5.472 5.472-5.472 5.472q-0.352 0.352-0.352 0.8t0.352 0.832l1.824 1.792q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+  </g>
+<g class="svgsprite" id="draghandle_lm" width="30" height="32" viewBox="0 0 30 32">
+    <path d="M16.224 24.896l1.824-1.792q0.352-0.352 0.352-0.832t-0.352-0.8l-5.472-5.472 5.472-5.472q0.352-0.352 0.352-0.8t-0.352-0.832l-1.824-1.792q-0.32-0.352-0.8-0.352t-0.8 0.352l-8.096 8.096q-0.352 0.32-0.352 0.8t0.352 0.8l8.096 8.096q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
+  </g>
+<g class="svgsprite" id="toolbar_updown_icon" width="30" height="30" viewBox="0 0 30 30">
     <path d="M17.038,8.518h-4.977v8.879l-7.084-0.002V8.518H0L8.519,0L17.038,8.518z M22.2,30l8.519-8.518h-4.977v-8.877l-7.084-0.002
 	v8.879h-4.977L22.2,30z"></path>
+  </g>
+<g class="svgsprite" id="toolbar_close" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M16.295 15.705C16.295 15.705 17.705 14.295 17.705 14.295C17.705 14.295 11.705 8.295 11.705 8.295C11.705 8.295 5.705 14.295 5.705 14.295C5.705 14.295 7.115 15.705 7.115 15.705C7.115 15.705 11.705 11.125 11.705 11.125C11.705 11.125 16.295 15.705 16.295 15.705"></path>
+  </g>
+<g class="svgsprite" id="toolbar_open" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M7.115 8.295C7.115 8.295 5.705 9.705 5.705 9.705C5.705 9.705 11.705 15.705 11.705 15.705C11.705 15.705 17.705 9.705 17.705 9.705C17.705 9.705 16.295 8.295 16.295 8.295C16.295 8.295 11.705 12.875 11.705 12.875C11.705 12.875 7.115 8.295 7.115 8.295"></path>
   </g>
 <g class="svgsprite" id="angle-circled-left" width="27" height="32" viewBox="0 0 27 32">
 <path d="M16.224 24.896l1.824-1.792q0.352-0.352 0.352-0.832t-0.352-0.8l-5.472-5.472 5.472-5.472q0.352-0.352 0.352-0.8t-0.352-0.832l-1.824-1.792q-0.32-0.352-0.8-0.352t-0.8 0.352l-8.096 8.096q-0.352 0.32-0.352 0.8t0.352 0.8l8.096 8.096q0.352 0.352 0.8 0.352t0.8-0.352zM27.424 16q0 3.744-1.824 6.88t-4.992 4.992-6.88 1.856-6.912-1.856-4.96-4.992-1.856-6.88 1.856-6.88 4.96-4.992 6.912-1.856 6.88 1.856 4.992 4.992 1.824 6.88z"></path>
@@ -281,6 +272,9 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 <g class="svgsprite" id="menu" width="27" height="32" viewBox="0 0 27 32">
     <path d="M27.424 24v2.272q0 0.48-0.32 0.8t-0.832 0.352h-25.12q-0.48 0-0.8-0.352t-0.352-0.8v-2.272q0-0.48 0.352-0.8t0.8-0.352h25.12q0.48 0 0.832 0.352t0.32 0.8zM27.424 14.848v2.304q0 0.448-0.32 0.8t-0.832 0.32h-25.12q-0.48 0-0.8-0.32t-0.352-0.8v-2.304q0-0.448 0.352-0.8t0.8-0.32h25.12q0.48 0 0.832 0.32t0.32 0.8zM27.424 5.728v2.272q0 0.48-0.32 0.8t-0.832 0.352h-25.12q-0.48 0-0.8-0.352t-0.352-0.8v-2.272q0-0.48 0.352-0.832t0.8-0.32h25.12q0.48 0 0.832 0.32t0.32 0.832z"></path>
   </g>
+<g class="svgsprite" id="weblink" width="32" height="32" viewBox="0 0 27 32">
+ <path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2zm6.93,6h-2.95c-0.32,-1.25,-0.78,-2.45,-1.38,-3.56,1.84,0.63,3.37,1.91,4.33,3.56zM12,4.04c0.83,1.2,1.48,2.53,1.91,3.96h-3.82c0.43,-1.43,1.08,-2.76,1.91,-3.96zM4.26,14C4.1,13.36,4,12.69,4,12s0.1,-1.36,0.26,-2h3.38c-0.08,0.66,-0.14,1.32,-0.14,2,0,0.68,0.06,1.34,0.14,2H4.26zm0.82,2h2.95c0.32,1.25,0.78,2.45,1.38,3.56,-1.84,-0.63,-3.37,-1.9,-4.33,-3.56zm2.95,-8H5.08c0.96,-1.66,2.49,-2.93,4.33,-3.56C8.81,5.55,8.35,6.75,8.03,8zM12,19.96c-0.83,-1.2,-1.48,-2.53,-1.91,-3.96h3.82c-0.43,1.43,-1.08,2.76,-1.91,3.96zM14.34,14H9.66c-0.09,-0.66,-0.16,-1.32,-0.16,-2,0,-0.68,0.07,-1.35,0.16,-2h4.68c0.09,0.65,0.16,1.32,0.16,2,0,0.68,-0.07,1.34,-0.16,2zm0.25,5.56c0.6,-1.11,1.06,-2.31,1.38,-3.56h2.95c-0.96,1.65,-2.49,2.93,-4.33,3.56zM16.36,14c0.08,-0.66,0.14,-1.32,0.14,-2,0,-0.68,-0.06,-1.34,-0.14,-2h3.38c0.16,0.64,0.26,1.31,0.26,2s-0.1,1.36,-0.26,2h-3.38z"></path>
+ </g>
 <g class="svgsprite" id="collapse" width="27" height="32" viewBox="0 0 27 32">
 <path d="M20.448 19.936q-0.32 0.64-1.024 0.64h-11.424q-0.704 0-1.024-0.64-0.32-0.608 0.096-1.184l5.728-8q0.32-0.48 0.928-0.48t0.928 0.48l5.696 8q0.416 0.576 0.096 1.184zM22.848 24.576v-17.152q0-0.224-0.16-0.384t-0.416-0.192h-17.12q-0.224 0-0.416 0.192t-0.16 0.384v17.152q0 0.224 0.16 0.384t0.416 0.192h17.12q0.256 0 0.416-0.192t0.16-0.384zM27.424 7.424v17.152q0 2.112-1.504 3.616t-3.648 1.536h-17.12q-2.144 0-3.648-1.536t-1.504-3.616v-17.152q0-2.112 1.504-3.616t3.648-1.536h17.12q2.144 0 3.648 1.536t1.504 3.616z"></path>
 	</g>
@@ -323,96 +317,168 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 <g class="svgsprite" id="ok-squared" width="27" height="32" viewBox="0 0 27 32">
 <path d="M12.224 23.2l10.976-10.976q0.32-0.32 0.32-0.8t-0.32-0.8l-1.824-1.824q-0.352-0.32-0.8-0.32t-0.8 0.32l-8.352 8.352-3.776-3.776q-0.32-0.352-0.8-0.352t-0.8 0.352l-1.824 1.824q-0.32 0.32-0.32 0.8t0.32 0.8l6.4 6.4q0.352 0.32 0.8 0.32t0.8-0.32zM27.424 7.424v17.152q0 2.112-1.504 3.616t-3.648 1.536h-17.12q-2.144 0-3.648-1.536t-1.504-3.616v-17.152q0-2.112 1.504-3.616t3.648-1.536h17.12q2.144 0 3.648 1.536t1.504 3.616z"></path>
 	</g>
+<symbol class="svgsprite" id="menu-closed" viewBox="0 0 24 24">
+<path d="M2.99999995 23.9999998C2.99999995 23.9999998 21.0123147 12.01849265 21.0123147 12.01849265C21.0123147 12.01849265 3.02464845 1.28000000075e-05 3.02464845 1.28000000075e-05C3.02464845 1.28000000075e-05 2.99999995 23.9999998 2.99999995 23.9999998"></path>
+  </symbol>
+<symbol class="svgsprite" id="menu-open" viewBox="0 0 24 24">
+    <path d="M0.0 3.0C0.0 3.0 12.0 21.0 12.0 21.0C12.0 21.0 24.0 3.0 24.0 3.0C24.0 3.0 0.0 3.0 0.0 3.0"></path>
+  </symbol>
+<symbol class="svgsprite" id="close-search" viewBox="0 0 72 72">
+	<path d="M57 19.23L52.77 15 36 31.77 19.23 15 15 19.23 31.77 36 15 52.77 19.23 57 36 40.23 52.77 57 57 52.77 40.23 36 57 19.23z"></path>
+	</symbol>
 </defs>
 </svg>
-<div id="fouc"></div><div id="noscript"><h2 id="noscriptwarning">Please enable JavaScript to view this site.</h2></div>
-	<div id="pagewrapper">
+<div id="fouc" style="background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:100001;"></div><div id="noscript"><h2 id="noscriptwarning">Please enable JavaScript to view this site.</h2></div>
+	<div id="helpwrapper">
+	<!--<div id="pagewrapper">-->
 	<div id="toolbar_updown" class="toolwrapper phone">
-	<svg id="toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown"></use></svg>
+	<svg id="toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown_icon"></use></svg>
 	</div>
-	<div id="headerbox_wrapper">
+	<header id="headerbox_wrapper">
 	<div id="headerbox">
-
-<div id="headerwrapper"><h1 class="page_header" id="hm_pageheader">DevMan Online Help</h1></div>
-
-
-</div>
-	<div id="header_menu">
+	<div id="headerwrapper">
+<nav id="header_menu">
+<div id="homebutton"><a id="homebuttonlink" href="https://www.devman3.com/" alt="IS Kidz Africa (Pty) Ltd" title="IS Kidz Africa (Pty) Ltd" aria-label="IS Kidz Africa (Pty) Ltd">&nbsp;</a></div>
+<ul id="topnav" class="topnav" role="tablist">
+	<span>
+	<li class="desk_tablet headerlink logo"><a href="https://www.helpandmanual.com/" target="_blank" class="extralink" title="EC Software Website" aria-label="EC Software Website"><svg class="submenu_icon" alt="EC Software Website" viewBox="0 0 32 32"><use xlink:href="#weblink"></use></svg><span>EC Software Website</span></a></li>
+    <li class="header" role="tab">
+        <a title="Tutorials for programmers" aria-label="Tutorials for programmers" href="#">
+		<svg class="submenu_icon" alt="Show/Hide Submenu" viewBox="0 0 24 24"><use xlink:href="#menu-closed"></use></svg>
+		<span>Tutorials</span>
+		</a>  
+        <ul class="subnav">
+		<div class="subnav-menu">  
+			<div id="menu-tutorials" class="blockmenu image left-divider" style="background-image: url('./images/hmlogo_white.png')">
+			<p class="menu-header" style="background-image: url('./images/favorite.svg'); display: none;">These Tutorials</p>
+            <li><a href="https://www.helpandmanual.com/support_tutorials.html" target="_blank" title="Main Tutorials Page" aria-label="Main Tutorials Page"><span>Tutorials Page</span></a></li>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#vb" target="_blank" title="Visual Basic tutorials" aria-label="Visual Basic tutorials"><span>Visual Basic</span></a></li>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#dotnet" target="_blank" title=".NET language tutorials" aria-label=".NET language tutorials"><span>For .NET languages</span></a></li>
+			</div>
+			<div class="blockmenu right-divider">
+			<p class="menu-header icon" style="background-image: url('./images/build.svg');">Those Tutorials</p>
+			<li><a href="https://www.helpandmanual.com/support_tutorials.html#ac" target="_blank" title="Microsoft Access tutorials" aria-label="Microsoft Access tutorials"><span>Microsoft Access</span></a></li>
+			<li><a class="icon" href="https://www.helpandmanual.com/support_tutorials.html#foxpro" target="_blank" title="Visual Foxpro tutorials" aria-label="Visual Foxpro tutorials" style="background-image: url('./images/favorite.svg')"><span>Visual Foxpro</span></a><br/></li>
+			</div>
+			<div class="description right-divider">
+			<p class="menu-description">The tutorials linked to on the left show you how to make calls to your CHM help files in a wide variety of programming languages.<br/><br/></p></div> 
+		</div>
+        </ul>  
+    </li>  
+    <li class="header" role="tab">  
+        <a title="Free resources for help authors" aria-label="Free resources for help authors" href="#">
+		<svg class="submenu_icon" alt="Show/Hide Submenu" viewBox="0 0 24 24"><use xlink:href="#menu-closed"></use></svg>
+		<span>Resources</span>
+		</a>
+        <ul id="banner_menu" class="subnav">
+		<div class="subnav-menu">
+			<div class="fullmenu">
+			<p class="menu-header center">Free resources for help authors</p>
+            <li><a href="https://www.helpandmanual.com/downloads_mscomp.html" target="_blank" title="Help compiler downloads" aria-label="Help compiler downloads">Help Compilers</a></li>  
+            <li><a href="https://www.helpandmanual.com/downloads_delphi.html" target="_blank" title="Free components for Delphi programmers" aria-label="Free components for Delphi programmers">Delphi Components</a></li> 
+			<li><a href="http://www.tntscreencapture.com/" target="_blank" title="Free TNT screen capture utility" aria-label="Free TNT screen capture utility">TNT Screen Capture</a></li>
+			</div>
+		</div>
+        </ul>  
+    </li>  
+    <li class="header last" role="tab">
+		<a title="Sources for further information" aria-label="Sources for further information" href="#">
+		<svg class="submenu_icon" alt="Show/Hide Submenu" viewBox="0 0 24 24"><use xlink:href="#menu-closed"></use></svg>
+		<span>Information</span>
+		</a>
+	<ul class="subnav">
+	<div class="subnav-menu">
+		<div class="fullmenu"> 
+		<p class="menu-header center">Sources for further information</p>
+	    <li><a class="icon" style="background-image: url('./images/favorite.svg')" href="https://www.helpandmanual.com/company_about.html" target="_blank" title="About EC Software" aria-label="About EC Software"><span>About</span></a></li>  
+		<li><a class="icon" style="background-image: url('./images/build.svg')" href="https://www.helpandmanual.com/news/" target="_blank" title="The EC Software news blog and RSS feed" aria-label="The EC Software news blog and RSS feed"><span>News Blog</span></a></li>  
+		<li><a class="icon" style="background-image: url('./images/favorite.svg')" href="https://www.helpandmanual.com/company_contact.html" target="_blank" title="Contact addresses for feedback and support" aria-label="Contact addresses for feedback and support"><span>Contact Us</span></a></li>
+		</div>
+		</div>
+       </ul>  		
+	</li>  
+	<li class="desktop tablet">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+	</span>
+</ul>
+</nav>
 	</div>
 	</div>
-	<!-- TOPIC CONTENT -->
-	<div id="topicbox">
+	</header>
 	<div id="navigationmenu">
-	<ul id="hamburgermenu">
-	<li id="toggle_fullscreen" class="desktop">
+	<ul id="hamburgermenu" role="menu" aria-labelledby="hamburgerlink">
+	<li id="toggle_fullscreen" class="desktop" role="menuitem">
 	<svg id="fullscreen_toggle" class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#resize-full"></use></svg>
-	<a onclick='hmWebHelp.doFullEmbedWindow(this)' title="Zoom window">
+	<a onclick='hmWebHelp.doFullEmbedWindow(this)' tabindex="0" title="Zoom window">
 	<span>Zoom Window Out</span></a>
-	</li> 
-	<li>
-		<svg class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#text-height"></use></svg>
-		<a onclick="hmWebHelp.extFuncs('fontSize',[true,'global']);" title="Increase Font Size"> 
-		<span>Larger Text</span></a>&nbsp;|&nbsp;<a onclick="hmWebHelp.extFuncs('fontSize',[false,'global']);" title="Decrease Font Size"><span>Smaller Text</span></a>
 	</li>
-	<li class="desktop" id="showhide_pageheader">
+	<li role="menuitem" id="changefontsize">
+		<svg class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#text-height"></use></svg>
+		<a onclick="hmWebHelp.extFuncs('fontSize',[true,'global']);" id="increaseFont" title="Increase Font Size" href="javascript:void(0);"> 
+		<span>Larger Text</span></a>&nbsp;|&nbsp;<a onclick="hmWebHelp.extFuncs('fontSize',[false,'global']);" id="decreaseFont" title="Decrease Font Size" href="javascript:void(0);"><span>Smaller Text</span></a>
+	</li>
+	<li class="desktop" id="showhide_pageheader" role="menuitem">
 		<svg id="showhide_header_icon" class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#collapse"></use></svg>
-		<a title="Hide Page Header">
+		<a title="Hide Page Header" href="javascript:void(0);">
 		<span>Hide Page Header</span></a>
 	</li>
-	<li class="toggles" id="showhide_toggles">
+	<li class="toggles" id="showhide_toggles" role="menuitem">
 		<svg id="showhide_toggles_icon" class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#eye"></use></svg>
-		<a onclick="hmWebHelp.extFuncs('hmDoToggle',{method: 'hmToggleToggles', obj: {speed: 80}});" title="Show/hide Expanding Text Blocks on Page"> 
+		<a onclick="hmWebHelp.extFuncs('hmDoToggle',{method: 'hmToggleToggles', obj: {speed: 80}});" title="Show/hide Expanding Text Blocks on Page" href="javascript:void(0);"> 
 		<span>Show Expanding Text</span></a>
 	</li>
-	<li class="server">
+	<li id="hm_printable_version" role="menuitem">
+		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#print"></use></svg>
+		<a id="hm_printable_link" href="_hm_print_window.htm?alumnirollout.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Print Current Topic" href="javascript:void(0);">
+		<span>Print Topic</span></a>
+	</li>
+	<li id="mailfeedback" role="menuitem">
+		<svg class="hmbicon" viewBox="0 0 32 32"><use xlink:href="#mail-alt"></use></svg>
+		<a onclick="hmWebHelp.extFuncs('hm_mail_feedback')" title="Send an E-Mail with Feedback on This Topic" href="javascript:void(0);"> 
+		<span>Send Mail Feedback</span></a>
+	</li>
+	<li class="server" id="sharetopic" role="menuitem">
 		<svg class="hmbicon" viewBox="0 0 27 32"><use xlink:href="#share"></use></svg>
-		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="socialsharing.js" data-path="./js/" data-title="Share this Topic" class="popuplink" title="Share this topic on social networks"> 
+		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="socialsharing.js" data-path="./js/" data-title="Share this Topic" class="popuplink" title="Share this topic on social networks" href="javascript:void(0);"> 
 		<span>Share This Topic</span></a>
 	</li>
-	<li class="desktop server">
+	<li class="desktop server" id="savepermalink" role="menuitem">
 		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#link"></use></svg>
-		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="_hmpermalink.html" data-path="./" data-title="Save Topic Permalink" class="popuplink" title="Copy URL of current topic">
+		<a href="javascript:hmWebHelp.hamburgerMenu()" data-target="_hmpermalink.html" data-path="./" data-title="Save Topic Permalink" class="popuplink" title="Copy URL of current topic" href="javascript:void(0);">
 		<span>Save Permalink URL</span></a>
 	</li> 	
 	</ul>
-			 
 	</div>
+	<!-- TOPIC CONTENT -->
+	<main id="topicbox">
+	<div id="autoTocWrapper" class=""></div>
 	<div id="topicbody">
 	<!-- HMSKIN BODY START -->
-	<div id="hmpageheader">
+	<nav id="hmpageheader" role="navigation" aria-label="Topic Navigation">
 	<table id="topicheadertable">
 	  <tr>
 		<td id="topicheadercell">
 		  <div id="topicheaderwrapper">
-		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p>
-		  <span class="hdFormat"><p class="p_KidzHeader1"><span class="f_KidzHeader1">Alumni roll-out</span></p>
-</span>
+		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p> 
+		  <h1 class="topictitle" title="Alumni roll-out">Alumni roll-out<h1>
 		  </div>
 		</td>
 		<td id="topicnavcell"><span>
-		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
+		<a id="phonemenulink" class="topicnavlink" href="javascript:void(0)" title="Links to other pages">
+		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#link"></use></svg>
+		<span >Links</span>
+		</a>
+		<a id="atoclink" class="topicnavlink" href="javascript:void(0);" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
-		<span>Scroll</span></a> 
-		 <a id="topicnavlinkprevious" class="topicnavlink disabled"  title="This is the first topic">
-		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
-		 <span>Prev</span></a>
-		<a id="topicnavlinkhome" class="topicnavlink disabled" title="No topics above this level">
-		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
-		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink disabled" title="This is the last topic">
-		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
-		<span>Next</span></a>
-		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
+		<span>Contents</span></a>
+		 <a id="hamburgerlink" class="topicnavlink" href="javascript:void(0);" title="Additional Functions Menu">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg>
-		 <span>More</span></a>
+		 <span>Menu</span></a>
 		 </span>
 		 </td>
 	  </tr>
 	</table>
-	</div>
-	<div id="autoTocWrapper" class=""></div> 
+	</nav>
 	<div id="hmpagebody">
-	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART--> 
 	<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
@@ -480,39 +546,44 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 <p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
 <p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
 
+	<footer class="topicfooter">
+<p class="topicfooter">Created with <a href="http://www.helpandmanual.com/products_hm_overview.html" title="EC Software Products" target="_blank">Help+Manual 9</a> and styled with <a href="http://www.helpandmanual.com/products_hm_pluspack.html" title="Premium Pack Information">Premium Pack Version 5</a> &copy; by EC Software</p>
+</footer>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
-	</div><!-- topicbox -->
+	</main><!-- topicbox -->
 	<div id="navwrapper">
-	<div id="dragwrapper" class="toolwrapper">
-	<svg id="draghandleicon" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle"></use></svg>
-	</div>
-	<div id="toolbutton_wrapper" class="toolwrapper tablet">
-	<svg id="tablet_toolbar_updown_button" alt="Show/Hide Toolbars" viewBox="0 0 30 30"><use xlink:href="#toolbar_updown"></use></svg>
-	</div>
+	<div id="toolbutton_wrapper" class="toolwrapper desk_tablet" tabindex="0" role="button" aria-label="Hide Page Header">
+	<div id="toolbutton">
+	<svg id="toolbar_updown_close" class="splittertool" viewBox="0 0 30 32" alt="showhide pageheader"><use xlink:href="#toolbar_close"></use></svg>
+	<svg id="toolbar_updown_open" class="splittertool" viewBox="0 0 30 32" alt="showhide pageheader"><use xlink:href="#toolbar_open"></use></svg>
+	</div></div>
+	<div id="dragwrapper" class="toolwrapper" tabindex="0" role="button" aria-label="Hide Navigation Pane">
+	<div id="dragbutton">
+	<svg id="draghandleicon_r" class="splittertool" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle_r"></use></svg>
+	<svg id="draghandleicon_l" class="splittertool" viewBox="0 0 30 32" alt="resize nav pane"><use xlink:href="#draghandle_l"></use></svg>
+	</div></div>
 	<div id="navsplitbar"></div>
 	<img id="leftright" src="./images/leftright.png" alt="resize nav pane" width="150" height="45" border="0" />
-	<div id="navcontainer">
+	<nav id="navcontainer" role="navigation" aria-label="Main Navigation">
 	<!-- NAV TABS START -->
-	<nav id="navpane_tabs">
-	<ul id="topictabs" class="tabs">
-	<li id="contentstab" class="hmtabs current" title="Table of Contents"><a id="contentstablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#th-list"></use></svg></a></li>
-	<li id="indextab" class="hmtabs" title="Keyword Index"><a id="indextablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#key-inv"></use></svg></a></li>
-	<li id="searchtab" class="hmtabs" title="Search Topics"><a id="searchtablink"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#search"></use></svg></a></li>
-	</ul>
-	</nav>
+	<div id="main_searchbox">
+	<div class="search_input_wrapper">
+	<a id="searchlink" title="Search" aria-label="Search" href="hmftsearch.html"><svg class="tocicon" viewBox="0 0 30 32"><use xlink:href="#search"></use></svg></a>
+	<input type="text" name="search_input" id="search_input" size="100%" autocorrect="off" autocapitalize="none" spellcheck="false" />&nbsp;
+	<svg class="searchicon" id="clear_search_button" alt="Close Search" viewBox="0 0 30 30"><use xlink:href="#close-search"></use></svg>
+	<div id="contents_link_wrapper" title="Contents" aria-label="Contents"><a id="contentslink" title="Contents" aria-label="Contents" href="hmcontent.html" target="hmnavigation"><svg class="searchicon" id="contents_button" title="Contents" aria-label="Contents" alt="Contents" viewBox="0 0 30 30"><use xlink:href="#angle-circled-left"></use></svg></a></div>
+	</div>
+	</div>
 	<!-- NAV TABS END -->	
 	<div id="contentsbox" class="navbox on">
-	<iframe name="hmnavigation" id="hmnavigation" class="navframe" src="hmcontent.html" scrolling="no" seamless="seamless" title="Navigation Pane" frameborder="0"></iframe>
+	<iframe name="hmnavigation" id="hmnavigation" class="navframe" src="hmcontent.html" scrolling="no" seamless="seamless" title="Contents" frameborder="0"></iframe>
 	</div>
-	<div id="indexbox" class="navbox off">
-	<iframe name="hmindex" id="hmindex" class="navframe" src="" scrolling="no" seamless="seamless" title="Keyword Index Pane" frameborder="0"></iframe>	
-	</div> 
 	<div id="searchbox" class="navbox off">
-	<iframe name="hmsearch" id="hmsearch" class="navframe" src="" scrolling="no" seamless="seamless" title="Full Text Search Pane" frameborder="0"></iframe>
+	<iframe name="hmsearch" id="hmsearch" class="navframe" src="" scrolling="no" seamless="seamless" title="Search" frameborder="0"></iframe>
 	</div>
-	</div><!-- navcontainer -->
+	</nav><!-- navcontainer -->
 	</div><!-- navwrapper -->
 	<div id="mob_toolbar_wrapper" data="open">
 	<div id="mob_toolbar" class="mtoolbar">
@@ -525,21 +596,21 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 			<td id="mob_tb_previous" align="center" valign="middle"><div id="mobnavprevious" class="mobnav previous"></div></td>
 			<td id="mob_tb_next" align="center" valign="middle"><div id="mobnavnext" class="mobnav next"></div></td>
 			<td>&nbsp;&nbsp;</td>
-			<td id="mob_tb_hamburger" class="mob_hamburger" align="right" valign="top"><div id="phone_mobnav_hamburger_icon" class="mobnav phone"><svg id="phone_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div></td>
+			<td id="mob_tb_hamburger" class="mob_hamburger" align="right" valign="top"><div id="phone_mobnav_hamburger_icon" class="mobnav phone"><svg id="phonetb_hamburger_mobnav" viewBox="0 0 27 32"><use xlink:href="#menu"></use></svg></div></td>
 			</tr></table>
 	</div></div>
-	</div> <!-- pagewrapper --> 
+	 <!-- </div> pagewrapper -->
+	</div> <!-- helpwrapper -->
 	<div id="dragsurface"></div>
 <script type="text/javascript" src="./js/xmessage.js"></script> 
 <script id="hmPageInitScript" type="text/javascript">
 var fouc=document.getElementById("fouc");
-if (!hmFlags.isEWriter) fouc.parentNode.removeChild(fouc);
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 // Reset font size with preset cookie value if available
 (function(){
-	var tempFontSize = sessionVariable.getPV("fontSize"),
+	var tempFontSize = sessionVariable.getPV("hmFontSize"),
 		baseElement = document.getElementsByTagName("html")[0];
 	if (tempFontSize !== null) {
 	baseElement.style.fontSize=tempFontSize + "%";
@@ -564,7 +635,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmFlags.tocInitWidth = 0;
 	hmFlags.jumpHighlight = false;
 	hmFlags.hmMainPage = "index.html";
-	hmFlags.hmTrackHost = "http://www.helpandmanual.com/help/";
+	hmFlags.hmTrackHost = "https://www.devman3.com/";
 	hmFlags.hmProject = "DevMan Online Help";
 	hmFlags.hmDefaultPage = "index.html";
 	hmFlags.hmCurrentPage = "alumnirollout.html";
@@ -579,7 +650,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmFlags.projName = "DevHelp";
 	hmFlags.tDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	hmFlags.tKeywords = "";
-	hmFlags.hdFormat = true;
+	hmFlags.hdFormat = false;
 	hmFlags.contextID = (function(){
 		var cntxMatch;
 		if (/^https??:\/\//im.test(document.location)) {
@@ -597,28 +668,44 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	  loadScripts(currentScript);
 	  } else {
 	  hmpage.defaulttopic = "index.html";
-	
-	  hmWebHelp.hmMainPageInit();
+	hmpage.breadcrumbs = !false;
+	hmpage.parenthome = true;
+	  //hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
+	  hmpage.topicfooter = $("footer.topicfooter")[0].outerHTML;
 	  
-	
-	  /* window.navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40);
-			
-			navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40)
-	  		alert("Standalone: " + navigator.standalone + "\nTouchstart: " + hmBrowser.touchstart); */
+	  $("input#search_input").on("keyup", function(event) {
+		
+		var searchQ = $(this).val();
+	  
+		if (event.which == 13 && searchQ.length > 2) {
+			xMessage.sendObject("hmsearch",{action: "callfunction",fn: "hmDoFtSearch", fa: searchQ});
+			return;
+		};
+		if (event.which == 27) {
+			searchQ = "";
+			$(this).val("");
+			return;
+		}
+		
+		$(this).attr("placeholder", "");
+		
+		xMessage.sendObject("hmsearch",{action: "callfunction",fn: "loadSquery", fa: searchQ});
+	  });
+	  
+	hmWebHelp.hmMainPageInit();
 	  }
 	}); // $getScript
 	}  // loadScripts()
-
+	
 	// Force HTML4 mode in History framework for local WebHelp (required for Chrome, use globally for consistency)
 	if (document.location.protocol.substr(0,4) !== "http") {
 		window.History = {options: {html4Mode: true} };
 	}
 	var currentScript = 0;
-	var scripts = ["./js/helpman_settings.js", "./js/jquery.scrollTomin.js", "./js/jquery.history.js", "./js/hm_webhelp.js"]
+	var scripts = ["./js/helpman_settings.js", "./js/jquery.scrollTomin.js", "./js/jquery.history.js", "./js/hm_webhelp.js", "./js/HM_CLASSICMENU.js" ];
 	if (hmFlags.contextID) scripts.unshift("./js/hmcontextids.js");
-	if (hmDevice.phone) scripts.push("./js/mobileNav.js");	
  
 	var jScript = document.getElementById("jqscript");
 	jScript.src = "./js/jquery.js";
@@ -652,7 +739,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	else if (window.attachEvent)
 	window.attachEvent("onload", initScripts);
 	else window.onload = initScripts;
-helpman_mailrecipient = 'Support <support@devman3.com>';
+helpman_mailrecipient = 'Support Staff <support@devman3.com>';
 hmGetUrlParams = function() {/*! 
 * Enter code to save URL parameters to session variables inside the if clause below.
 * This will be executed when your WebHelp is first opened and the session variables
@@ -660,7 +747,7 @@ hmGetUrlParams = function() {/*!
 * the V3 Responsive Skins chapter of the help for detailed instructions.
 */
 if (hmWebHelp.userParams && hmWebHelp.userParams.paramsCount > 0) {
-  
+
 }
 }
 /*! 
@@ -685,5 +772,40 @@ if (hmWebHelp.userParams && hmWebHelp.userParams.paramsCount > 0) {
 */
 
 </script>
+<div id="keyboardinfo"> 
+<h1 id="keynavtitle">Keyboard Navigation</h1>
+<p>F7 for caret browsing</br> 
+Hold ALT and press letter</p> 
+<table border="0">
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.pageFocus('info')" title="Display this popup">This Info:</a></td>
+		<td class="c2">ALT+q</td>
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.pageFocus('header');" title="Go to main page header">Page Header:</a></td>
+		<td class="c2">ALT+h</td> 
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.pageFocus('topic');" title="Go to topic navigation header">Topic Header:</a></td>
+		<td class="c2">ALT+t</td> 
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.pageFocus('body');" title="Go to top of topic body">Topic Body:</a></td>
+		<td class="c2">ALT+b</td> 
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.switchNavTab('contents');" title="Go to table of contents">Contents:</a></td>
+		<td class="c2">ALT+c</td> 
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.switchNavTab('search');" title="Go to search">Search:</a></td> 
+		<td class="c2">ALT+s</td>
+	</tr>
+	<tr>
+		<td class="c1"><a href="javascript:hmWebHelp.closeMenus()" title="Exit a menu or go up">Exit Menu/Up:</a></td>
+		<td class="c2">ESC</td> 
+	</tr>
+</table>
+</div> 
 </body>
 </html>

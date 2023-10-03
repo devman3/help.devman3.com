@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 function xMsg(ogn) {
@@ -19,7 +19,7 @@ function xMsg(ogn) {
 			allowedDomains = allowedDomains.split(",");
 		}
 		
-		if (docDomain !== "" && location.protocol !== "file:")  {
+		if (docDomain !== "" && docDomain.length !== 0 && location.protocol !== "file:")  {
 			docDomain = location.protocol + "//" + docDomain + (location.port !== "" && location.port !== "0" ? ":" + location.port : "");
 			}
 			else {
@@ -32,7 +32,7 @@ function xMsg(ogn) {
 		try {
 			var tErr = ("Target: " + (typeof target == "string" ? target : typeof target));
 			var t = typeof target !== "string" ? target : target === "parent" ? parent : target.indexOf("parent.") === 0 ? parent.frames[target.substr(7)].contentWindow : document.getElementById(target).contentWindow,
-				targetDomain = typeof message.domain == "undefined" ? docDomain : message.domain;
+				targetDomain = typeof message.domain == "undefined" || message.domain == "file:" || !message.domain ? docDomain : message.domain;
 			
 			if (typeof message == "object") {
 				t.postMessage(message,targetDomain);
@@ -126,7 +126,11 @@ function xMsg(ogn) {
 
 			var currentProtocol = document.location.protocol, func, callback,
 				domainOK = allowedDomains.length > 0 ? allowedDomains.includes(event.origin) : event.origin == docDomain;
-				
+
+			// Ignore PostMessage messages from internal components like browser extensions, and from Google Analytics
+			if (event.origin !== "null" && event.origin !== "file:" && !/^https?:\/\//i.test(event.origin)) return;
+			if (/^https?:\/\/tagassistant.google.com/i.test(event.origin)) return;
+
 			if (currentProtocol.substr(0,4) === "http" && !domainOK) {
 				alert("Security error:\r\n\r\nInterframe communication between " + event.origin + " and " + docDomain + " is not currently permitted.\r\n\r\nFor full functionality you must include both domains in your allowed domains settings in all participating WebHelp collections, using the EMBEDDED_DOMAINS variable in the skin.")
 				return;
@@ -138,13 +142,13 @@ function xMsg(ogn) {
 			if (!event.data.action) return;
 			switch (event.data.action) {
 				
-				case "setnavlinks":
+				/*case "setnavlinks":
 				hmWebHelp.tocNav(event.data);
 				break;
 				
 				case "setmobnavlinks":
 				hmWebHelp.mobNavLinks(event.data);
-				break;
+				break;*/
 				
 				case "breadcrumbs":
 				hmWebHelp.tocNav({action: "bread", crumbs: event.data});
@@ -201,10 +205,10 @@ function xMsg(ogn) {
 			
 		} 
 			
-		/******** String Data *********/
-		// Treat as deprecated
-		else if (typeof event.data == "string") 
-		console.log("WARNING: xMessage call with deprecated string argument: " + event.data);
+		/* String data is also an external script */
+		else if (typeof event.data == "string") {
+		return;
+		}
 			} // doParse()
 
 		if (window.addEventListener) {

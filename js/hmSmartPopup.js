@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 //** Main Object **//
@@ -12,7 +12,7 @@ $popparent.append('<div id="hmpopupbox" class="hmpopup"><div id="hmpopuptitlebar
 
 // General variables
 	hmXPopup.$popup = $("div#hmpopupbox");
-	hmXPopup.$popupcontainer = $("div#topicbox");
+	hmXPopup.$popupcontainer = $("main#topicbox");
 	hmXPopup.$popuptitle = $("div#hmpopuptitle > p");
 	hmXPopup.$popupheader = $("div#hmpopuptitlebar");
 	hmXPopup.$popupdragger = $("div#hmpopuptitle");
@@ -221,7 +221,7 @@ hmXPopup.bookmarkPermalink = function() {
 
 // Global load popup executed by the JS popup when it is loaded
 hmLoadPopup = function(popObj) {
-	$(document).on("keydown.popescape",function(event){
+	$(document).on("keydown.popescape", function(event){
 		if (event.which === 27) {
 			$(document).off(".popescape");
 			hmXPopup.closePopup();
@@ -242,15 +242,15 @@ hmLoadPopup = function(popObj) {
 		$("textarea#plinkBox").text(document.location.protocol + "\/\/" + document.location.hostname + (document.location.port === "80" || document.location.port === "" ? "" : ":" + document.location.port) +  document.location.pathname);
 		$("p#permalink_tip").text("Right-click on permalink to copy to clipboard");
 		$("input#bookmarkPermalink").attr("value","Bookmark Topic");
-		$('input#selectPermalink').on(hmBrowser.touchstart,function(){
+		$('input#selectPermalink').on(hmBrowser.touchstart, function(){
 			$('textarea#plinkBox').focus().select();
 		});
 		// Prevent deselection
-		$('textarea#plinkBox').on("mousedown",function(event){
+		$('textarea#plinkBox').on("mousedown", function(event){
 			if (event.button == 2)
 			$(this).focus().select();
 		});
-		$('input#bookmarkPermalink').on("mousedown",function(){
+		$('input#bookmarkPermalink').on("mousedown", function(){
 			hmXPopup.bookmarkPermalink();
 		});
 	}
@@ -259,10 +259,10 @@ hmLoadPopup = function(popObj) {
 	hmXPopup.sizeAndPosition();
 
 	// Social sharing popup
-	if (typeof hmXPopup.social !== 'undefined' && hmXPopup.social) {
+	/*if (typeof hmXPopup.social !== 'undefined' && hmXPopup.social) {
 		// hmXPopup.noresize=true;
 		setTimeout(hmXPopup.sizeAndPosition,3000);
-	}
+	}*/
 	
 	// Permalink popup
 	if (typeof popObj.permalink !== 'undefined' && popObj.permalink){
@@ -273,11 +273,11 @@ hmLoadPopup = function(popObj) {
 	}
 	
 	if (hmDevice.desktop && !hmXPopup.noresize) {
-		$("body").off("mousemove.resizepopuplistener").on("mousemove.resizepopuplistener",function(event){
+		$("body").off("mousemove.resizepopuplistener").on("mousemove.resizepopuplistener", function(event){
 		var ev = event.originalEvent;
 		hmXPopup.resizeListener(ev);
 		});
-		$("body").off("mousedown.resizepopup").on("mousedown.resizepopup",function(event){
+		$("body").off("mousedown.resizepopup").on("mousedown.resizepopup", function(event){
 			var e = event.originalEvent;
 			hmXPopup.startResizePopup(e);
 		});
@@ -363,8 +363,11 @@ hmXPopup.$popupbody.on("click",
 hmXPopup.$popupbody.on(hmBrowser.touchstart,
 	"a.weblink, a.webhotspot",
 	function(event){
-		$(this).attr("target","_blank");
-	});	
+		if (hmDevice.desktop)
+			$(this).attr("target","_blank");
+		else
+			$(this).attr("target","_self");
+	});
 
 // Delegated event binding for popup links in the popup
 hmXPopup.$popupbody.on(hmBrowser.touchstart,
@@ -416,7 +419,7 @@ hmXPopup.EventType = function(e) {
 		hmXPopup.$popupdragger.off(".moveevents");
 		hmXPopup.$dragsurface.off(".endevents");
 		hmXPopup.$dragsurface.off(".moveevents");
-		hmXPopup.$dragsurface.hide().css("cursor","col-resize");
+		hmXPopup.$dragsurface.hide().css("cursor","ew-resize");
 		hmXPopup.PreventDefault(e);
 		};
 			// Drag action
@@ -502,7 +505,7 @@ hmXPopup.resizeListener = function(e) {
 	var corner = ((rBd && (e.pageY > (popPos.top + popHt-10))) || (bBd && e.pageX > (popPos.left + popWd-10)));
 	hmXPopup.bdDrag = rBd || bBd;
 
-	$("body").css("cursor",function(){
+	$("body").css("cursor", function(){
 	return corner ? "nw-resize" : rBd && !bBd ? hmXPopup.ewResize : bBd && !rBd ? hmXPopup.nsResize : "auto";
 	});
 };

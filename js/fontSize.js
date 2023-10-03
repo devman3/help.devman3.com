@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 function hmFS() {
 
@@ -36,7 +36,6 @@ function hmFS() {
 			hmWebHelp.extFuncs('fontSize',mode);
 			xMessage.sendObject("hmnavigation", {action: "callfunction", fn: "extFuncs", fa: ['fontSize',mode]});
 			xMessage.sendObject("hmsearch", {action: "callfunction", fn: "extFuncs", fa:['fontSize',mode]});
-			xMessage.sendObject("hmindex", {action: "callfunction", fn: "extFuncs", fa: ['fontSize',mode]});
 		}
 			
 			function doFS()	{ 
@@ -68,16 +67,12 @@ function hmFS() {
 				}
 				document.getElementsByTagName("html")[0].style.fontSize = changeSize + "%";
 				if (pageName == "mainPage") {
-					sessionVariable.setPV("fontSize",changeSize.toString());
+					sessionVariable.setPV("hmFontSize",changeSize.toString());
 					setTimeout(function() {
 					if (!hmDevice.phone)
 						hmWebHelp.resizePanes(hmpage.FnavWidth());
 					},100);
 					} 
-					
-					if (hmDevice.phone) {
-						hmWebHelp.funcs.mobTBfix();
-					}
 				}
 			} // doFS()
 		

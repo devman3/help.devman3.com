@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Constructor
@@ -48,7 +48,7 @@ function fh() {
 		if ($("div#featureheader").length < 1)
 			$("div#topicbody").prepend('<div id="featureheader"><p id="featuretext"></p></div>');
 		$fhead = $("div#featureheader");
-		$pscroller = $('div#topicbox');
+		$pscroller = $('main#topicbox');
 		$pheader = $('div#headerbox');
 		$pbody = $("div#hmpagebody");
 		$fp = $("p#featuretext");
@@ -91,7 +91,7 @@ function fh() {
 				
 			});
 			
-	$fhead.on("selectstart",function(){return false;});
+	$fhead.on("selectstart", function(){return false;});
 
 	$fhead.off(hmBrowser.touchstart).on(hmBrowser.touchstart, function(){
 				if ($fp.is(":visible")) {

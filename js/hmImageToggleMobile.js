@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 var HMImageToggle = function($img){
 	
@@ -66,7 +66,7 @@ var HMImageToggle = function($img){
 
 			if (instant) {
 				$page.fadeIn("fast");
-				$imgbox.fadeOut("fast",function(){
+				$imgbox.fadeOut("fast", function(){
 					$this.remove();
 					rescale();
 				});
@@ -97,7 +97,7 @@ var HMImageToggle = function($img){
 		
 	$imgzoomer = $("div#imagezoom");
 	$imgbox = $("div#imagetogglebox");
-	$page = $("div#pagewrapper");
+	$page = $("div#helpwrapper");
 	$zoomImage = $("img#zoomImg");
 	
 	$zoomImage.on("click",closeImage);
@@ -114,7 +114,7 @@ var HMImageToggle = function($img){
 			"width": (closeddims.w * scaleFactor) + "px",
 			"height": (closeddims.h * scaleFactor) + "px"
 			
-		},"fast",function(){
+		},"fast", function(){
 			
 		});
 

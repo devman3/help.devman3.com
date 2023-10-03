@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
  function layouttables() {
 	
@@ -7,7 +7,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 		$tableanchor,
 		speed = 300,
 		$tablewrapper = $("div#ltTableWrapper"),
-		$pagewrapper = $("div#pagewrapper"),
+		$pagewrapper = $("div#helpwrapper"),
 		$napkin = $("div#ltTableNapkin");
 
 	function showTable() {
@@ -25,7 +25,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	function hideTable(instant) {
 
 		$tablewrapper.fadeOut(speed, function() {
-			$pagewrapper.fadeIn(speed * 2,function(){
+			$pagewrapper.fadeIn(speed * 2, function(){
 			$tableanchor.after($(tableID));
 			$(tableID).hide();
 			});
@@ -72,7 +72,7 @@ $('body').prepend(
 	);
 $("div#ltTableWrapper").on(hmBrowser.touchmove, function(){
 	$("img#closeLTable").css("opacity","0.2");
-		}).on(hmBrowser.touchend,function(){
+		}).on(hmBrowser.touchend, function(){
 			$("img#closeLTable").css("opacity","1.0");
 		});
 

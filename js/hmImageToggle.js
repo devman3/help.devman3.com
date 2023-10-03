@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 var HMImageToggle = function($img){
 	var	$imgbox, $captionbox = false,
@@ -43,14 +43,13 @@ var HMImageToggle = function($img){
 		function unClicker (elem) {
 			
 			
-			// Click outside element
-			$(document).on((typeof hmBrowser == "undefined" ? "click" : hmBrowser.touchstart) + '.closemenu', function(event){
-				if (!elem.contains(event.target)) {
-					closeImage();
-					$(document).off(".closemenu");
-					$(elem).off(".closemenu");
-				}
+			// Click inside element
+			$(elem).on((typeof hmBrowser == "undefined" ? "click" : hmBrowser.touchstart) + '.closemenu', function(){
+				closeImage();
+				$(document).off(".closemenu");
+				$(elem).off(".closemenu");
 			});
+			
 			
 			// ESC key
 			$(document).on("keydown.closemenu", function(event){
@@ -65,7 +64,7 @@ var HMImageToggle = function($img){
 		
 		function closeImage(event,anispeed) {
 			var speed = (typeof anispeed == "undefined") ? "fast" : anispeed;
-			$imgbox.animate({width: closeddims.w, height: closeddims.h, top: startTop, left: startLeft},speed,function(){
+			$imgbox.animate({width: closeddims.w, height: closeddims.h, top: startTop, left: startLeft},speed, function(){
 				$imgbox.hide();
 				$imgbox.remove();
 				$img.attr("data-state","0");
@@ -79,7 +78,7 @@ var HMImageToggle = function($img){
 		hmWebHelp.funcs.closeImageToggle = closeImage;
 		
 		function maximizeImage(event) {
-			event.stopPropagation();
+
 			if ($imgbox.width() < maxdims.w) {
 				if (maxdims.w > $(window).width() || maxdims.h > $(window).height()) {
 				$("body,html").css("overflow","auto");
@@ -119,7 +118,7 @@ var HMImageToggle = function($img){
 			$imgbox.append(newImage);
 			$imgbox.append('<div id="imagezoom"><img id="imagezoomer" src="./images/ZoomIn.png" border="0"/></div>');
 
-			unClicker($imgbox[0]);
+			unClicker(newImage);
 
 			$imgbox.css({"left": startLeft + "px", "top": startTop + "px", "width": closeddims.w + "px", "height": closeddims.h + "px"});
 			$imgbox.show();	
@@ -144,7 +143,10 @@ var HMImageToggle = function($img){
 				hOffset = cboxHeight+vBorderWidth*2;
 			}
 			if (maxdims.w > opendims.w) {
-				$("div#imagezoom").on("click",maximizeImage).show();
+				$("div#imagezoom").on("click, keydown", function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+				}).on(hmBrowser.touchstart, maximizeImage).show();
 			}
 			$imgbox.animate({width: opendims.w, height: opendims.h + hOffset, top: newTop, left: newLeft },'fast',
 			function() {

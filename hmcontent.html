@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-za">
 <head>
 <!-- HMSKIN FILETYPE: TOC -->
 <title>DevMan Online Help</title>
@@ -9,28 +9,9 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="-1" />
 <meta http-equiv="cache-control" content="no-cache" /> 
-<!-- Insert Google web fonts references here. 
-
-Get your font references at https://fonts.google.com/ 
-
-Click on the black panel shown at the bottom of the Google fonts page when 
-you have selected your fonts to get your EMBED reference. Use STANDARD, not
-@IMPORT. Then click in the top right corner and download and install the
-the fonts to your Windows computer as well so that you canuse them in your 
-project. Otherwise they won't be referenced correctly. You don't need the
-"Specify in CSS" references. That is handled by Help+Manual.
-
-Example of a font reference for Roboto light, regular and medium:
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet">
-
-See the section on Google Web Fonts in the PP help for more details.
-Delete this comment to save space after adding your references. 
-
--->
-<style type="text/css">
-div#noscript {display: none;}
-</style> 
+<!--This is set up for self-hosted Google Fonts on your own web server with font files included in the skin. See the help for instructions on using fonts hosted by Google -->
+<link type="text/css" href="./css/GoogleFonts.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="./css/hmwebhelp_toc.css" />
 <noscript>
 <style type="text/css">
 	div#noscript {
@@ -49,11 +30,12 @@ div#noscript {display: none;}
 </style> 
 </noscript>
 <script type="text/javascript">
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
-		var pageName = "tocPage";
-		var hmDevice = {
+		var pageName = "tocPage",
+			tocFocused = "false",
+			hmDevice = {
 		// Cookies
 		hmSetCookie: function(cname, cvalue, exdays) {
 			var expires = "";
@@ -102,7 +84,38 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 			}
 	
 	};
-	
+
+		// Manage the logo
+		var manageLogo = function(mode) {
+			switch(mode) {
+			
+			case "hide":
+			$("div#tocHeader").css({
+			"background-image": "none"
+			});
+			$("p.tocProjectTitle").css({
+			"padding-left": "0",
+			"text-align": "center"
+			});
+			$("a#tocHeaderLink").css({
+			"pointer-events": "none"
+			});
+			break;
+			
+			case "show":
+			$("div#tocHeader").css("background-image","url('./images/logo-image-mobile.png')");
+			$("p.tocProjectTitle").css({
+			"padding-left": "25px",
+			"text-align": "left"
+			});
+			$("a#tocHeaderLink").css({
+			"pointer-events": "initial"
+			});
+			break;
+			
+			}
+		}
+
 		// Close TOC on topic open if phone or narrow page
 		var closeTOC = function(topicleft) {
 		if (hmDevice.phone || (!hmDevice.phone && topicleft)) {
@@ -183,7 +196,7 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmDevice.page = "hmcontent";
 	hmDevice.baseFontSize = 100;
 	hmDevice.fontChangeMax = 20;
-	hmDevice.parentHome = false;
+	hmDevice.parentHome = true;
 	hmDevice.defaultTopic = "index.html";
 	
 	/* Source Checks */
@@ -216,13 +229,6 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 	hmDevice.fontSize = hmDevice.phone ? hmDevice.baseFontSize * 1.0 : hmDevice.tablet ? hmDevice.baseFontSize * 1.0 : hmDevice.desktop ? hmDevice.baseFontSize : hmDevice.baseFontSize;
 	hmDevice.maxFontSize = hmDevice.fontSize + hmDevice.fontChangeMax;
 	hmDevice.minFontSize = hmDevice.fontSize - hmDevice.fontChangeMax;
-	
-	/* Main Stylesheet */
-	hmDevice.cssfile = document.createElement('link');
-	hmDevice.cssfile.rel = 'stylesheet';
-	hmDevice.cssfile.type = 'text/css';
-	hmDevice.cssfile.href = hmDevice.phone ? "./css/hmwebhelp_toc_phone.css" : hmDevice.tablet ? "./css/hmwebhelp_toc_tablet.css" : hmDevice.desktop ? "./css/hmwebhelp_toc_desktop.css" : "./css/hmwebhelp_toc_default.css";
-	document.getElementsByTagName('head')[0].appendChild(hmDevice.cssfile);
 </script>
 <script id="jqscript" type="text/javascript"></script>
 </head>
@@ -234,18 +240,21 @@ Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.
 <p class="navbar noscript" id="tocnoscriptnavbar">Contents&nbsp;|&nbsp;<a href="hmkwindex.html" target="_self">Index</a>&nbsp;|&nbsp;<a href="hmftsearch.html" target="_self">Search</a></p>
 </div>
 <div id="hmpagebody">
-<div id="hmtoctree"></div> 
+<div id="tocHeader"><a id="tocHeaderLink" href="https://www.devman3.com/" title="IS Kidz Africa (Pty) Ltd" aria-label="IS Kidz Africa (Pty) Ltd" target="_blank">
+<p class="tocProjectTitle">DevMan Online Help</p>
+</a></div> 
+<div id="hmtoctree" role="doc-toc"></div>
 </div>
 <!-- HMSKIN BODY END -->
 </div>
 <script type="text/javascript">
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Reset font size with preset cookie value if available
 (function(){
-	var tempFontSize = sessionVariable.getPV("fontSize"),
+	var tempFontSize = sessionVariable.getPV("hmFontSize"),
 		baseElement = document.getElementsByTagName("html")[0];
 	if (tempFontSize !== null) {
 	baseElement.style.fontSize=tempFontSize + "%";
@@ -272,8 +281,8 @@ var hmBrowser = {};
 	hmBrowser.touchend = (function(){return hmDevice.desktop ? 'mouseup.endevents' : (('ontouchend' in window && !hmDevice.w8desktop && !window.opera && !hmDevice.winphone) || (window.DocumentTouch && document instanceof DocumentTouch && !hmDevice.w8desktop && !window.opera && !hmDevice.winphone)) ? 'touchend.endevents' : (window.pointerEvent || window.navigator.pointerEnabled) ? 'pointerup.endevents' : (window.MSPointerEvent || window.navigator.msPointerEnabled) ? 'MSPointerUp.endevents' : 'mouseup.endevents'})();
 	hmBrowser.orientationevent = typeof window.orientation == "undefined" ? "resize" : "orientationchange";
 	hmBrowser.server = /^https??:\/\//im.test(document.location);
-	
-	hmBrowser.parenthome=false;
+	hmBrowser.parenthome = true;
+	hmBrowser.intervalCounter = true;
 
 // Handler for post-loading functions from files
 function extFuncs(func, args) {		
@@ -296,10 +305,20 @@ function extFuncs(func, args) {
 			}
 	} // extFuncs()
 
+// Timers for TOC navigation
+var timerA = new Date().getTime(),
+	timerB = new Date().getTime();
+
 // TOC Constructor
 
 function tocConstructor(toc) {
-   
+
+   // Set header
+   if (hmDevice.phone) 
+	manageLogo("show");
+	else
+	manageLogo("hide");
+
    // Public variables
    this.tocTree = toc;
    this.currentTopicItem = null;
@@ -338,7 +357,7 @@ function tocConstructor(toc) {
    function buildTocEntry(thisItem) {			
 	
 	var newItem = document.createElement("li"),
-		newItemSpan = document.createElement("span"),
+		newItemAlink = document.createElement("a"),
 		newItemCaption = document.createTextNode(thisItem.cp),
 		nodeType = getNodeType(thisItem);
 	
@@ -346,7 +365,6 @@ function tocConstructor(toc) {
 			if (item.tr === "" || item.tr === "hmcontent") { 
 				window.open(item.hf, "_blank");
 				} else {
-				// alert(item.tr)
 				window.open(item.hf, item.tr);
 				}
 			}
@@ -356,7 +374,9 @@ function tocConstructor(toc) {
 		thisItem.i0 = ".\/images\/internet.svg";
 		thisItem.i1 = ".\/images\/internet.svg";
 		}
-newItemSpan.setAttribute("style","background-image:url('"+thisItem.i0+"')");
+	newItemAlink.setAttribute("style","background-image:url('"+thisItem.i0+"')");
+	newItemAlink.setAttribute("href",thisItem.hf);
+	
 	// Store icon images for chapters without text directly in the HTML
 	if (thisItem.hf === "") {
 		newItem.setAttribute("src0", thisItem.i0);
@@ -367,13 +387,61 @@ newItemSpan.setAttribute("style","background-image:url('"+thisItem.i0+"')");
 	if (thisItem.tr !== "") 
 		newItem.setAttribute("tg", thisItem.tr);
 	if (thisItem.tp == "topiclink") {
-		$(newItem).on("click",function(event){
+		$(newItem).on("click", function(event){
+				event.preventDefault();
+				event.stopPropagation();
+			tocSource.doTopicLink(event,thisItem,this);
+		});
+
+		$(newItem).on("keydown", function(event){
+			
+			var doArrows = function($obj, kcode, shift) {
+
+			var offset;
+			
+			if (kcode == 9) {
+				offset = shift ? -1 : 1;
+			} else {
+				offset = [37, 38,].includes(kcode) ? -1 : 1;
+			}
+			
+			// Keydown bug -- fires twice on some browsers
+			timerB = new Date().getTime();
+			var diff = timerB - timerA;
+			if (diff < 100) return;
+
+			event.preventDefault();
+			var thisBS = $obj.attr("bs"),
+			nextBS, $nextItem;
+			
+			nextBS = (parseInt(thisBS) + offset)
+			if (nextBS < 0) nextBS = self.lastTopic;
+			if (nextBS > self.lastTopic) nextBS = 0;
+			$nextItem = $("li[bs='"+nextBS+"']");
+
+			while ($nextItem.length == 0 || $nextItem.is(":hidden")) {
+				nextBS = nextBS+offset;
+				if (nextBS < 0) nextBS = self.lastTopic;
+			if (nextBS > self.lastTopic) nextBS = 0;
+				$nextItem = $("li[bs='"+ (nextBS) +"']");
+			} 
+
+			if ($nextItem.length > 0) {
+				$nextItem.find("a").first().focus();
+				}
+
+			timerA = new Date().getTime();
+		}
+				
+		if ([9, 37, 38, 39, 40].includes(event.keyCode)) doArrows($(this), event.keyCode, event.shiftKey);
+			
+				if (event.type == "keydown" && ![" ", "Enter"].includes(event.key)) return;
 				event.preventDefault();
 				event.stopPropagation();
 			tocSource.doTopicLink(event,thisItem,this);
 		});
 	} else if (thisItem.tp === "" && thisItem.items.length > 0) {
-			$(newItem).on("click",function(event){
+			$(newItem).on("click", function(event){
 				event.preventDefault();
 				event.stopPropagation();
 				// Find first real target 
@@ -414,15 +482,15 @@ newItemSpan.setAttribute("style","background-image:url('"+thisItem.i0+"')");
 						}
 		});
 	} else if (thisItem.tp === "weblink") {
-		$(newItem).on("click",function(event){
+		$(newItem).on("click", function(event){
 				event.preventDefault();
 				event.stopPropagation();
 				webLink(thisItem);
 		});
 		
 	}
-	newItemSpan.appendChild(newItemCaption);
-	newItem.appendChild(newItemSpan);	
+	newItemAlink.appendChild(newItemCaption);
+	newItem.appendChild(newItemAlink);	
 	return newItem;
    }
    
@@ -515,19 +583,37 @@ this.displayBranch = function(branch, animate, mode) {
 		index = mode ? tCount-1 : 0,
 		targetState = "1",
 		scrolled = false;
-		
-	function scrollToTarget(s){
-		// Only auto-scroll if the TOC has not been clicked
+
+function scrollToTarget(s){
+		var $target = $("a.current"),
+			pagePos = $("div#hmtoctree")[0].offsetTop + $target.parent("li")[0].offsetTop,
+			scrollPos = $("div#hmpagebody").scrollTop(),
+			wrapperHeight = $("div#hmpagebody").height(),
+			targetHeight = Math.abs($target.parent("li").height());
+		// Only auto-scroll if the TOC has not been clicked and item is not visible
+		/*console.log("ScrollPos: "  + scrollPos);
+		console.log("Wrapper: " + wrapperHeight);
+		console.log("PPos = " + $("div#hmtoctree")[0].offsetTop + " + " + ($target.parent("li")[0].offsetTop + 20));
+		console.log("PPos: " + pagePos);
+		console.log("Scroll + Wrapper: " + (scrollPos + wrapperHeight))
+		console.log("Target height: " + targetHeight)*/
 		if (!self.tocLinkClicked) {
 		 setTimeout(function(){
-				var target = $("span.current");
-				$("div#hmpagebody").scrollTo(target,s,{axis: 'y', offset:{top:-10}});
+				if ($target.parent("li").attr("bs") == "0") {
+					$("div#hmpagebody").scrollTo(0,0,0);
+				} else if (pagePos < scrollPos) {
+					$("div#hmpagebody").scrollTo($target,0,{axis: 'y', offset:{top:-20}});
+					//console.log("scroll 1")
+				} else if (pagePos > (scrollPos + wrapperHeight - 10)) {
+					$("div#hmpagebody").scrollTo($target,0,{axis: 'y', offset:{top:-(wrapperHeight-(10 + targetHeight))}});
+					//console.log("scroll 2")
+				}
 			},s + 50);
 	} else {
 		self.tocLinkClicked = false;
-	}
+		}
 	} // scrollToTarget
-	
+
 	function doIterate(){
 		var toggleSpeed = speed,
 			timeoutSpeed = (speed >  0) ? speed + 20 : 0;
@@ -568,6 +654,7 @@ this.displayBranch = function(branch, animate, mode) {
 };
 
 function selectTopic(topicItem,currentTree,bsSearch) {
+	$(document.activeElement).blur();
 	var targetItem = topicItem.rf,
 		treeRoot = currentTree[currentTree.length-1];
 	if (currentTopic !== null) {
@@ -580,6 +667,8 @@ function selectTopic(topicItem,currentTree,bsSearch) {
 		// New current topic
 		targetItem.className = "current " + targetItem.className;
 		targetItem.firstChild.className = "current";
+		targetItem.firstChild.focus();
+		tocFocused = "true";
 		currentTopic = targetItem;
 		self.currentTopicItem = topicItem;
 		xMessage.sendObject("parent",{action: "setvalue", vn: "hmWebHelp.currentBS", vv: "*" + topicItem.bs});
@@ -876,6 +965,10 @@ this.findElement = function(targetRef) {
 						homeAC = parentItem.ac;
 			}
 				}
+				// Home is default topic:
+				if (!hmBrowser.parenthome) {
+					homeHF = "index.html";
+					}
 				if (!hmDevice.phone) {
 				xMessage.sendObject("parent",{action: "setnavlinks", pbs: prevBS, phf: prevHF, pac: prevAC, hbs: homeBS, hhf: homeHF, hac: homeAC, nbs: nextBS, nhf: nextHF, nac: nextAC});
 				} else {
@@ -1072,9 +1165,68 @@ var initScripts = function() {
 				}
 			loaded=0;
 
-			$(window).on("click",function(){document.getSelection().removeAllRanges();});
-			}
+			// Prevent accidental selection
+			$(window).on("click", function(){document.getSelection().removeAllRanges();});
 
+			// Close parent menus on click in TOC pane
+			$(document).on(hmBrowser.touchstart, function(event){
+				if (hmBrowser.intervalCounter) {
+					hmBrowser.intervalCounter = false;
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.closeMenus"});
+					setTimeout(function(){
+						hmBrowser.intervalCounter = true;
+					},600)
+				};
+			});
+			
+			// Keyboard control
+			$(window).on("keydown", function(event){
+			
+			switch(event.keyCode) {
+				
+				case 27:
+				xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.closeMenus"});
+				break;
+				case 67:
+				if (event.altKey) {
+				event.preventDefault();
+				$("a[href='index.html']").focus();
+				}
+				break;
+				case 81:
+				if (event.altKey) {
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.pageFocus", fa: "info"});
+					event.preventDefault();
+					}
+				break;
+				case 83:
+				if (event.altKey) {
+					event.preventDefault();
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.switchNavTab", fa: "search"});
+					}
+				break;
+				case 84:
+				if (event.altKey) {
+					event.preventDefault();
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.pageFocus", fa: "topic"});
+					};
+				break;
+				case 72:
+				if (event.altKey) {
+					event.preventDefault();
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.pageFocus", fa: "header"});
+					}
+				break;
+				case 66:
+				if (event.altKey) {
+					event.preventDefault();
+					xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.pageFocus", fa: "body"});
+					}
+				break;
+				} // switch
+			}); // Keyboard control				
+			
+		} // Post script load functions
 		}); // getScript
 	}; // loadScripts()
 	
@@ -1095,7 +1247,7 @@ if (window.addEventListener)
 window.addEventListener("load", initScripts, false);
 else if (window.attachEvent)
 window.attachEvent("onload", initScripts);
-else window.onload = initScripts;	
+else window.onload = initScripts;
 
 </script> 
 </body>

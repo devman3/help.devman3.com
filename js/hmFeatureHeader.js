@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 // Constructor
@@ -64,7 +64,7 @@ function fh() {
 	self.fhInit = function() {
 
 		if ($("div#featureheader").length < 1)
-			$("div#hmpagebody").prepend('<div id="featureheader"><p id="featuretext"></p></div>');
+			$("div#hmpagebody").prepend('<div id="featureheader" title="Click to show/hide description"><p id="featuretext"></p></div>');
 		$fhead = $("div#featureheader");
 		$pscroller = $('div#hmpagebody_scroller');
 		$fp = $("p#featuretext");

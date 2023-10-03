@@ -1,5 +1,5 @@
-/*! Help & Manual WebHelp 3 Script functions
-Copyright (c) 2015-2021 by Tim Green. All rights reserved. Contact: https://www.ec-software.com
+﻿/*! Help+Manual WebHelp 3 Script functions
+Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.helpandmanual.com
 */
 
 function xTableConstructor($thisTable) {
@@ -206,9 +206,9 @@ function xTableConstructor($thisTable) {
 			$switchTD = $(this);
 			
 			
-		$(this).html("<div class='"+tableID+" xtable_dataiconwrapper'><img class='xtable_dataicon' id=\""+tIconID+"\"src=\"images/open_data.png\" title=\""+showDataTooltip+"\"/></div><div class='xtable_switchwrapper'>" + tempHTML+"</div>");
+		$(this).html("<div class='"+tableID+" xtable_dataiconwrapper'><img class='xtable_dataicon' id=\""+tIconID+"\"src=\"images/open_data.png\" title=\""+showDataTooltip+" aria-label=\""+showDataTooltip+"\"/></div><div class='xtable_switchwrapper'>" + tempHTML+"</div>");
 		
-		$("img#"+tIconID).on("click",function(event){
+		$("img#"+tIconID).on("click", function(event){
 			hmWebHelp.funcs.xTables[tableID](event,$switchTD);
 			
 		});
@@ -245,7 +245,7 @@ function xTableConstructor($thisTable) {
 			colspan = 0,
 			colcounter = 0,
 			datatitle_class = "xtable_datatitle";
-
+				
 		// Create data blocks row if it doesn't exist already
 		// Only create if actually needed (user tries to display it)
 		if ($("tr#" + dataid).length === 0) {
@@ -266,13 +266,13 @@ function xTableConstructor($thisTable) {
 			$("div#" + divid).hide();
 			$("tr#" + dataid).show();
 			$("div#" + divid).slideDown("fast", function(){
-			$("img#" + iconid).attr("src","images/close_data.png").attr("title",hideDataTooltip);
+			$("img#" + iconid).attr("src","images/close_data.png").attr("title",hideDataTooltip).attr("aria-label",hideDataTooltip);
 			});
 				
 			} else if ($obj.parent("tr").hasClass("dataoff") || visibleColumns() == noOfColumns) {
 				$("div#" + divid).slideUp("fast", function(){
 				$("tr#" + dataid).hide();
-				$("img#" + iconid).attr("src","images/open_data.png").attr("title",showDataTooltip);
+				$("img#" + iconid).attr("src","images/open_data.png").attr("title",showDataTooltip).attr("aria-label",showDataTooltip);
 				});
 				
 				}

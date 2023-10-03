@@ -1,11 +1,11 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
 	<title>Print Version Template</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name='viewport' content='width=device-width, initial-scale=1, minimal-ui'/>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-	<meta name="generator" content="Help &amp; Manual" />
+	<meta name="generator" content="Help+Manual" />
 	<meta name="robots" content="noindex, nofollow" />
 	<link id="pagestylesheet" type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
 	<link type="text/css" href="./css/hmwebhelp_main_print.css" rel="stylesheet" />
@@ -36,17 +36,17 @@
 		} else {
 			$("p#ptopic_breadcrumbs").hide();
 		}
-	
+		
 		$("title").text(topicObj.hmTitle);	
-		$("p#topictitle").html(topicObj.hmTitle);
+		$("h1#topictitle").html(topicObj.hmTitle);
 		$("div#topicbody").html(topicObj.hmBody);
 	}
 
 	$(document).ready(function(){
 		var printTopic = document.location.search;
 		printTopic = "jstopics/" + printTopic.substr(1,printTopic.lastIndexOf("\.")) + "js";
-		$.getScript(printTopic,function() {
-			$("a").attr("href","javascript:void(0);").on("click",function(event){
+		$.getScript(printTopic, function() {
+			$("a").attr("href","javascript:void(0);").on("click", function(event){
 				event.preventDefault();
 				event.stopPropagation();
 				});
@@ -62,7 +62,7 @@
 	</script>
 </head>
 <body>
-<div id="topicheader"><p id="ptopic_breadcrumbs"></p><p id="topictitle" class="topictitle"></p></div>
+<div id="topicheader"><p id="ptopic_breadcrumbs"></p><h1 id="topictitle" class="topictitle"></h1></div>
 <div id="topicbody">
 
 </div> 

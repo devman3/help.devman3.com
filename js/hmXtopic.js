@@ -1,4 +1,4 @@
-// Project information
+﻿// Project information
 
 hmProjectInfo = {
 	title: "DevMan Online Help",
@@ -6,7 +6,7 @@ hmProjectInfo = {
 	copyright: "© 2023 IS Kidz Africa Pty Ltd",
 	summary: "Proud authors of Devman Bursary, Fundraising and Grant-making &nbsp;web application",
 	version: "",
-	date: "Tuesday, 26 September 2023",
+	date: "Tuesday, 03 October 2023",
 	language: "en-za",
 	mainfile: "index.html"
 	}
@@ -99,13 +99,13 @@ hmProjectInfo = {
 		});
 	
 	$textpopup = $("div#textpopup");
-	$textpopup.attr("title","Click outside popup to close. Popups in field-level topics are plain text only.");
+	$textpopup.attr("title","Click outside popup to close. Popups in field-level topics are plain text only.").attr("aria-label","Click outside popup to close. Popups in field-level topics are plain text only.");
 	
 	var hmClosePopup = function(reset) {
 		if (reset)
 			$textpopup.html("").attr("style","");
 		else
-			$textpopup.fadeOut("fast",function(){
+			$textpopup.fadeOut("fast", function(){
 			$textpopup.html("").attr("style","");
 			});
 	};
@@ -114,7 +114,7 @@ hmProjectInfo = {
 		event.stopPropagation();
 	});
 	
-	$(document).on("click",function(){
+	$(document).on("click", function(){
 		if ($textpopup.is(":visible"))
 			hmClosePopup(false);
 	});
