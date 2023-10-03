@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>DevMan Online Help</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta http-equiv="expires" content="-1">
+   <meta http-equiv="cache-control" content="no-cache">
+   <meta http-equiv="pragma" content="no-cache">
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style type="text/css">
+       body { background:#FFF; }
+       .navbar      { font-size: 120% }
+
+       #idx          { margin: 0; padding: 0 }     /* div tag that wraps the keyword index */
+       #idx a        { color: #000; text-decoration: none }  /* all links in index appear as text */
+
+       #idx p             { margin: 2px }        /* keywords and secondary keywords */
+       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+
+       table.idxtable { background: #F4F4F4;
+                        border: 1px solid #000000;
+                        border-collapse: collapse;
+                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
+                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
+                        box-shadow: 2px 2px 2px #B0B0B0;
+                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
+       td.idxtable    { background: #F4F4F4 }
+
+       /* font definitions for keyword section, keywords and popup links */
+       .idxsection  { font-family: Arial,Helvetica; font-weight: normal; font-size: 14pt; color: #000000; text-decoration: none;
+                      margin-top: 15px; margin-bottom: 15px; }
+       .idxkeyword  { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxkeyword2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxlink     { font-family: Arial,Helvetica; font-weight: normal; font-size: 8pt; color: #000000; text-decoration: none; }
+
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body>
+<p class="navbar"><a href="hmcontent.htm">Contents</a>
+ | <b>Index</b>
+ | <a href="hmftsearch.htm">Search</a>
+</p>
+<hr/>
+  <!-- Place holder for the keyword index - this variable is REQUIRED! -->
+  <script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+function getText(obj) {
+  return (obj.innerText ? obj.innerText : obj.textContent);
+}
+function trackidx(obj) {
+  var akeyword = "";
+  while (obj.className != "idxkeyword") {
+    if (obj.previousSibling == null)
+      { obj = obj.parentNode; }
+    else
+      { obj = obj.previousSibling; }
+    if (obj.className == "idxkeyword2") { akeyword = getText(obj); }
+    if (obj.className == "idxkeyword") { akeyword = ((akeyword=="") ? getText(obj) : getText(obj) + ":" + akeyword); }
+  }
+  if (parent.frames.length>0) {
+    if (parent.gaaccount) { parent.track("index", akeyword); }
+  }
+}
+
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="1" id="1"></a><p class="idxsection">- 1 -</p>
+<p class="idxkeyword"><a href="section18areceipts.htm#reissue_s18" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">18A</span></a></p>
+<a name="2" id="2"></a><p class="idxsection">- 2 -</p>
+<p class="idxkeyword"><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">2023</span></a></p>
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Academic</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k4')"><span class="idxkeyword">Access</span></a></p>
+<div id="k4" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsdevmanfunction" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsuseraccess" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="devsecurity.htm#userprofile" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Add</span></a></p>
+<p class="idxkeyword"><a href="email.htm#failedaddressvalidate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Address</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k7')"><span class="idxkeyword">Advanced</span></a></p>
+<div id="k7" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online results</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchadvanced" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onlineapplications.htm#reopenapplication" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">application</span></a></p>
+<p class="idxkeyword"><a href="onlineapplications.htm#reportingissues" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">applications</span></a></p>
+<p class="idxkeyword"><a href="onlineapplications.htm#resendfailedemail" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">applicatoin</span></a></p>
+<p class="idxkeyword"><a href="documentmanagement.htm#documentupload" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Attach</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k12')"><span class="idxkeyword">Attachment</span></a></p>
+<div id="k12" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="documentmanagement.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Document management</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dossier.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Dossier</span></a></td></tr></table></td></tr></table></div>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword"><span class="idxkeyword">Beneficiaries</span></p>
+<p class="idxkeyword2"><a href="prjbeneficiariesadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#favouritesmanage" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bookmarks</span></a></p>
+<p class="idxkeyword"><a href="faqgeneral.htm#browser" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">browser</span></a></p>
+<p class="idxkeyword"><a href="rvnbudget.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Budget</span></a></p>
+<p class="idxkeyword2"><a href="rvnbudgetreport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Print</span></a></p>
+<p class="idxkeyword2"><a href="rvnbudgetview.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">View</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k17')"><span class="idxkeyword">Certificate</span></a></p>
+<div id="k17" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Section 18A receipts</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Section 18A receipts</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="faqgeneral.htm#changepassword" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">change</span></a></p>
+<p class="idxkeyword"><a href="email.htm#linktrack" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Clicks</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Contact</span></p>
+<p class="idxkeyword2"><a href="prjprojectsummary.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Organisation, add</span></a></p>
+<p class="idxkeyword2"><a href="entpersoncontactalter.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Person, add</span></a></p>
+<p class="idxkeyword2"><a href="entsearchadv.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Search</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Contacts</span></p>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Linking</span></a></p>
+<p class="idxkeyword"><a href="email.htm#linktrack" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Count</span></a></p>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k23')"><span class="idxkeyword">Data</span></a></p>
+<div id="k23" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="devsecurity.htm#faqsecurityanchor" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Security</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="devsecurity.htm#faqdatasecure" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Security</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Details</span></a></p>
+<p class="idxkeyword"><a href="securityadvanced.htm#permissionsdevmanfunction" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DevMan functions</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k26')"><span class="idxkeyword">Document</span></a></p>
+<div id="k26" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#documentlink" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="documentmanagement.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Document management</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="documentmanagement.htm#documentupload" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Document management</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Donation</span></p>
+<p class="idxkeyword2"><a href="rvndonation.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<p class="idxkeyword"><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Donor</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k29')"><span class="idxkeyword">Dossier</span></a></p>
+<div id="k29" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="documentmanagement.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Document management</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dossier.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Dossier</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="entdossierview.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Viewing</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k30')"><span class="idxkeyword">email</span></a></p>
+<div id="k30" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#emailsend" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#failedaddressvalidate" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#improveemaildelivery" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#documentlink" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#junkmail" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineapplications.htm#resendfailedemail" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online applications</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="email.htm#emailaddressvalidate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Address</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#userpreferences" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Email identity</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#userpreferences" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Email verification</span></a></p>
+<p class="idxkeyword"><a href="quickguides.htm#enduser" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">End user requirements</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Envelopes</span></p>
+<p class="idxkeyword2"><a href="rptcontactenvelope.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Print</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k35')"><span class="idxkeyword">Events</span></a></p>
+<div id="k35" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="eventmanagement.htm#eventmodulefeatures" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Event management</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchoptions" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchadvanced" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="importsandupdates.htm#importer" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">excel</span></a></p>
+<p class="idxkeyword"><a href="faqgeneral.htm#browser" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">explorer</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Export</span></p>
+<p class="idxkeyword2"><a href="rptcontactexport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Reports</span></a></p>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="onlineapplications.htm#resendfailedemail" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">failed</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k40')"><span class="idxkeyword">FAQ</span></a></p>
+<div id="k40" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="navigation.htm#faqnavigation" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Navigation</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm#smsfaq" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="navigation.htm#favouritesmanage" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Favourites</span></a></p>
+<p class="idxkeyword"><a href="searching.htm#sayt" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FAYT</span></a></p>
+<p class="idxkeyword"><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Fields</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#gridfeature" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">filter sort resize</span></a></p>
+<p class="idxkeyword"><a href="searching.htm#sayt" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Find</span></a></p>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword"><a href="setting.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Getting started</span></a></p>
+<p class="idxkeyword"><a href="onlinegiving.htm#onlinegivingprojects" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Giving</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Grid</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Grids</span></p>
+<p class="idxkeyword2"><a href="personalpreference.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Font, default</span></a></p>
+<p class="idxkeyword2"><a href="personalpreference.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Row, number displayed</span></a></p>
+<p class="idxkeyword"><a href="devsecurity.htm#faqpopia" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Guide</span></a></p>
+<p class="idxkeyword"><a href="quickguides.htm#enduser" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Guides</span></a></p>
+<a name="I" id="I"></a><p class="idxsection">- I -</p>
+<p class="idxkeyword"><a href="importsandupdates.htm#importer" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">import</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#notes" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Important</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Interaction</span></p>
+<p class="idxkeyword2"><a href="actinteractionadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<p class="idxkeyword2"><a href="actinteractionadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">New</span></a></p>
+<p class="idxkeyword2"><a href="actinteractionview.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">View</span></a></p>
+<p class="idxkeyword"><a href="faqgeneral.htm#browser" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">internet</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k56')"><span class="idxkeyword">Issue</span></a></p>
+<div id="k56" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="faqsupport.htm#helpandsupport" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Support</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="faqsupport.htm#reportissue" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Support</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onlineapplications.htm#reportingissues" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">issues</span></a></p>
+<a name="J" id="J"></a><p class="idxsection">- J -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k58')"><span class="idxkeyword">junk</span></a></p>
+<div id="k58" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#improveemaildelivery" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#junkmail" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr></table></td></tr></table></div>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><span class="idxkeyword">Labels</span></p>
+<p class="idxkeyword2"><a href="rptcontactlabel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Print</span></a></p>
+<p class="idxkeyword"><a href="faqletter.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Letter</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k61')"><span class="idxkeyword">Link</span></a></p>
+<div id="k61" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#documentlink" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Linking Contacts</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Employee</span></a></p>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Employer</span></a></p>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Organisation</span></a></p>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Person</span></a></p>
+<p class="idxkeyword"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Linking</span></a></p>
+<p class="idxkeyword"><a href="email.htm#linktrack" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Links</span></a></p>
+<p class="idxkeyword"><a href="onlinegiving.htm#onlinegivingprojects" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">List</span></a></p>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><a href="email.htm#junkmail" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">mail</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k66')"><span class="idxkeyword">Mailshot</span></a></p>
+<div id="k66" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="mailshot.htm#mailshotrecipients" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Mailshot</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="mailshot.htm#schedulemailshot" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Mailshot</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k67')"><span class="idxkeyword">Mailshots</span></a></p>
+<div id="k67" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchoptions" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchadvanced" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="eventmanagement.htm#eventmodulefeatures" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Managed by</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="navigation.htm#faqnavigation" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Navigation</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#notes" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Notes</span></a></p>
+<p class="idxkeyword"><a href="email.htm#junkmail" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">notifications</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k72')"><span class="idxkeyword">online</span></a></p>
+<div id="k72" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlinegiving.htm#onlinegivingprojects" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online giving</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineapplications.htm#reportingissues" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online applications</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineapplications.htm#reopenapplication" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online applications</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineapplications.htm#resendfailedemail" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online applications</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Organisation</span></p>
+<p class="idxkeyword2"><a href="prjprojectsummary.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="faqgeneral.htm#changepassword" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Password</span></a></p>
+<p class="idxkeyword2"><a href="setpasswordchange.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Change</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Payment</span></p>
+<p class="idxkeyword2"><a href="rvnpaymentpledgepay.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Pledge (payment made)</span></a></p>
+<p class="idxkeyword2"><a href="rvnpaymentadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Pledge (payment received)</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k76')"><span class="idxkeyword">people</span></a></p>
+<div id="k76" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online results</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchoptions" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k77')"><span class="idxkeyword">Permissions</span></a></p>
+<div id="k77" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsdevmanfunction" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsuseraccess" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="devadministrationmine.htm#userrights" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Security</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Person</span></p>
+<p class="idxkeyword2"><a href="entpersoncontactalter.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#userpreferences" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Personal</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Pledge</span></p>
+<p class="idxkeyword2"><a href="rvnpaymentpledgeadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add (Payment made)</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k80.2')"><span class="idxkeyword2">Donation</span></a></p>
+<div id="k80.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="committedgiving.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Commitment - giving</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rvndonationpledgeadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Add a pledge</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rvnpledge.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Pledge</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k80.3')"><span class="idxkeyword2">Pay</span></a></p>
+<div id="k80.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rvnpaymentadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Add a payment</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rvnpaymentpledgepay.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Pay a pledge</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="rvndonationpledgepay.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Pay donation</span></a></p>
+<p class="idxkeyword"><a href="devsecurity.htm#faqpopia" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">POPIA</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Popup</span></p>
+<p class="idxkeyword2"><a href="faqpopups.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Blockers</span></a></p>
+<p class="idxkeyword2"><a href="faqpopups.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Not displaying</span></a></p>
+<p class="idxkeyword2"><a href="faqpopups.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Remove popup blocker alerts</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k83')"><span class="idxkeyword">Preferences</span></a></p>
+<div id="k83" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="navigation.htm#userpreferences" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Navigation</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="personalpreference.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Personal preferences</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="faqprintingproblems.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Print</span></a></p>
+<p class="idxkeyword2"><a href="printmedia.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">HTML</span></a></p>
+<p class="idxkeyword2"><a href="printmedia.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">PDF</span></a></p>
+<p class="idxkeyword2"><a href="printmedia.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Word</span></a></p>
+<p class="idxkeyword"><a href="securityadvanced.htm#permissionsuseraccess" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Privilege</span></a></p>
+<p class="idxkeyword"><a href="devsecurity.htm#userprofile" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Profile</span></a></p>
+<p class="idxkeyword"><a href="onlinegiving.htm#onlinegivingprojects" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Project</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k87.1')"><span class="idxkeyword2">Beneficiaries</span></a></p>
+<div id="k87.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="prjbeneficiaries.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Project beneficiaries</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="prjbeneficiariesadd.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Add beneficiary</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Partners</span></a></p>
+<p class="idxkeyword2"><a href="proposal.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Tutorial</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Proposal</span></p>
+<p class="idxkeyword2"><a href="proposal.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Tutorial</span></a></p>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword"><a href="mailshot.htm#mailshotrecipients" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">recipient</span></a></p>
+<p class="idxkeyword"><a href="section18areceipts.htm#reissue_s18" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">reissue</span></a></p>
+<p class="idxkeyword"><a href="entlink.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Relationships</span></a></p>
+<p class="idxkeyword"><a href="onlineapplications.htm#reopenapplication" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Re-open</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k93')"><span class="idxkeyword">Report</span></a></p>
+<div id="k93" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="faqsupport.htm#helpandsupport" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Support</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="faqsupport.htm#reportissue" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Support</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onlineapplications.htm#reportingissues" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">reporting</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k95')"><span class="idxkeyword">Reports</span></a></p>
+<div id="k95" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchadvanced" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="report.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Report</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.1')"><span class="idxkeyword2">Advanced</span></a></p>
+<div id="k95.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="importsandupdates.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Imports and updates</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="batchupdate.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Process a batch of records</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="rvnbudgetreport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Budget</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.3')"><span class="idxkeyword2">Contacts</span></a></p>
+<div id="k95.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptcontact.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Printing contact reports</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptcontactprofiles.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Printing contact profiles</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.4')"><span class="idxkeyword2">Customisable exports</span></a></p>
+<div id="k95.4" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="importsandupdates.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Imports and updates</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="batchupdate.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Process a batch of records</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="rptcontactenvelope.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Envelopes</span></a></p>
+<p class="idxkeyword2"><a href="rptcontactexport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Excel</span></a></p>
+<p class="idxkeyword2"><a href="rptcontactexport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Export</span></a></p>
+<p class="idxkeyword2"><a href="rptcontactlabel.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Labels</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.9')"><span class="idxkeyword2">Project</span></a></p>
+<div id="k95.9" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptproject.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Printing project reports</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptproject_2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Printing finance reports</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.10')"><span class="idxkeyword2">Project lists</span></a></p>
+<div id="k95.10" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptprojectlists.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Project lists</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptprojectlists_2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Project lists_2</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.11')"><span class="idxkeyword2">Report builder</span></a></p>
+<div id="k95.11" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="importsandupdates.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Imports and updates</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="batchupdate.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Process a batch of records</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="rptcontactreport.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Report Layout</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k95.13')"><span class="idxkeyword2">Statistical, project</span></a></p>
+<div id="k95.13" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptprojectstats.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Statistical project reports</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rptprojectstats_2.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Statistical project reports_2</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onlineresults.htm#steps" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Request</span></a></p>
+<p class="idxkeyword"><a href="onlineapplications.htm#resendfailedemail" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Re-send</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#steps" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Result</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Results</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k100')"><span class="idxkeyword">Rights</span></a></p>
+<div id="k100" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsdevmanfunction" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="devadministrationmine.htm#userrights" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Security</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="eventmanagement.htm#eventmodulefeatures" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RSVP</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SARS</span></a></p>
+<p class="idxkeyword"><a href="mailshot.htm#schedulemailshot" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Schedule</span></a></p>
+<p class="idxkeyword"><a href="mailshot.htm#schedulemailshot" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Scheduler</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k105')"><span class="idxkeyword">Search</span></a></p>
+<div id="k105" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onlineresults.htm#peoplesearchadvancedacademicresults" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Online results</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="searching.htm#searchadvanced" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Searching</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="entsearchadv.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Contact</span></a></p>
+<p class="idxkeyword2"><a href="entsearchadv.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Organisation</span></a></p>
+<p class="idxkeyword2"><a href="entsearchadv.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Person</span></a></p>
+<p class="idxkeyword2"><a href="entsearchadv.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Project</span></a></p>
+<p class="idxkeyword"><a href="searching.htm#sayt" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Search as you type</span></a></p>
+<p class="idxkeyword"><a href="section18areceipts.htm#reissue_s18" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">section</span></a></p>
+<p class="idxkeyword"><a href="devsecurity.htm#faqdatasecure" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Secure</span></a></p>
+<p class="idxkeyword2"><a href="devsecurity.htm#faqsecurityanchor" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Recovery</span></a></p>
+<p class="idxkeyword"><a href="devsecurity.htm#faqpopia" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Security</span></a></p>
+<p class="idxkeyword"><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Self</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k111')"><span class="idxkeyword">Send</span></a></p>
+<div id="k111" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#emailsend" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm#smsfaq" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Service</span></a></p>
+<p class="idxkeyword"><a href="navigation.htm#userpreferences" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Settings</span></a></p>
+<p class="idxkeyword2"><a href="personalpreference.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Personal preferences</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k114')"><span class="idxkeyword">SMS</span></a></p>
+<div id="k114" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm#smsfaq" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="email.htm#improveemaildelivery" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">spam</span></a></p>
+<p class="idxkeyword"><a href="importsandupdates.htm#importer" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">spreadsheet</span></a></p>
+<p class="idxkeyword"><a href="onlineresults.htm#steps" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Steps</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k118')"><span class="idxkeyword">Subscription</span></a></p>
+<div id="k118" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="mailshot.htm#mailshotrecipients" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Mailshot</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="eventmanagement.htm#eventmodulefeatures" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Event management</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="faqsupport.htm#helpandsupport" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Support</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k120')"><span class="idxkeyword">Tax</span></a></p>
+<div id="k120" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="section18areceipts.htm#sars2023" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Section 18A receipts</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Section 18A receipts</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Template</span></p>
+<p class="idxkeyword2"><a href="faqletter.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Letter</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k122')"><span class="idxkeyword">Time</span></a></p>
+<div id="k122" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="textmessage.htm#smsfaq" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SMS</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="textmessage.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">times</span></a></p>
+<p class="idxkeyword"><a href="email.htm#linktrack" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Track</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Troubleshooting</span></p>
+<p class="idxkeyword2"><a href="faqprintingproblems.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Printing, problem</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Tutorial</span></p>
+<p class="idxkeyword2"><a href="proposal.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Project</span></a></p>
+<p class="idxkeyword2"><a href="proposal.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Proposal</span></a></p>
+<a name="U" id="U"></a><p class="idxsection">- U -</p>
+<p class="idxkeyword"><a href="section18areceipts.htm#selfserviceupdate" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Update</span></a></p>
+<p class="idxkeyword"><a href="documentmanagement.htm#documentupload" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Upload</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k129')"><span class="idxkeyword">User</span></a></p>
+<div id="k129" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="devsecurity.htm#userprofile" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Security</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="securityadvanced.htm#permissionsuseraccess" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Advanced</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="secuserpermission.htm" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Permissions</span></a></p>
+<p class="idxkeyword"><a href="devadministrationmine.htm#userrights" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Users</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k131')"><span class="idxkeyword">Validate</span></a></p>
+<div id="k131" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#emailaddressvalidate" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email.htm#failedaddressvalidate" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Email</span></a></td></tr></table></td></tr></table></div>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="eventmanagement.htm#eventmodulefeatures" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Web stationery</span></a></p>
+</div>
+
+
+</body>
+</html>
