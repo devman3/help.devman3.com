@@ -628,9 +628,6 @@ Add and link a new DevMan user</a></span></td></tr></table></div>
 </table>
 </div>
 
-	<footer class="topicfooter">
-<p class="topicfooter">Created with <a href="http://www.helpandmanual.com/products_hm_overview.html" title="EC Software Products" target="_blank">Help+Manual 9</a> and styled with <a href="http://www.helpandmanual.com/products_hm_pluspack.html" title="Premium Pack Information">Premium Pack Version 5</a> &copy; by EC Software</p>
-</footer>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
@@ -755,8 +752,6 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  //hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
-	  hmpage.topicfooter = $("footer.topicfooter")[0].outerHTML;
-	  
 	  $("input#search_input").on("keyup", function(event) {
 		
 		var searchQ = $(this).val();

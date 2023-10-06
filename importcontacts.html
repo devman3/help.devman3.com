@@ -531,9 +531,6 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormalIndent" style="text-indent: -1.1250rem; margin: 0 2.3750rem 0 3.5000rem;"><span style="font-size: 1.10rem;">Your import will now run in the background and you will get a note when it is finished. If you get an error message it's likely your data is not formatted correctly</span></p>
 <p class="p_KidzNormalIndent" style="text-indent: -1.1250rem; margin: 0 2.3750rem 0 3.5000rem;"><span style="font-size: 1.10rem;">A record of this transmission and its recipients are saved in DevMan. &nbsp;Please note these records do not get imported into the Devman person tables. </span></p>
 
-	<footer class="topicfooter">
-<p class="topicfooter">Created with <a href="http://www.helpandmanual.com/products_hm_overview.html" title="EC Software Products" target="_blank">Help+Manual 9</a> and styled with <a href="http://www.helpandmanual.com/products_hm_pluspack.html" title="Premium Pack Information">Premium Pack Version 5</a> &copy; by EC Software</p>
-</footer>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
@@ -658,8 +655,6 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  //hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
-	  hmpage.topicfooter = $("footer.topicfooter")[0].outerHTML;
-	  
 	  $("input#search_input").on("keyup", function(event) {
 		
 		var searchQ = $(this).val();
