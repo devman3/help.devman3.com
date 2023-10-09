@@ -483,6 +483,9 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	<p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
 <p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">If you have received money, when adding a donation it is essential to allocate the donation to the pledge, otherwise any financial reports that you generate will be incorrect. &nbsp;See <a href="rvnpaymentpledgepay.html" class="topiclink">Pay a pledge</a>.</span></p>
 
+	<footer class="topicfooter">
+<p class="topicfooter">DevMan3 <a " title="Information for growth" target="_blank">Information for growth</a> <a href="https://devman3.com/" </p>
+</footer>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
@@ -607,6 +610,8 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  //hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
+	  hmpage.topicfooter = $("footer.topicfooter")[0].outerHTML;
+	  
 	  $("input#search_input").on("keyup", function(event) {
 		
 		var searchQ = $(this).val();

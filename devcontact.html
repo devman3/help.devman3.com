@@ -536,6 +536,9 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormalIndent" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 2.3750rem;"><span class="f_KidzNormalIndent" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span><span class="f_KidzNormalIndent"><a href="online-updates.html" class="topiclink">Online updates</a></span></p>
 <p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">&nbsp;</span></p>
 
+	<footer class="topicfooter">
+<p class="topicfooter">DevMan3 <a " title="Information for growth" target="_blank">Information for growth</a> <a href="https://devman3.com/" </p>
+</footer>
 	</div> <!-- hmpagebody_scroller -->
 	</div> <!-- hmpagebody -->
 	</div> <!-- topicbody-->
@@ -660,6 +663,8 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  //hmWebHelp.hmMainPageInit();
 	  hmpage.hmDescription = document.querySelector("meta[name='description']").getAttribute("content");
 	  hmpage.hmPicture = "" === "" ? "" : "./images/";
+	  hmpage.topicfooter = $("footer.topicfooter")[0].outerHTML;
+	  
 	  $("input#search_input").on("keyup", function(event) {
 		
 		var searchQ = $(this).val();
