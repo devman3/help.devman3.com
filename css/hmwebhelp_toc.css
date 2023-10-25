@@ -106,10 +106,10 @@ div#tocHeader {
 	background-position: 10px 4px;
 }
 p.tocProjectTitle {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: Tahoma;
 	text-align: center;
-	font-size: 1.4rem;
-	color: #444444;
+	font-size: 1.5rem;
+	color: #365c6b;
 	padding-left: calc(1.2rem + 5px);
 }
 a#tocHeaderLink:link {
