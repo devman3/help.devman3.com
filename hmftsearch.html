@@ -492,6 +492,9 @@ var initScripts = function() {
 					}
 				xMessage.sendObject("parent",{action: "setvalue", vn: "hmFlags.searchHighlight", vv: "*" + args[1]});
 				xMessage.sendObject("parent",{action: "loadtopic", href: (args[0].replace(/^\.\/|^.+\//,"") + gaquery), bs: false});
+				if (hmBrowser.server && gaaccount !== "") {
+					xMessage.sendObject("parent", {action: "callfunction", fn: "hmWebHelp.track", fa: ['search_click', encodeURIComponent(args[0].replace(/^\.\/|^.+\//,""))]});
+					}
 				});
 
 			xMessage.sendObject("parent",{action: "getvalue", vn: "hmFlags.searchSession", cbf: "hmDevice.doNavbar"});
@@ -545,6 +548,20 @@ var initScripts = function() {
 			break;
 		}
 	}); // Keyboard control 
+	
+		// Search term GA tracking
+		if (hmBrowser.server && gaaccount !== "") {
+		var inputs = document.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].className=="zoom_button") { var btn = inputs[i]; }
+			else if (inputs[i].className=="zoom_searchbox") { var sbx = inputs[i]; }
+				}
+			if ((btn)&&(sbx)) { 
+				$(btn).on("click", function(){
+				xMessage.sendObject("parent",{action: "callfunction", fn: "hmWebHelp.track", fa: ['search', encodeURIComponent(sbx.value.replace(/\s/g, '+'))]});
+				});
+				}
+			} // Search term GA tracking 
 			}
 			});
 		} 		

@@ -404,6 +404,24 @@ jQuery.cachedScript = function( url, options ) {
   return jQuery.ajax( options );
 };
 
+// Topic tracking function
+var HMTrackTopiclink = function(obj) {
+
+	if (hmBrowser.server && gaaccount !== "") {
+		
+		switch (obj.className) {
+			
+			case "filelink":
+			hmWebHelp.track("file", obj.href);
+			break;
+			
+			case "weblink":
+			hmWebHelp.track("web", obj.href);
+			break;
+			}		   
+		}
+};
+
 // Handler for post-loading functions from files
 hmWebHelp.extFuncs = function(func, args) {	
 		var newScript = "";
@@ -578,6 +596,89 @@ hmWebHelp.tocNav = new function() {
 	};
 	}();
 
+hmWebHelp.track = function(action, data) {
+	
+	// Quit if GA is disabled
+	if (!hmDevice.GAactive) return;
+
+	switch(action) {
+		
+		case "search":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "search_term",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "search_click":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "search_click",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "index":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "<%GA_INDEXLABEL%>",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "index_click":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "<%GA_INDEXCLICKLABEL%>",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "topic":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "topic_link",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "file":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "file_link",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "web":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "web_link",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "toc_web":
+		alert("tracking toc web link: " + decodeURIComponent(data))
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "toc_weblink",
+		'value': decodeURIComponent(data)
+		});
+		break;
+		
+		case "toc_click":
+		gtag('event', action, {
+		'event_category': 'engagement',
+		'event_label': "toc_click",
+		'value': decodeURIComponent(data)
+		});
+		
+		
+	}
+}; // hmWebHelp.track 
+
 // Close all drop-down menus before continuing with something else
 hmWebHelp.closeMenus = function() {
 		var active = 0;
@@ -708,6 +809,11 @@ hmWebHelp.hmTopicPageInit = function() {
 				target = hmWebHelp.targetCheck(target);
 				if (hmWebHelp.hmMainPageCheck(target)) {
 					hmWebHelp.tocNav({action: "set", href: target, bs: false});
+					// Track topic link click
+					if (hmBrowser.server && gaaccount !== "") {
+					hmWebHelp.track('topic', target);
+
+					}
 				}
 			}
 		});
