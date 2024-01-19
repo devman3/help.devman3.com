@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"send,SMS,time,times",
 hmTitle:"SMS",
 hmDescription:"Overview  Mobile communication is a key platform for stakeholder communication, often used to augment existing email based communication, and sometimes even replacing it,...",
-hmPrevLink:"email.html",
+hmPrevLink:"emailsetup.html",
 hmNextLink:"mailshot.html",
 hmParentLink:"devcommunication.html",
 hmBreadCrumbs:"<a href=\"devcommunication.html\">Communication<\/a>",
