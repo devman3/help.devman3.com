@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"Reports,Reports Advanced,Reports Customisable exports,Reports Report builder",
 hmTitle:"Imports and updates",
 hmDescription:"Overview  Easily apply a series of changes to a group of records by using the bulk update feature. Updates can be made to people, organisations, projects, bursaries and financia",
-hmPrevLink:"payments.html",
+hmPrevLink:"pledges.html",
 hmNextLink:"onlineapplications.html",
 hmParentLink:"devmanfunction.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a>",
