@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Commitments",
 hmDescription:"Overview    Topics",
-hmPrevLink:"payments.html",
+hmPrevLink:"budget.html",
 hmNextLink:"pledges.html",
 hmParentLink:"expenditure.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a> &gt; <a href=\"expenditure.html\">Expenditure<\/a>",
