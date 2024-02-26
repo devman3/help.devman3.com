@@ -221,94 +221,6 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	}
 	</style>
 	</noscript>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MCTLHGG72"></script>
-<script>
-var gaOptString = 'ga-disable-' + "G-4MCTLHGG72",
-	gaConfigString = 'ga-configure-' + "G-4MCTLHGG72",
-	gaAccountOK = true,
-	gaOptOutCookie = hmDevice.hmGetCookie(gaOptString),
-	gaConfigCookie = hmDevice.hmGetCookie(gaConfigString);
-	
-	// Redirect to author's GDPR consent form if required
-	var ga_redirect = "";
-	if (ga_redirect != "") {
-	// Redirect to consent form if neither cookie is set
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		window.location.replace(ga_redirect);
-		}
-	}
-
-if (/^UA-/.test("G-4MCTLHGG72")) {
-		alert("Invalid Universal Analytics GA ID: G-4MCTLHGG72\r\n\r\nYou must use a Google Analytics 4 ID.")
-		gaAccountOK = false;
-	}
-
-if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
-
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-4MCTLHGG72');
-
-	var optmode = "optout";
-
-	// Configure consent if activated
-	if (optmode != "off") {
-
-	let ad_storage = "denied", 
-		analytics_storage = "denied", 
-		ads_data_redaction = "denied";
-
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		if (optmode == "optin") {
-			gaOptOutCookie = "true";
-		} else if (optmode == "optout") {
-			ad_storage = "granted", 
-			analytics_storage = "granted", 
-			ads_data_redaction = "granted";
-			}
-		} else if (!navigator.cookieEnabled) {
-			gaOptOutCookie = "true";
-		}
-
-	if (gaOptOutCookie == "true") {
-
-		// Disable GA completely
-		window['ga-disable-G-4MCTLHGG72'] = true;
-		hmDevice.GAactive = false;
-		
-	} else if (gaConfigCookie != "") {
-
-		switch (gaConfigCookie) {
-		
-			case "granted":
-			ad_storage = analytics_storage = ads_data_redaction = "granted";
-			break;
-			
-			case "denied":
-			ad_storage = analytics_storage = ads_data_redaction = "denied";
-			break;
-			
-			default:
-			if (gaConfigCookie.indexOf("ad_storage") > -1) ad_storage = "granted";
-			if (gaConfigCookie.indexOf("analytics_storage") > -1) analytics_storage = "granted";
-			if (gaConfigCookie.indexOf("ads_data_redaction") > -1) ads_data_redaction = "granted";
-			break;
-		}
-
-		// Configure GA
-		gtag('consent', {
-			'ad_storage': ad_storage,
-			'analytics_storage': analytics_storage,
-			'ads_data_redaction': ads_data_redaction,
-			'wait_for_update': 500
-			});
-		
-		} // Config cookie
-	} // Consent mode
-} // If server
-</script>
 	<link rel="canonical" href="https://www.devman3.com/navigation.html" />
 	<script id="jqscript" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/HM_CLASSICMENU.css" />
@@ -578,7 +490,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 2.3750rem 0 2.3750rem;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186a1_ICON" class="dropdown-toggle-icon" alt="Home page features" title="Home page features" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186a1_LINK" class="dropdown-toggle" title="Home page features" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a1_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Home page</a></span></td></tr></table></div>
 <div id="toggle0186a1" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 2.3750rem 0 3.5000rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 80.24% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/homepage.html" data-lightbox="true" data-aspect="80.24" data-title="Home page" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Home page</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 80.24% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_homepage.html" data-lightbox="true" data-aspect="80.24" data-title="Home page" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Home page</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -587,7 +499,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 2.3750rem 0 2.3750rem;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186a2_ICON" class="dropdown-toggle-icon" alt="hmtoggle_arrow0" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186a2_LINK" class="dropdown-toggle" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a2_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Menu structure</a></span></td></tr></table></div>
 <div id="toggle0186a2" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 2.3750rem 0 3.5000rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 63.81% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/menustructure.html" data-lightbox="true" data-aspect="63.81" data-title="Menu structure" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Menu structure</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 63.81% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_menustructure.html" data-lightbox="true" data-aspect="63.81" data-title="Menu structure" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Menu structure</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -611,7 +523,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 2.3750rem 0 2.3750rem;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186a4_ICON" class="dropdown-toggle-icon" alt="Use breadcrumbs to speed up navigation" title="Use breadcrumbs to speed up navigation" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186a4_LINK" class="dropdown-toggle" title="Use breadcrumbs to speed up navigation" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a4_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Breadcrumbs</a></span></td></tr></table></div>
 <div id="toggle0186a4" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 2.3750rem 0 3.5000rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 59.67% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/breadcrumbs.html" data-lightbox="true" data-aspect="59.67" data-title="Breadcrumbs" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Breadcrumbs</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 59.67% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_breadcrumbs.html" data-lightbox="true" data-aspect="59.67" data-title="Breadcrumbs" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Breadcrumbs</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -620,7 +532,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 2.3750rem 0 2.3750rem;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186a5_ICON" class="dropdown-toggle-icon" alt="Use breadcrumbs to save to favourites" title="Use breadcrumbs to save to favourites" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/><a id="favourites" class="hmanchor"></a></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186a5_LINK" class="dropdown-toggle" title="Use breadcrumbs to save to favourites" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a5_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Bookmarks / favourites</a></span></td></tr></table></div>
 <div id="toggle0186a5" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 2.3750rem 0 3.5000rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 64.02% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/bookmarks.html" data-lightbox="true" data-aspect="64.02" data-title="Bookmarks" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Bookmarks</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 64.02% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_bookmarks.html" data-lightbox="true" data-aspect="64.02" data-title="Bookmarks" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Bookmarks</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -629,7 +541,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 2.3750rem 0 2.3750rem;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><a id="gridfeature" class="hmanchor"></a><img id="toggle0186a6_ICON" class="dropdown-toggle-icon" alt="hmtoggle_arrow0" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186a6_LINK" class="dropdown-toggle" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a6_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Grid features</a></span></td></tr></table></div>
 <div id="toggle0186a6" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 2.3750rem 0 3.5000rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 75.88% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/datagrids.html" data-lightbox="true" data-aspect="75.88" data-title="Grid features" data-load="view" data-playbutton="true" data-playafter="1.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Grid features</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 75.88% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_datagrids.html" data-lightbox="true" data-aspect="75.88" data-title="Grid features" data-load="view" data-playbutton="true" data-playafter="1.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Grid features</span></p></div></div>
 <p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
 </td>
 </tr>
@@ -824,9 +736,6 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  
 		if (event.which == 13 && searchQ.length > 2) {
 			xMessage.sendObject("hmsearch",{action: "callfunction",fn: "hmDoFtSearch", fa: searchQ});
-			if (hmBrowser.server && gaaccount !="") {
-				hmWebHelp.track("search", encodeURIComponent(searchQ));
-				}
 			return;
 		};
 		if (event.which == 27) {

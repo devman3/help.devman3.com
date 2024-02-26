@@ -221,94 +221,6 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	}
 	</style>
 	</noscript>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MCTLHGG72"></script>
-<script>
-var gaOptString = 'ga-disable-' + "G-4MCTLHGG72",
-	gaConfigString = 'ga-configure-' + "G-4MCTLHGG72",
-	gaAccountOK = true,
-	gaOptOutCookie = hmDevice.hmGetCookie(gaOptString),
-	gaConfigCookie = hmDevice.hmGetCookie(gaConfigString);
-	
-	// Redirect to author's GDPR consent form if required
-	var ga_redirect = "";
-	if (ga_redirect != "") {
-	// Redirect to consent form if neither cookie is set
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		window.location.replace(ga_redirect);
-		}
-	}
-
-if (/^UA-/.test("G-4MCTLHGG72")) {
-		alert("Invalid Universal Analytics GA ID: G-4MCTLHGG72\r\n\r\nYou must use a Google Analytics 4 ID.")
-		gaAccountOK = false;
-	}
-
-if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
-
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-4MCTLHGG72');
-
-	var optmode = "optout";
-
-	// Configure consent if activated
-	if (optmode != "off") {
-
-	let ad_storage = "denied", 
-		analytics_storage = "denied", 
-		ads_data_redaction = "denied";
-
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		if (optmode == "optin") {
-			gaOptOutCookie = "true";
-		} else if (optmode == "optout") {
-			ad_storage = "granted", 
-			analytics_storage = "granted", 
-			ads_data_redaction = "granted";
-			}
-		} else if (!navigator.cookieEnabled) {
-			gaOptOutCookie = "true";
-		}
-
-	if (gaOptOutCookie == "true") {
-
-		// Disable GA completely
-		window['ga-disable-G-4MCTLHGG72'] = true;
-		hmDevice.GAactive = false;
-		
-	} else if (gaConfigCookie != "") {
-
-		switch (gaConfigCookie) {
-		
-			case "granted":
-			ad_storage = analytics_storage = ads_data_redaction = "granted";
-			break;
-			
-			case "denied":
-			ad_storage = analytics_storage = ads_data_redaction = "denied";
-			break;
-			
-			default:
-			if (gaConfigCookie.indexOf("ad_storage") > -1) ad_storage = "granted";
-			if (gaConfigCookie.indexOf("analytics_storage") > -1) analytics_storage = "granted";
-			if (gaConfigCookie.indexOf("ads_data_redaction") > -1) ads_data_redaction = "granted";
-			break;
-		}
-
-		// Configure GA
-		gtag('consent', {
-			'ad_storage': ad_storage,
-			'analytics_storage': analytics_storage,
-			'ads_data_redaction': ads_data_redaction,
-			'wait_for_update': 500
-			});
-		
-		} // Config cookie
-	} // Consent mode
-} // If server
-</script>
 	<link rel="canonical" href="https://www.devman3.com/section18areceipts.html" />
 	<script id="jqscript" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/HM_CLASSICMENU.css" />
@@ -617,7 +529,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <p class="p_KidzNormal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_KidzNormal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span><span class="f_KidzNormal">Click on the template to open, </span><span class="f_KidzNormal" style="font-weight: bold;">Save</span><span class="f_KidzNormal"> a copy, then add your own branding and organisation details.</span></p>
 <p class="p_KidzNormal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_KidzNormal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span><span class="f_KidzNormal">See the video tutorial below for more detail.</span></p>
 <p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
-<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 67.09% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxcertificatetemplate.html" data-lightbox="true" data-aspect="67.09" data-title="Sample Section 18A receipt template" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Sample Section 18A receipt template</span></p></div></div>
+<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 67.09% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxcertificatetemplate.html" data-lightbox="true" data-aspect="67.09" data-title="Sample Section 18A receipt template" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Sample Section 18A receipt template</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -634,7 +546,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><a id="selfserviceupdate" class="hmanchor"></a><img id="toggle0186a6_ICON" class="dropdown-toggle-icon" alt="Online form for the donor to update their tax details" title="Online form for the donor to update their tax details" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormal"><a id="toggle0186a6_LINK" class="dropdown-toggle" title="Online form for the donor to update their tax details" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a6_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Donor online form</a></span></td></tr></table></div>
 <div id="toggle0186a6" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 129.03% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxdetails2023.html" data-lightbox="true" data-aspect="129.03" data-title="Tax details 2023 - Self-service update" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Tax details 2023 - Self-service update</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 129.03% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxdetails2023.html" data-lightbox="true" data-aspect="129.03" data-title="Tax details 2023 - Self-service update" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Tax details 2023 - Self-service update</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -652,7 +564,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <p class="p_KidzNormal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_KidzNormal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span><span class="f_KidzNormal">If you receive a donor's tax details via email or phone, you can add them manually in the donor profile. Select </span><span class="f_KidzNormal" style="font-weight: bold;">Edit</span><span class="f_KidzNormal">, and then click in </span><span class="f_KidzNormal" style="font-weight: bold;">Update</span><span class="f_KidzNormal"> next to</span><span class="f_KidzNormal" style="font-weight: bold;"> SARS details</span><span class="f_KidzNormal">.</span></p>
 <p class="p_KidzNormal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_KidzNormal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span><span class="f_KidzNormal">See the video tutorial below for more detail.</span></p>
 <p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
-<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 72.67% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/sarsupdatelink.html" data-lightbox="true" data-aspect="72.67" data-title="SARS self-service update link" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">SARS self-service update link</span></p></div></div>
+<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 72.67% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_sarsupdatelink.html" data-lightbox="true" data-aspect="72.67" data-title="SARS self-service update link" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">SARS self-service update link</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -671,7 +583,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormal"><span class="f_KidzNormal" style="font-weight: bold;">NOTE</span><span class="f_KidzNormal">: If all details required by SARS are not completed, the s18A receipt will not be generated.</span></p>
 <p class="p_KidzNormal"><span class="f_KidzNormal">&nbsp;</span></p>
-<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 67.78% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxcertificatesingle.html" data-lightbox="true" data-aspect="67.78" data-title="Issue a section 18A receipt" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Issue a section 18A receipt</span></p></div></div>
+<div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 67.78% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxcertificatesingle.html" data-lightbox="true" data-aspect="67.78" data-title="Issue a section 18A receipt" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Issue a section 18A receipt</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -680,7 +592,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186aa_ICON" class="dropdown-toggle-icon" alt="Bulk method of printing Section 18A receipts" title="Bulk method of printing Section 18A receipts" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormalIndent"><a id="toggle0186aa_LINK" class="dropdown-toggle" title="Bulk method of printing Section 18A receipts" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186aa_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Bulk generate section 18A receipts</a></span></td></tr></table></div>
 <div id="toggle0186aa" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_ImageCaption"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 77.53% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxcertificatebulk.html" data-lightbox="true" data-aspect="77.53" data-title="Bulk generate section 18A receipts" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Bulk generate section 18A receipts</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_ImageCaption"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 77.53% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxcertificatebulk.html" data-lightbox="true" data-aspect="77.53" data-title="Bulk generate section 18A receipts" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Bulk generate section 18A receipts</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -689,7 +601,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><img id="toggle0186ab_ICON" class="dropdown-toggle-icon" alt="hmtoggle_arrow0" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormal"><a id="toggle0186ab_LINK" class="dropdown-toggle" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186ab_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Cancel a section 18A receipt</a></span></td></tr></table></div>
 <div id="toggle0186ab" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_ImageCaption"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 65.98% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxcertificatecancel.html" data-lightbox="true" data-aspect="65.98" data-title="Cancel a section 18A receipt" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Cancel a section 18A receipt</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_ImageCaption"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 65.98% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxcertificatecancel.html" data-lightbox="true" data-aspect="65.98" data-title="Cancel a section 18A receipt" data-load="view" data-playbutton="true" data-playafter="2.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Cancel a section 18A receipt</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -698,7 +610,7 @@ if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none;border-spacing:0;padding:0;line-height: 1.38;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:1.1250rem"><a id="reissue_s18" class="hmanchor"></a><img id="toggle0186ac_ICON" class="dropdown-toggle-icon" alt="How to reissue a section 18A receipt when requested" title="How to reissue a section 18A receipt when requested" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/></td><td style="border:none;padding:0"><span class="f_KidzNormal"><a id="toggle0186ac_LINK" class="dropdown-toggle" title="How to reissue a section 18A receipt when requested" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186ac_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Reissue a section 18A receipt</a></span></td></tr></table></div>
 <div id="toggle0186ac" class="dropdown-toggle-body" style="text-align: left; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 1.1250rem;display:none"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 62.80% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/taxcertificatereissue.html" data-lightbox="true" data-aspect="62.80" data-title="Reissue section 18A receipts" data-load="view" data-playbutton="true" data-playafter="1.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Reissue section 18A receipts</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_KidzNormal"><div style="padding:0;width:25%;height:auto"><div style="position:relative;overflow:hidden;width:100%;height:0;padding:0 0 62.80% 0;cursor:pointer;text-align:center;background:#000;border:none"><div class="helpxplain" style="width:100%;height:auto" data-url="./xplain/_taxcertificatereissue.html" data-lightbox="true" data-aspect="62.80" data-title="Reissue section 18A receipts" data-load="view" data-playbutton="true" data-playafter="1.00"></div></div><p style="text-align:center"><span class="f_ImageCaption">Reissue section 18A receipts</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -911,9 +823,6 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  
 		if (event.which == 13 && searchQ.length > 2) {
 			xMessage.sendObject("hmsearch",{action: "callfunction",fn: "hmDoFtSearch", fa: searchQ});
-			if (hmBrowser.server && gaaccount !="") {
-				hmWebHelp.track("search", encodeURIComponent(searchQ));
-				}
 			return;
 		};
 		if (event.which == 27) {

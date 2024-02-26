@@ -7,6 +7,5 @@ var hmLightboxConstrained = true;
 var hmForceRedirect = false;
 var hmTocSingleClick = true;
 var autocollapse = false;
-var gaaccount = "G-4MCTLHGG72",
-    gatracklevels = 9;
+var gaaccount = "";
 var initialtocstate = "collapsed";

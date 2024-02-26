@@ -221,94 +221,6 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	}
 	</style>
 	</noscript>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MCTLHGG72"></script>
-<script>
-var gaOptString = 'ga-disable-' + "G-4MCTLHGG72",
-	gaConfigString = 'ga-configure-' + "G-4MCTLHGG72",
-	gaAccountOK = true,
-	gaOptOutCookie = hmDevice.hmGetCookie(gaOptString),
-	gaConfigCookie = hmDevice.hmGetCookie(gaConfigString);
-	
-	// Redirect to author's GDPR consent form if required
-	var ga_redirect = "";
-	if (ga_redirect != "") {
-	// Redirect to consent form if neither cookie is set
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		window.location.replace(ga_redirect);
-		}
-	}
-
-if (/^UA-/.test("G-4MCTLHGG72")) {
-		alert("Invalid Universal Analytics GA ID: G-4MCTLHGG72\r\n\r\nYou must use a Google Analytics 4 ID.")
-		gaAccountOK = false;
-	}
-
-if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
-
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-4MCTLHGG72');
-
-	var optmode = "optout";
-
-	// Configure consent if activated
-	if (optmode != "off") {
-
-	let ad_storage = "denied", 
-		analytics_storage = "denied", 
-		ads_data_redaction = "denied";
-
-	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
-		if (optmode == "optin") {
-			gaOptOutCookie = "true";
-		} else if (optmode == "optout") {
-			ad_storage = "granted", 
-			analytics_storage = "granted", 
-			ads_data_redaction = "granted";
-			}
-		} else if (!navigator.cookieEnabled) {
-			gaOptOutCookie = "true";
-		}
-
-	if (gaOptOutCookie == "true") {
-
-		// Disable GA completely
-		window['ga-disable-G-4MCTLHGG72'] = true;
-		hmDevice.GAactive = false;
-		
-	} else if (gaConfigCookie != "") {
-
-		switch (gaConfigCookie) {
-		
-			case "granted":
-			ad_storage = analytics_storage = ads_data_redaction = "granted";
-			break;
-			
-			case "denied":
-			ad_storage = analytics_storage = ads_data_redaction = "denied";
-			break;
-			
-			default:
-			if (gaConfigCookie.indexOf("ad_storage") > -1) ad_storage = "granted";
-			if (gaConfigCookie.indexOf("analytics_storage") > -1) analytics_storage = "granted";
-			if (gaConfigCookie.indexOf("ads_data_redaction") > -1) ads_data_redaction = "granted";
-			break;
-		}
-
-		// Configure GA
-		gtag('consent', {
-			'ad_storage': ad_storage,
-			'analytics_storage': analytics_storage,
-			'ads_data_redaction': ads_data_redaction,
-			'wait_for_update': 500
-			});
-		
-		} // Config cookie
-	} // Consent mode
-} // If server
-</script>
 	<link rel="canonical" href="https://www.devman3.com/commitmentsbudget.html" />
 	<script id="jqscript" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/HM_CLASSICMENU.css" />
@@ -712,9 +624,6 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  
 		if (event.which == 13 && searchQ.length > 2) {
 			xMessage.sendObject("hmsearch",{action: "callfunction",fn: "hmDoFtSearch", fa: searchQ});
-			if (hmBrowser.server && gaaccount !="") {
-				hmWebHelp.track("search", encodeURIComponent(searchQ));
-				}
 			return;
 		};
 		if (event.which == 27) {

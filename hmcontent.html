@@ -365,9 +365,6 @@ function tocConstructor(toc) {
 			if (item.tr === "" || item.tr === "hmcontent") { 
 				window.open(item.hf, "_blank");
 				} else {
-				if (hmBrowser.server && gaaccount !== "") {
-					xMessage.sendObject("parent", {action: "callfunction", fn: "hmWebHelp.track", fa: ['toc_web', encodeURIComponent(item.hf)]});
-					}
 				window.open(item.hf, item.tr);
 				}
 			}
@@ -1092,13 +1089,6 @@ this.doTopicLink = function(event, thisItem, obj) {
 		else  {
 			$chp.slideDown("fast");
 			obj.firstChild.setAttribute("style","background-image:url('"+obj.getAttribute("src1")+"')");
-		}
-	}
-	
-	if (hmBrowser.server && gaaccount !== "") {
-	let thisHF = obj.getAttribute("hf");
-	if (thisHF && thisHF != "") {
-		xMessage.sendObject("parent", {action: "callfunction", fn: "hmWebHelp.track", fa: ['toc_click', encodeURIComponent(thisHF)]});
 		}
 	}
 	
