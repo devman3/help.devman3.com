@@ -221,6 +221,94 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	}
 	</style>
 	</noscript>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MCTLHGG72"></script>
+<script>
+var gaOptString = 'ga-disable-' + "G-4MCTLHGG72",
+	gaConfigString = 'ga-configure-' + "G-4MCTLHGG72",
+	gaAccountOK = true,
+	gaOptOutCookie = hmDevice.hmGetCookie(gaOptString),
+	gaConfigCookie = hmDevice.hmGetCookie(gaConfigString);
+	
+	// Redirect to author's GDPR consent form if required
+	var ga_redirect = "";
+	if (ga_redirect != "") {
+	// Redirect to consent form if neither cookie is set
+	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
+		window.location.replace(ga_redirect);
+		}
+	}
+
+if (/^UA-/.test("G-4MCTLHGG72")) {
+		alert("Invalid Universal Analytics GA ID: G-4MCTLHGG72\r\n\r\nYou must use a Google Analytics 4 ID.")
+		gaAccountOK = false;
+	}
+
+if (/^https??:\/\//im.test(document.location) && gaAccountOK) {
+
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-4MCTLHGG72');
+
+	var optmode = "optout";
+
+	// Configure consent if activated
+	if (optmode != "off") {
+
+	let ad_storage = "denied", 
+		analytics_storage = "denied", 
+		ads_data_redaction = "denied";
+
+	if (navigator.cookieEnabled && gaOptOutCookie == "" && gaConfigCookie == "") {
+		if (optmode == "optin") {
+			gaOptOutCookie = "true";
+		} else if (optmode == "optout") {
+			ad_storage = "granted", 
+			analytics_storage = "granted", 
+			ads_data_redaction = "granted";
+			}
+		} else if (!navigator.cookieEnabled) {
+			gaOptOutCookie = "true";
+		}
+
+	if (gaOptOutCookie == "true") {
+
+		// Disable GA completely
+		window['ga-disable-G-4MCTLHGG72'] = true;
+		hmDevice.GAactive = false;
+		
+	} else if (gaConfigCookie != "") {
+
+		switch (gaConfigCookie) {
+		
+			case "granted":
+			ad_storage = analytics_storage = ads_data_redaction = "granted";
+			break;
+			
+			case "denied":
+			ad_storage = analytics_storage = ads_data_redaction = "denied";
+			break;
+			
+			default:
+			if (gaConfigCookie.indexOf("ad_storage") > -1) ad_storage = "granted";
+			if (gaConfigCookie.indexOf("analytics_storage") > -1) analytics_storage = "granted";
+			if (gaConfigCookie.indexOf("ads_data_redaction") > -1) ads_data_redaction = "granted";
+			break;
+		}
+
+		// Configure GA
+		gtag('consent', {
+			'ad_storage': ad_storage,
+			'analytics_storage': analytics_storage,
+			'ads_data_redaction': ads_data_redaction,
+			'wait_for_update': 500
+			});
+		
+		} // Config cookie
+	} // Consent mode
+} // If server
+</script>
 	<link rel="canonical" href="https://www.devman3.com/devsecurity.html" />
 	<script id="jqscript" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/HM_CLASSICMENU.css" />
@@ -557,7 +645,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><a id="faqdatasecure" class="hmanchor"></a><img id="toggle0186a8_ICON" class="dropdown-toggle-icon" alt="Relevant for hosted cloud solution" title="Relevant for hosted cloud solution" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186a8_LINK" class="dropdown-toggle" title="Relevant for hosted cloud solution" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a8_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">How secure is my data?</a></span></p>
 <div id="toggle0186a8" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -566,7 +654,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><img id="toggle0186a9_ICON" class="dropdown-toggle-icon" alt="Relevant for hosted cloud solution" title="Relevant for hosted cloud solution" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186a9_LINK" class="dropdown-toggle" title="Relevant for hosted cloud solution" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186a9_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Will my data be shared with other organisations?</a></span></p>
 <div id="toggle0186a9" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -575,7 +663,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><img id="toggle0186aa_ICON" class="dropdown-toggle-icon" alt="Relevant for hosted cloud solution" title="Relevant for hosted cloud solution" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186aa_LINK" class="dropdown-toggle" title="Relevant for hosted cloud solution" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186aa_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Who has access to my data?</a></span></p>
 <div id="toggle0186aa" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent"> See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent"> See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -584,7 +672,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><img id="toggle0186ab_ICON" class="dropdown-toggle-icon" alt="Relevant for hosted cloud solution" title="Relevant for hosted cloud solution" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186ab_LINK" class="dropdown-toggle" title="Relevant for hosted cloud solution" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186ab_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">What disaster recovery procedures are in place?</a></span></p>
 <div id="toggle0186ab" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="TechnicalAndSecurityInformation.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan - Techincal and security information guide (pdf)">DevMan technical and security information guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -593,7 +681,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><a id="faqpopia" class="hmanchor"></a><img id="toggle0186ac_ICON" class="dropdown-toggle-icon" alt="hmtoggle_arrow0" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186ac_LINK" class="dropdown-toggle" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186ac_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Does DevMan comply with POPIA?</a></span></p>
 <div id="toggle0186ac" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="DevManAndPOPIA.pdf" target="_blank" class="weblink" title="DevMan and POPIA (pdf)">DevMan and POPIA guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="DevManAndPOPIA.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan and POPIA (pdf)">DevMan and POPIA guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -602,7 +690,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_KidzNormal"><img id="toggle0186ad_ICON" class="dropdown-toggle-icon" alt="Does DevMan comply with GDPR?" title="Does DevMan comply with GDPR?" style="margin:0;width:0.5625rem;height:0.5625rem;border:none" src="./images/hmtoggle_arrow0.gif"/> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_KidzNormalIndent"><a id="toggle0186ad_LINK" class="dropdown-toggle" title="Does DevMan comply with GDPR?" href="javascript:void(0)" data-type="dropdown" data-state="0" data-icon="toggle0186ad_ICON" data-src0="./images/hmtoggle_arrow0.gif" data-src1="./images/hmtoggle_arrow1.gif">Does DevMan comply with GDPR?</a></span></p>
 <div id="toggle0186ad" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;display:none"><table style="border:none; border-spacing:0;" role="cell">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="DevManAndGDPR.pdf" target="_blank" class="weblink" title="DevMan and GDPR (pdf)">DevMan and GDPR guide</a>.</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_KidzNormalIndent"><span class="f_KidzNormalIndent">See the <a href="DevManAndGDPR.pdf" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink" title="DevMan and GDPR (pdf)">DevMan and GDPR guide</a>.</span></p>
 </td>
 </tr>
 </table>
@@ -752,6 +840,9 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 	  
 		if (event.which == 13 && searchQ.length > 2) {
 			xMessage.sendObject("hmsearch",{action: "callfunction",fn: "hmDoFtSearch", fa: searchQ});
+			if (hmBrowser.server && gaaccount !="") {
+				hmWebHelp.track("search", encodeURIComponent(searchQ));
+				}
 			return;
 		};
 		if (event.which == 27) {
