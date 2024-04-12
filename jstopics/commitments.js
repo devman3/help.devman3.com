@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Commitments",
 hmDescription:"Overview  Capture regular donations as commitments. This has many benefits, including reduced workload and long-term donor retention.  Topics",
-hmPrevLink:"section18areceipts.html",
+hmPrevLink:"sarsit3exports.html",
 hmNextLink:"invoices.html",
 hmParentLink:"income.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a> &gt; <a href=\"income.html\">Income<\/a>",
