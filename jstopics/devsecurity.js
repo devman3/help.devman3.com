@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Security",
 hmDescription:"Overview  Computer security is an important component of a successful organisation. Avoid complacency, control access to activities and data with DevMan using the various tools",
-hmPrevLink:"advsearchwithsavedselection.html",
+hmPrevLink:"excelintegratedreports.html",
 hmNextLink:"securityadvanced.html",
 hmParentLink:"devmanfunction.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a>",
