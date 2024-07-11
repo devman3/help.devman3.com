@@ -1,0 +1,4 @@
+hmLoadPopup({
+hmTitle:"Designation",
+hmBody:"<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Word or words by which someone or something is called.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">The more common titles are: Mr, Ms, Mrs <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Note: Ms. is the default form of address, unless you know positively that a woman wishes to be addressed as Mrs.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">It may also be an appellation of dignity, honour, distinction, or pre-eminence attached to a person or family by virtue of rank, office, precedent, privilege, attainment, or lands.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Professor, Doctor.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">&nbsp;<\/span><\/p>\n\r"
+})
