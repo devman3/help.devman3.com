@@ -1,0 +1,4 @@
+hmLoadPopup({
+hmTitle:"Email subscription management",
+hmBody:"<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Let the specialists manage the complexity while you focus on connecting with your DevMan contacts.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">GraphicMail assists you avoid spam filter issues and ensures your mail gets to your audience.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Their tools take care of the restrictions imposed on subscription management:<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\"> - by mailbox software exchange systems<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\"> - legislation such as the new POPI act . <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">&nbsp;<\/span><\/p>\n\r"
+})
