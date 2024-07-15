@@ -1,0 +1,4 @@
+hmLoadPopup({
+hmTitle:"Primary contact",
+hmBody:"<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">The person at the organisation that you deal with the most. <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">On DevMan, an organisation could have numerous contact people, but there can only be one primary contact. <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">If you communicate with the organisation from DevMan, it will automatically communicate with the primary contact person. <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">DevMan will assign the first person linked to the organisation as the primary contact. <\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">You can change the primary contact. &nbsp;<\/span><\/p>\n\r"
+})
