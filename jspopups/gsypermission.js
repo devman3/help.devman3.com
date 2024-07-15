@@ -1,0 +1,4 @@
+hmLoadPopup({
+hmTitle:"Permission",
+hmBody:"<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">A permission to perform an action. These may be record-level and task-based.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Record-level privileges define what a user with access to a record can do.<\/span><\/p>\n\r<p class=\"p_KidzNormal\"><span class=\"f_KidzNormal\">Task-based privilege allows a user to carry out a specific task.<\/span><\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 4.5000rem;\">&nbsp;<\/p>\n\r<p class=\"p_Normal\" style=\"margin: 0 0 0 4.5000rem;\">&nbsp;<\/p>\n\r"
+})
