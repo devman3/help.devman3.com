@@ -57,7 +57,7 @@ function mFb() {
 	fbbody = unQuote("Dear Support Staff,"),
 	mailsubject = function(){return(unQuote("Feedback on:" +  " " + $("h1#hm_pageheader").text() + " > " + $("h1.topictitle").text()));},
 	mailrecipient = helpman_mailrecipient,
-	simplerecipient = "support@ec-software.com",
+	simplerecipient = "support@devman3.com",
 	simplesubject = "Documentation%20Feedback",
 	mailurl = "",
 	query = "" !== "" ? "" : false;

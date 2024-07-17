@@ -121,11 +121,16 @@ div#headerwrapper {
 #menu-wrapper div#homebutton {
   width: 220px;
   height: 42px;
-  background: url('../images/hmlogo.png') left top no-repeat;
+  background: url('../images/logo-image-desk.png') left top no-repeat;
   margin: 6px 0 0 0;
   float: left;
 }
 
+#menu-wrapper div#homebutton {
+	background:  url('../images/spacer.gif') left top no-repeat;
+	width: 10px;
+	height: 42px;
+}
 #menu-wrapper div#homebutton a {
   display: block;
   width: 100%;

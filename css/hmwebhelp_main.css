@@ -148,7 +148,7 @@ li#showhide_pageheader {
 		max-width: calc(40vw + 8rem);
 	}
 	h1.topictitle {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 
 /* Topic header links */
@@ -184,7 +184,7 @@ div#helpwrapper {
 	top: 0; bottom: 0;
 	left: 0; right: 0;
 	min-width: 230px;
-	max-width: 1024px;
+	max-width: 100%;
 	margin: 0 auto 0 auto;
 	z-index: 0;
 	overflow: hidden;
@@ -205,7 +205,7 @@ div#main_searchbox {
 	right: 0;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	margin: 0;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	border-bottom: 1px solid #888888;
 }
 
@@ -395,7 +395,8 @@ div#toolbutton_wrapper, div#dragwrapper {
 	height: 3.5rem;
 	z-index: 900;
 }
-div#toolbutton_wrapper {
+div#toolbutton_wrapper { 
+	display: none;
 	top: 20%;
 	cursor: ns-resize;
 	}
@@ -413,7 +414,7 @@ div#toolbutton, div#dragbutton {
 	padding: 1.4rem 0 0 0;
 	border-width: 0;
 	border-radius: 0 0.4rem 0.4rem 0;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	opacity: 1.0;
 	z-index: 900;
 	}
@@ -475,7 +476,7 @@ nav#hmpageheader {
 	position: absolute;
 	top: 0; left: 0; right: 0;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	background-color: #ffffff;
+	background-color: #f5f5f5;
 	overflow: hidden;
 	border-bottom: 1px solid #888888;
 	}
@@ -597,8 +598,8 @@ p.topic_breadcrumbs a:hover {
 	opacity: 1.0;
 	}
 h1.topictitle {
-	font-family: Helvetica, Arial, sans-serif;
-	color: #0068c3;
+	font-family: Tahoma;
+	color: #365c6b;
 	margin: 0; 
 	padding: 0 0 0.2rem 0;
 	font-weight: normal;
@@ -679,7 +680,7 @@ ul#hamburgermenu {
 	list-style-type: none;
 	font-weight: 600;
 	padding: 2px 0 2px 0;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	box-shadow: 2px 2px 3px #959595;
 	}
 ul#hamburgermenu li {
@@ -747,6 +748,9 @@ img#leftright {
 	top: 33%;
 	display: none;
 	z-index: 2000;
+	}
+li#showhide_pageheader {
+	display: none;
 	}
 
 /* Popups */
@@ -967,7 +971,7 @@ div#autoTocWrapper {
 	padding: 0;
 	margin: 0;
 	border: 0 solid transparent;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	border-top-width: 0;
 	z-index: 100;
 	/*box-shadow: 0.125rem 0.125rem 0.225rem 0.025rem #959595;*/
@@ -1008,7 +1012,7 @@ ul#autoTocList {
 	margin: 0;
 	padding: 0;
 	text-indent: 0;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	}
 li.autoTOC span {
 	display: inline-block;
@@ -1179,7 +1183,7 @@ div#noscript {
 		background-color: transparent !important;
 		color: #000000 !important;
 		font-weight: normal;
-		font-size: 1.5rem !important;
+		font-size: 1.6rem !important;
 		padding: 0; margin: 0;
 	}
 	div.dropdown-toggle-body {

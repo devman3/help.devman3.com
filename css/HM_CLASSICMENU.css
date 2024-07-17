@@ -43,7 +43,7 @@ p.menu-header, p.menu-description, div.menu-image-box, ul.topnav br, ul.topnav s
 	margin: 0 auto;
 	min-width: 200px;
 	max-width: 200px;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	box-shadow: 2px 2px 3px #959595;
 	border-radius: 3px;
 	}
@@ -102,7 +102,7 @@ div.blockmenu a.icon, div.fullmenu a.icon {
 ul.topnav li ul.subnav {
 	display: none;
 	list-style: none;
-	background-color: #1265ab;
+	background-color: #365c6b;
 	}
 ul.topnav li ul.subnav li {
 	margin: 0; padding: 0;
@@ -136,7 +136,7 @@ div#homebutton a {
   display: block;
   width: 100%;
   height: 100%;
-  background:url(../images/hmlogo.png) left top no-repeat;
+  background:url(../images/logo-image-desk.png) left top no-repeat;
   text-decoration: none;
 }
 /* Container for user dropdown menus */

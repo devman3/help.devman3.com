@@ -137,7 +137,7 @@ var hmpage = {
 			);},
 		headerclosedonopen: (function(){
 			var storedHeaderState = sessionVariable.getSV("headerState");
-			return (false || (storedHeaderState !== null && storedHeaderState === "closed"))})(),
+			return (true || (storedHeaderState !== null && storedHeaderState === "closed"))})(),
 		headerclosed: !!(this.headerclosedonopen || $("div#headerbox").is(":hidden")),
 		tocclosedonopen: (function(){
 			var storedTocState = sessionVariable.getSV("tocState");
@@ -202,12 +202,12 @@ hmWebHelp.trimString = function(str){
 	// Header closer and opener for calling to embedded help
 hmWebHelp.closeHeaderIfOpen = function() {
 	if ($("div#headerbox").is(":visible")) {
-		hmWebHelp.pageDimensions.pageHeaderUpDown(false);
+		hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 		}
 	};
 hmWebHelp.openHeaderIfClosed = function() {
 	if ($("div#headerbox").is(":hidden")) {
-		hmWebHelp.pageDimensions.pageHeaderUpDown(false);
+		hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 		}
 	};
 
@@ -1356,7 +1356,7 @@ hmWebHelp.hmMainPageInit = function() {
 	   hmWebHelp.pageDimensions = new hmWebHelp.pageDims();
 	   if (hmDevice.embedded) hmWebHelp.pageDimensions.embedInit();
 	   if (((hmpage.headerclosedonopen && !hmDevice.embedded) || (true && hmDevice.embedded)) && !hmDevice.phone) {
-		   hmWebHelp.pageDimensions.pageHeaderUpDown(false);
+		   hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 		   $("svg#toolbar_updown_close").hide();
 	   } else {
 		   $("svg#toolbar_updown_open").hide();
@@ -1583,7 +1583,7 @@ hmWebHelp.pageDims = function() {
 			if (inProgress) return;
 			inProgress = true;
 			var reset = false;
-			if ((animOff && animate) || (!hmpage.initialized && animate)) {
+			if ((animOff && animate) || (!hmpage.initialized && animate)|| true) {
 				animate = false;
 				reset = true;
 				} else animate = true;
@@ -1763,7 +1763,7 @@ hmWebHelp.pageDims = function() {
 		// Init for embedded WebHelp $$$
 		function embedInit() {
 			if (!hmDevice.embedded && hmDevice.desktop) {
-				if (hmpage.$headerbox.is(":hidden") && !false)
+				if (hmpage.$headerbox.is(":hidden") && !true)
 					hmWebHelp.pageDimensions.pageHeaderUpDown(true);
 				if (hmpage.breadcrumbs)
 					$("p#ptopic_breadcrumbs").show();

@@ -487,7 +487,7 @@ Copyright (c) 2015-2023 by Tim Green. All rights reserved. Contact: https://www.
 			FWcurrentFrameCSS = jQuery("iframe#hmhelp").attr("style");
 			jQuery("body,html").css("overflow", "hidden");
 			
-			jQuery("div#helpwrapper").attr("style","display: block; position: fixed; float: none; border-radius: 0; border: none; left: 50%; transform: translateX(-50%); max-height: 100%; max-width: 1024px;");
+			jQuery("div#helpwrapper").attr("style","display: block; position: fixed; float: none; border-radius: 0; border: none; left: 50%; transform: translateX(-50%); max-height: 100%; max-width: 100%;");
 
 			xMessage.sendObject("hmhelp",{action: "callfunction", fn: "hmWebHelp.embedBorderSwitch", fa: ["zoomout", jQuery(window).width()], domain: hmDevice.targetDomain});
 
