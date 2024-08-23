@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Expenditure",
 hmDescription:"Overview  Achieve a high standard of transparency, plan and track your financials, payments to grantees and for bursaries. Create and refine your budget, use it as an essential",
-hmPrevLink:"invoices.html",
+hmPrevLink:"sarsit3exports.html",
 hmNextLink:"budget.html",
 hmParentLink:"devfinance.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a>",
