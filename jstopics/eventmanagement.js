@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Event management",
 hmDescription:"Overview  Create and manage memorable events, connect and engage with attendees to provide a more personalised experience. Use this module to plan, execute and report on events.",
-hmPrevLink:"mailshot.html",
+hmPrevLink:"interactions.html",
 hmNextLink:"beforetheevent.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",
