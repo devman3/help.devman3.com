@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Qualification and results",
 hmDescription:"Overview  Track your beneficiaries\' progress in achieving their qualification.  Use the dashboard for insights on key bursary management data. Draw reports with multiple level",
-hmPrevLink:"bursary-profile.html",
+hmPrevLink:"bursaryprofile.html",
 hmNextLink:"onlineresults.html",
 hmParentLink:"bursarymanagement.html",
 hmBreadCrumbs:"<a href=\"bursarymanagement.html\">Bursary management<\/a>",
