@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Search & report",
 hmDescription:"Overview  DevMan\'s report and analytics platform provides rich search and reporting for all areas. Draw statistical high level summaries and graphs, track performance metrics, m",
-hmPrevLink:"portal.html",
+hmPrevLink:"applicantsupport.html",
 hmNextLink:"searching.html",
 hmParentLink:"devmanfunction.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a>",
