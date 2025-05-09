@@ -13,69 +13,69 @@ table, tr, th
 {
  font-size: 100%;
 }
-span.f_CodeExample /* Code Example */
+span.f_CodeExample, strong.f_CodeExample, em.f_CodeExample /* Code Example */
 {
  font-size: 0.80rem;
  font-family: 'Courier New',Courier,monospace;
 }
-span.f_Comment /* Comment */
+span.f_Comment, strong.f_Comment, em.f_Comment /* Comment */
 {
 }
-span.f_CourierFixed /* Courier Fixed */
+span.f_CourierFixed, strong.f_CourierFixed, em.f_CourierFixed /* Courier Fixed */
 {
  font-size: 0.90rem;
  font-family: 'Courier New',Courier,monospace;
 }
-span.f_Heading1NewStandard /* Heading 1 New Standard */
+span.f_Heading1NewStandard, strong.f_Heading1NewStandard, em.f_Heading1NewStandard /* Heading 1 New Standard */
 {
  font-size: 1.40rem;
  font-weight: bold;
  color: #b3cad3;
 }
-span.f_Heading1 /* Heading1 */
+span.f_Heading1, strong.f_Heading1, em.f_Heading1 /* Heading1 */
 {
  font-size: 1.40rem;
  font-weight: bold;
  color: #990917;
 }
-span.f_ImageCaption /* Image Caption */
+span.f_ImageCaption, strong.f_ImageCaption, em.f_ImageCaption /* Image Caption */
 {
  font-size: 0.80rem;
  font-weight: bold;
 }
-span.f_KidzBoldItalics /* KidzBoldItalics */
+span.f_KidzBoldItalics, strong.f_KidzBoldItalics, em.f_KidzBoldItalics /* KidzBoldItalics */
 {
  font-size: 1.10rem;
  font-style: italic;
  font-weight: bold;
 }
-span.f_KidzHeader1 /* KidzHeader1 */
+span.f_KidzHeader1, strong.f_KidzHeader1, em.f_KidzHeader1 /* KidzHeader1 */
 {
  font-size: 2.00rem;
  font-family: Tahoma,Geneva,Verdana,sans-serif;
  font-weight: bold;
  color: #990917;
 }
-span.f_KidzHeader1New /* KidzHeader1 New */
+span.f_KidzHeader1New, strong.f_KidzHeader1New, em.f_KidzHeader1New /* KidzHeader1 New */
 {
  font-size: 2.00rem;
  font-family: Tahoma,Geneva,Verdana,sans-serif;
  font-weight: bold;
  color: #365c6b;
 }
-span.f_KidzHeader12 /* KidzHeader12 */
+span.f_KidzHeader12, strong.f_KidzHeader12, em.f_KidzHeader12 /* KidzHeader12 */
 {
  font-size: 1.60rem;
  font-family: Tahoma,Geneva,Verdana,sans-serif;
  color: #44546a;
 }
-span.f_KidzHeader12New /* KidzHeader12 New */
+span.f_KidzHeader12New, strong.f_KidzHeader12New, em.f_KidzHeader12New /* KidzHeader12 New */
 {
  font-size: 1.60rem;
  font-family: Tahoma,Geneva,Verdana,sans-serif;
  color: #44546a;
 }
-span.f_KidzHeaderCaps /* KidzHeaderCaps */
+span.f_KidzHeaderCaps, strong.f_KidzHeaderCaps, em.f_KidzHeaderCaps /* KidzHeaderCaps */
 {
  font-size: 1.10rem;
  font-family: Tahoma,Geneva,Verdana,sans-serif;
@@ -83,61 +83,61 @@ span.f_KidzHeaderCaps /* KidzHeaderCaps */
  color: #990917;
  text-transform: uppercase;
 }
-span.f_KidzHeaderIndent /* KidzHeaderIndent */
+span.f_KidzHeaderIndent, strong.f_KidzHeaderIndent, em.f_KidzHeaderIndent /* KidzHeaderIndent */
 {
  font-family: Tahoma,Geneva,Verdana,sans-serif;
  font-weight: bold;
  color: #990917;
 }
-span.f_KidzImageCaptionIndent2 /* KidzImageCaptionIndent2 */
+span.f_KidzImageCaptionIndent2, strong.f_KidzImageCaptionIndent2, em.f_KidzImageCaptionIndent2 /* KidzImageCaptionIndent2 */
 {
  font-size: 0.90rem;
  font-weight: bold;
 }
-span.f_KidzNormal /* KidzNormal */
+span.f_KidzNormal, strong.f_KidzNormal, em.f_KidzNormal /* KidzNormal */
 {
  font-size: 1.10rem;
 }
-span.f_KidzNormalIndent /* KidzNormalIndent */
+span.f_KidzNormalIndent, strong.f_KidzNormalIndent, em.f_KidzNormalIndent /* KidzNormalIndent */
 {
  font-size: 1.10rem;
 }
-span.f_KidzNormalIndent2 /* KidzNormalIndent2 */
+span.f_KidzNormalIndent2, strong.f_KidzNormalIndent2, em.f_KidzNormalIndent2 /* KidzNormalIndent2 */
 {
  font-size: 1.10rem;
 }
-span.f_KidzNormalIndent3 /* KidzNormalIndent3 */
+span.f_KidzNormalIndent3, strong.f_KidzNormalIndent3, em.f_KidzNormalIndent3 /* KidzNormalIndent3 */
 {
  font-size: 1.10rem;
 }
-span.f_KidzNormalIndent4 /* KidzNormalIndent4 */
+span.f_KidzNormalIndent4, strong.f_KidzNormalIndent4, em.f_KidzNormalIndent4 /* KidzNormalIndent4 */
 {
  font-size: 1.10rem;
 }
-span.f_KidzNormalIndentSingleSpace /* KidzNormalIndentSingleSpace */
+span.f_KidzNormalIndentSingleSpace, strong.f_KidzNormalIndentSingleSpace, em.f_KidzNormalIndentSingleSpace /* KidzNormalIndentSingleSpace */
 {
  font-size: 1.10rem;
 }
-span.f_KidzSplashCentre /* KidzSplashCentre */
+span.f_KidzSplashCentre, strong.f_KidzSplashCentre, em.f_KidzSplashCentre /* KidzSplashCentre */
 {
  font-size: 1.40rem;
  color: #993300;
 }
-span.f_KidzSplashIt /* KidzSplashIt */
+span.f_KidzSplashIt, strong.f_KidzSplashIt, em.f_KidzSplashIt /* KidzSplashIt */
 {
  font-size: 1.60rem;
  color: #990917;
 }
-span.f_NormalNewStandard /* Normal New Standard */
+span.f_NormalNewStandard, strong.f_NormalNewStandard, em.f_NormalNewStandard /* Normal New Standard */
 {
 }
-span.f_NoteBoldItalic /* NoteBoldItalic */
+span.f_NoteBoldItalic, strong.f_NoteBoldItalic, em.f_NoteBoldItalic /* NoteBoldItalic */
 {
  font-size: 1.10rem;
  font-style: italic;
  font-weight: bold;
 }
-span.f_Notes /* Notes */
+span.f_Notes, strong.f_Notes, em.f_Notes /* Notes */
 {
 }
 /* Paragraph styles */
