@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Online giving",
 hmDescription:"Overview  Make giving effortless and simple with DevMan\'s integrated online giving portal. Offer donors a fast, easy and secure online giving experience, while reducing your adm",
-hmPrevLink:"commitments.html",
+hmPrevLink:"invoices.html",
 hmNextLink:"debitorders.html",
 hmParentLink:"income.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devfinance.html\">Finance<\/a> &gt; <a href=\"income.html\">Income<\/a>",
