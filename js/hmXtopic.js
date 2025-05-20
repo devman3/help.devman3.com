@@ -6,7 +6,7 @@ hmProjectInfo = {
 	copyright: "© 2025 IS Kidz Africa Pty Ltd",
 	summary: "Proud authors of DevMan bursary, fundraising and grant making web application",
 	version: "1.0.0",
-	date: "Friday, 09 May 2025",
+	date: "Tuesday, 20 May 2025",
 	language: "en-za",
 	mainfile: "index.html"
 	}
