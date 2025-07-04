@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Consent",
 hmDescription:"Overview  Get your POPIA implementation plan off the ground, and painlessly achieve compliance by making practical use of the Consent module. Monitor and manage lawful processin",
-hmPrevLink:"mergecontacts.html",
+hmPrevLink:"maintenance.html",
 hmNextLink:"online-updates.html",
 hmParentLink:"devcontact.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"devcontact.html\">Contacts<\/a>",
