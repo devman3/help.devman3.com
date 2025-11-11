@@ -2203,7 +2203,7 @@ dictwords = ["overview 0 15 64 1 15 64 2 15 96 3 15 64 4 15 96 5 15 64 6 15 96 7
 	"adheres 74 10 4",
 	"outlined 74 10 4",
 	"sast 74 18 4",
-	"gmt 74 18 4",
+	"gmt 74 18 6",
 	"put 74 10 4",
 	"charges 74 10 2",
 	"languages 74 10 2",
