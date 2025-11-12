@@ -23,9 +23,6 @@
 	<g id="Shape1" class="xplitem shape" transform="translate(639.05 180.93)" style="--xpl-w:399.08;--xpl-h:30.8;--xpl-valign:middle;">
 		<rect fill="none" fill-rule="evenodd" stroke-width="2" stroke="#818181" x="1" y="1" rx="15" ry="15" width="397.08" height="28.8"></rect>
 	</g>
-	<g id="Shape2" class="xplitem shape" transform="translate(701.93 136.02)" style="--xpl-w:290.01;--xpl-h:41.06;--xpl-valign:middle;">
-		<rect fill="#D5D5D5" fill-rule="evenodd" stroke-width="2" stroke="#C0C0C0" x="1" y="1" rx="15" ry="15" width="288.01" height="39.06"></rect>
-	</g>
 	<g id="Shape3" class="xplitem shape" transform="translate(5 201)" style="--xpl-w:109;--xpl-h:90;--xpl-valign:middle;">
 		<rect fill="#D5D5D5" fill-rule="evenodd" stroke-width="2" stroke="#C0C0C0" x="1" y="1" rx="15" ry="15" width="107" height="88"></rect>
 	</g>
@@ -35,16 +32,19 @@
 			<g style="font-family:Arial, Helvetica, sans-serif;font-size:13px;fill:#000000;text-anchor:middle"><text x="44.91" y="16" dy="-0.12em" style="white-space:pre">To view </text><text x="44.91" y="32" dy="-0.12em" style="white-space:pre">individual </text><text x="44.91" y="48" dy="-0.12em" style="white-space:pre">messages, </text><text x="44.91" y="64" dy="-0.12em" style="white-space:pre">select Itemised </text><text x="44.91" y="80" dy="-0.12em" style="white-space:pre">list.</text></g>
 		</switch>
 	</g>
-	<g id="Text2" class="xplitem text" transform="translate(719 149)" style="--xpl-w:261;--xpl-h:16;--xpl-valign:top;">
-		<switch>
-			<foreignObject x="0" y="0" width="261" height="16" style="overflow:visible"><body xmlns="http://www.w3.org/1999/xhtml"><p style="text-align:center;font-family:Arial;font-size:15px;color:#000000;"><span style="font-size:13px">The status of your sent messages.</span></p></body></foreignObject>
-			<g style="font-family:Arial, Helvetica, sans-serif;font-size:13px;fill:#000000;text-anchor:middle"><text x="130.5" y="16" dy="-0.12em" style="white-space:pre">The status of your sent messages.</text></g>
-		</switch>
-	</g>
 	<g id="Shape4" class="xplitem shape" transform="translate(329.79 230.55)" style="--xpl-w:96.24;--xpl-h:30;--xpl-valign:middle;">
 		<rect fill="#FFFFFF" fill-rule="evenodd" stroke-width="2" stroke="#FFFFFF" x="1" y="1" width="94.24" height="28"></rect>
 	</g>
 	<g id="Shape5" class="xplitem shape" transform="translate(329.79 261.91)" style="--xpl-w:100.09;--xpl-h:30;--xpl-valign:middle;">
 		<rect fill="#EAEAEA" fill-rule="evenodd" stroke-width="2" stroke="#EAEAEA" x="1" y="1" width="98.09" height="28"></rect>
+	</g>
+	<g id="Shape2" class="xplitem shape" transform="translate(683 143)" style="--xpl-w:314;--xpl-h:37;--xpl-valign:middle;">
+		<rect fill="#D5D5D5" fill-rule="evenodd" stroke-width="2" stroke="#EAEAEA" x="1" y="1" rx="15" ry="15" width="312" height="35"></rect>
+	</g>
+	<g id="Text2" class="xplitem text" transform="translate(701 153)" style="--xpl-w:278.46;--xpl-h:16;--xpl-valign:top;">
+		<switch>
+			<foreignObject x="0" y="0" width="278.46" height="16" style="overflow:visible"><body xmlns="http://www.w3.org/1999/xhtml"><p style="text-align:center;font-family:Arial;font-size:13px;color:#000000;">The status of your sent messages.</p></body></foreignObject>
+			<g style="font-family:Arial, Helvetica, sans-serif;font-size:13px;fill:#000000;text-anchor:middle"><text x="139.23" y="16" dy="-0.12em" style="white-space:pre">The status of your sent messages.</text></g>
+		</switch>
 	</g>
 </svg>
