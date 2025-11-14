@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"What\'s new?",
 hmDescription:"New features in DevMan  Advanced inline search  We have added a powerful enhancement to the inline search feature to ensure faster and more accurate results. You can now searc",
-hmPrevLink:"faqsupport.html",
+hmPrevLink:"knownissues.html",
 hmNextLink:"navigation.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"<a href=\"index.html\">Introduction<\/a>",
