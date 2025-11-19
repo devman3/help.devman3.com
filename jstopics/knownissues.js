@@ -1,12 +1,12 @@
 hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Known issues",
-hmDescription:"Issues  There are currently no known issues on DevMan.",
+hmDescription:"Issues  Grid selection using  laptop built-in mouse or trackpad  Users may experience issues with clicking and selecting rows in grids, which can impact: •\tPerforming bulk upd",
 hmPrevLink:"faqsupport.html",
 hmNextLink:"whatsnew.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"<a href=\"index.html\">Introduction<\/a>",
 hmTitlePath:"Introduction > Known issues",
 hmHeader:"<p class=\"p_KidzHeader1New\"><span class=\"f_KidzHeader1New\">Known issues<\/span><\/p>\n\r",
-hmBody:"<p class=\"p_KidzHeader12New\"><span class=\"f_KidzHeader12New\">Issues<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">There are currently no known issues on DevMan.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r"
+hmBody:"<p class=\"p_KidzHeader12New\"><span class=\"f_KidzHeader12New\">Issues<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><strong class=\"f_KidzNormalIndent2\" style=\"font-weight: bold;\">Grid selection using &nbsp;laptop built-in mouse or trackpad<\/strong><\/p>\n\r<p class=\"p_KidzISmallSpaceIndent\"><span class=\"f_KidzISmallSpaceIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"line-height: 1.44;\"><span class=\"f_KidzNormalIndent\">Users may experience issues with clicking and selecting rows in grids, which can impact:<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"line-height: 1.44;\"><span class=\"f_KidzNormalIndent\">• &nbsp; &nbsp; &nbsp; &nbsp;Performing bulk updates<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"line-height: 1.44;\"><span class=\"f_KidzNormalIndent\">• &nbsp; &nbsp; &nbsp; &nbsp;Exporting selected rows to Excel<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"line-height: 1.44;\"><span class=\"f_KidzNormalIndent\"> If you encounter this problem, please use an external mouse until the issue is resolved.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\" style=\"line-height: 1.44;\"><strong class=\"f_KidzNormalIndent\" style=\"font-weight: bold;\">TIP:<\/strong><span class=\"f_KidzNormalIndent\"> After performing a bulk update, double-check that the number of records matches the number you intended to select.<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r<p class=\"p_KidzNormalIndent\"><strong class=\"f_KidzNormalIndent2\" style=\"font-weight: bold;\">EasySMS<\/strong><\/p>\n\r<p class=\"p_KidzNormalIndent\"><span class=\"f_KidzNormalIndent\">&nbsp;<\/span><\/p>\n\r"
 })
