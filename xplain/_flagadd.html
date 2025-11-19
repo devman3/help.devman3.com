@@ -1,0 +1,498 @@
+﻿<!doctype html>
+<!-- saved from url=(0027)http://www.helpxplain.com/ -->
+<!--
+
+Hey!
+Glad you take a look into the source... :-)
+
+                 This slideshow was made with
+.__           .__           ____  ___      .__         .__
+|  |__   ____ |  | ______   \   \/  /_____ |  | _____  |__| ____
+|  |  \_/ __ \|  | \____ \   \     /\____ \|  | \__  \ |  |/    \
+|   Y  \  ___/|  |_|  |_> >  /     \|  |_> >  |__/ __ \|  |   |  \
+|___|  /\___  >____/   __/  /___/\  \   __/|____(____  /__|___|  /
+     \/     \/     |__|           \_/__|             \/        \/
+
+HelpXplain is the cutting-edge graphics software, that
+creates interactive HTML5 and Javascript slideshows
+for the Web. No Flash here, believe us! Just standards-
+compliant HTML5 & CSS & Javascript. 100% responsive and
+100% cross-platform.
+
+Visit our website, download the trial and give it a run!
+You'll love it, promise.
+
+http://www.helpxplain.com
+
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes" />
+<title>Add flags</title>
+<meta name="description" content="Add flags - see how to add level 1 and level 2 flags." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:title" content="Add flags" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Add flags - see how to add level 1 and level 2 flags." />
+<meta property="og:image" content="./_flagadd/preview.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="904" />
+<meta property="og:image:height" content="714" />
+<meta property="og:image:alt" content="Add flags" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Add flags" />
+<meta property="twitter:description" content="Add flags - see how to add level 1 and level 2 flags." />
+<meta property="twitter:image" content="./_flagadd/preview.jpg" />
+
+<link rel="icon" href="./_flagadd/favicon.png" type="image/png" />
+<style type="text/css" media="screen">
+body {
+  font-family: Arial,sans-serif;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+a { color: #0070C0 }
+
+p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3 {
+  line-height: 1.2em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+ul {
+  margin: 0 0 0 0.9em;
+  padding: 0;
+}
+ol {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+li {
+  line-height: 1.2em;
+}
+
+body {
+  font-family: Calibri;
+  font-size: 12px;
+}
+h1,h2,h3 {
+  font-family: Calibri;
+  font-size: 12px;
+}
+
+
+div.fallback {
+  position: absolute;
+  top: 20%;
+  background: #FFF;
+  opacity: 0.9;
+  font-size: 2em;
+  padding: 1em;
+  line-height: 1em
+}
+
+div#xplplayercontrols {
+	 position: fixed;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 36px;
+	 background: rgba(0,0,0,0.50);
+ 	 opacity: 1;
+     transition: opacity 0.3s;
+	 padding: 0;
+	 margin: 0;
+	 text-align: right;
+}
+body:hover > div#xplplayercontrols {
+	 opacity: 1;
+}
+div#xplplayerprogress {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+div#xplplayerprogress div {
+	height: 1vH;
+	width: 0%;
+	background: #1072C5;
+}
+
+div#xplplayercontrolstitle {
+	float: left;
+	font-size: 16px;
+	padding-left: 6px;
+	color: #FFFFFF;
+	height: 100%;
+	width: 50vW;
+	text-align: left;
+	line-height: 36px;
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+
+div#xplplayercontrols a {
+	text-decoration: none;
+}
+
+div#xplplayercontrols .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px;
+  width: 24px;
+  height: 24px;
+}
+
+div#xplplayercontrols .disabled {
+  display: none;
+}
+div#xplplayerprev.disabled, div#xplplayernext.disabled {
+  opacity: 0.3;
+  display: inline-block;
+}
+
+div#xplplayercontrols .button:hover {
+  background: #1072C5;
+}
+div#xplplayercontrols .disabled:hover {
+  background: none;
+}
+	
+
+div#xplplayersharepopup {
+	position:fixed;
+	right: 0;
+	top: 36px;
+	width: auto;
+	height: auto;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+div#xplplayershare:hover > div#xplplayersharepopup {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+div#xplplayersharepopup a {
+	cursor: pointer;
+}
+
+
+div#xplplayercontrols svg {
+	height:95%;
+	width: auto;
+	vertical-align: top;
+}
+
+div#xplplayercontrols path {
+  fill: #FFFFFF;
+  stroke: none;
+  stroke-width: 0px;
+}
+div#xplplayerloading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20vH;
+  height: 20vH;
+  margin: -10vH 0 0 -10vH;
+}
+div#xplplayerloading.disabled {
+  display: none;	
+}
+svg.xplspinner {
+  animation: rotate 2s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+svg.xplspinner > circle {
+    stroke: #1072C5;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+</style>
+</head>
+<body style="background-color:#000000;position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden">
+<div id="xplbase" style="display:none;position:absolute;top:50%;left:50%;transform-origin:left top" data-width="904" data-height="714">
+<div id="xplcanvas" style="position:absolute">
+<div class="xplitem frame xplframe" id="Slide19" data-scale="1" data-rotate="0" data-frameindex="0" data-framew="904" data-frameh="714" data-framecx="-1627.43" data-framecy="-1285.38" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-2079.43px;top:-1642.38px;width:904px;height:714px">
+<div class="xplitem image" id="Capture19" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture19.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="Cursor19" data-scale="1" data-rotate="0" data-frameout="0,movefrom,452,357,0.72,0,Power1.easeOut,false" style="position:absolute;left:132px;top:97px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="0,flash,0,0,0.3,0.72,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle22" data-scale="1" data-rotate="0" style="position:absolute;left:199.21px;top:77.99px;width:701.8px;height:635.63px"><svg style="position:absolute;overflow:visible" width="702" height="636" viewBox="0 0 702 636"><rect class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="702" height="636"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle4" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,0,,false" style="position:absolute;left:232.63px;top:121.36px;width:589.85px;height:393.63px"><svg style="position:absolute;overflow:visible" width="590" height="394" viewBox="0 0 590 394"><defs><filter id="Rectangle4:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle4:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="590" height="394"></rect></svg>
+</div>
+<div class="xplitem text" id="Text39" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,0.5,,false;0,wait,0,0,2,0,,false" style="position:absolute;left:270.84px;top:172.91px;width:126.66px;height:26px"><div style="position:absolute;left:0px;top:0px;width:126.66px;height:26px;"><p style="text-align:left;"><span style="color: #808080;"><b><span style="font-size:21px;">Add a flag</span></b></span></p></div>
+</div>
+<div class="xplitem text" id="Text5" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,2,,false;0,wait,0,0,5.5,0,,false" style="position:absolute;left:292.03px;top:236.89px;width:436.21px;height:20px"><div style="position:absolute;left:0px;top:0px;width:436.21px;height:20px;"><p><span style="font-size:16px">Flag settings can be found in each relevant area in DevMan.</span></p></div>
+</div>
+<div class="xplitem text" id="Text6" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,5.5,,false;0,wait,0,0,9,0,,false" style="position:absolute;left:292.03px;top:295.54px;width:504.6px;height:20px"><div style="position:absolute;left:0px;top:0px;width:504.6px;height:20px;"><p><span style="font-size:16px">In this example, we will add a new level 1 flag under the project focus area.</span></p></div>
+</div>
+<div class="xplitem text" id="Text7" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,9,,false;0,wait,0,0,13.5,0,,false" style="position:absolute;left:292.03px;top:354.18px;width:224.64px;height:20px"><div style="position:absolute;left:0px;top:0px;width:224.64px;height:20px;"><p><span style="font-size:16px">We will then add a level 2 flag.<b>&nbsp;</b></span></p></div>
+</div>
+<div class="xplitem text" id="Text8" data-scale="1" data-rotate="0" data-framein="0,scale,0,0,0.5,13.5,,false;0,wait,0,0,18,0,,false" style="position:absolute;left:292.03px;top:412.83px;width:492.57px;height:20px"><div style="position:absolute;left:0px;top:0px;width:492.57px;height:20px;"><p><span style="font-size:16px">On the <b>Development</b> page select&nbsp;<b>Projects &gt; Settings &gt; Flags &gt; Focus area.</b></span></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide4" data-scale="1" data-rotate="0" data-frameindex="1" data-framew="904" data-frameh="714" data-framecx="-542.48" data-framecy="-1285.39" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-994.48px;top:-1642.39px;width:904px;height:714px">
+<div class="xplitem image" id="capture4" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture4.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor4" data-scale="1" data-rotate="0" data-frameout="1,movefrom,132,97,0.5,0,Power1.easeOut,false" style="position:absolute;left:542.42px;top:487.16px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="1,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide5" data-scale="1" data-rotate="0" data-frameindex="2" data-framew="904" data-frameh="714" data-framecx="542.48" data-framecy="-1285.38" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:90.48px;top:-1642.38px;width:904px;height:714px">
+<div class="xplitem image" id="capture5" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture5.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor5" data-scale="1" data-rotate="0" data-frameout="2,movefrom,542.42,487.16,0.98,0,Power1.easeOut,false" style="position:absolute;left:78px;top:117px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="2,flash,0,0,0.3,0.98,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle3" data-scale="1" data-rotate="0" style="position:absolute;left:763.49px;top:276.47px;width:80.37px;height:30px"><svg style="position:absolute;overflow:visible" width="80" height="30" viewBox="0 0 80 30"><rect class="xplsvgpath" fill="#F1F1F1" fill-rule="evenodd" stroke="none" x="0" y="0" width="80" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle19" data-scale="1" data-rotate="0" data-framein="2,scale,0,0,0.5,0,,false;2,wait,0,0,2.5,0,,false" style="position:absolute;left:7.32px;top:199.27px;width:107.46px;height:95.44px"><svg style="position:absolute;overflow:visible" width="107" height="95" viewBox="0 0 107 95"><defs><filter id="Rectangle19:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle19:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="107" height="95"></rect></svg>
+</div>
+<div class="xplitem text" id="Text59" data-scale="1" data-rotate="0" data-framein="2,scale,0,0,0.5,2.5,,false;2,wait,0,0,9,0,,false" style="position:absolute;left:18.29px;top:238.52px;width:89.09px;height:20px"><div style="position:absolute;left:0px;top:0px;width:89.09px;height:20px;"><p style="color:#000000;"></p><p><span style="font-size:16px;">Select <b>Add</b>.</span></p></div>
+</div>
+<div class="xplitem shape" id="Rectangle5" data-scale="1" data-rotate="0" style="position:absolute;left:777.19px;top:649.59px;width:80.37px;height:30px"><svg style="position:absolute;overflow:visible" width="80" height="30" viewBox="0 0 80 30"><rect class="xplsvgpath" fill="#F1F1F1" fill-rule="evenodd" stroke="none" x="0" y="0" width="80" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle2" data-scale="1" data-rotate="0" style="position:absolute;left:773.5px;top:610.14px;width:77.6px;height:30px"><svg style="position:absolute;overflow:visible" width="78" height="30" viewBox="0 0 78 30"><rect class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" x="0" y="0" width="78" height="30"></rect></svg>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="Slide21" data-scale="1" data-rotate="0" data-frameindex="3" data-framew="904" data-frameh="714" data-framecx="1627.37" data-framecy="-1285.43" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:1175.37px;top:-1642.43px;width:904px;height:714px">
+<div class="xplitem image" id="Capture1" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture1.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="Cursor1" data-scale="1" data-rotate="0" data-frameout="3,movefrom,78,117,0.5,0,Power1.easeOut,false" style="position:absolute;left:260px;top:358px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="3,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle23" data-scale="1" data-rotate="0" data-framein="3,scale,0,0,0.5,0,,false;3,wait,0,0,2.5,0,,false" style="position:absolute;left:258.62px;top:403.36px;width:454.83px;height:180px"><svg style="position:absolute;overflow:visible" width="455" height="180" viewBox="0 0 455 180"><defs><filter id="Rectangle23:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle23:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="455" height="180"></rect></svg>
+</div>
+<div class="xplitem text" id="Text62" data-scale="1" data-rotate="0" data-framein="3,scale,0,0,0.5,2.5,,false" style="position:absolute;left:290.61px;top:442.62px;width:321.22px;height:20px"><div style="position:absolute;left:0px;top:0px;width:321.22px;height:20px;"><p style="color:#000000;"></p><p><span style="font-size:16px;">Add a description.</span></p></div>
+</div>
+<div class="xplitem shape" id="Rectangle56" data-scale="1" data-rotate="0" data-framein="3,scale,0,0,0.5,2.5,,false;3,wait,0,0,8,0,,false" style="position:absolute;left:86.24px;top:127.87px;width:294.61px;height:30.21px"><svg style="position:absolute;overflow:visible" width="295" height="30" viewBox="0 0 295 30"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="293" height="28"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle57" data-scale="1" data-rotate="0" data-framein="3,scale,0,0,0.5,8,,false;3,wait,0,0,13.5,0,,false" style="position:absolute;left:243.51px;top:343.46px;width:36.18px;height:28.33px"><svg style="position:absolute;overflow:visible" width="36" height="28" viewBox="0 0 36 28"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="34" height="26"></rect></svg>
+</div>
+<div class="xplitem text" id="Text54" data-scale="1" data-rotate="0" data-framein="3,scale,0,0,0.5,8,,false" style="position:absolute;left:294.06px;top:483.91px;width:378.76px;height:39px"><div style="position:absolute;left:0px;top:0px;width:378.76px;height:39px;"><p style="font-size:16px;">To publish this flag online, click on the check box, then select <b>Save and close.</b></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="Slide23" data-scale="1" data-rotate="0" data-frameindex="4" data-framew="904" data-frameh="714" data-framecx="-1627.43" data-framecy="-428.46" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-2079.43px;top:-785.46px;width:904px;height:714px">
+<div class="xplitem image" id="Capture3" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture3.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="Cursor3" data-scale="1" data-rotate="0" data-frameout="4,movefrom,260,358,0.5,0,Power1.easeOut,false" style="position:absolute;left:206px;top:118px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="4,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide20" data-scale="1" data-rotate="0" data-frameindex="5" data-framew="904" data-frameh="714" data-framecx="-542.48" data-framecy="-428.46" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-994.48px;top:-785.46px;width:904px;height:714px">
+<div class="xplitem image" id="capture20" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture5.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor20" data-scale="1" data-rotate="0" data-frameout="5,movefrom,206,118,0.98,0,Power1.easeOut,false" style="position:absolute;left:78px;top:117px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="5,flash,0,0,0.3,0.98,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle6" data-scale="1" data-rotate="0" style="position:absolute;left:763.49px;top:276.47px;width:80.37px;height:30px"><svg style="position:absolute;overflow:visible" width="80" height="30" viewBox="0 0 80 30"><rect class="xplsvgpath" fill="#F1F1F1" fill-rule="evenodd" stroke="none" x="0" y="0" width="80" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle21" data-scale="1" data-rotate="0" data-framein="5,scale,0,0,0.5,0,,false;5,wait,0,0,2.5,0,,false" style="position:absolute;left:2.05px;top:209.46px;width:109.95px;height:123.52px"><svg style="position:absolute;overflow:visible" width="110" height="124" viewBox="0 0 110 124"><defs><filter id="Rectangle21:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle21:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="110" height="124"></rect></svg>
+</div>
+<div class="xplitem text" id="Text61" data-scale="1" data-rotate="0" data-framein="5,scale,0,0,0.5,2.5,,false;5,wait,0,0,9,0,,false" style="position:absolute;left:19.2px;top:237.63px;width:78.01px;height:58px"><div style="position:absolute;left:0px;top:0px;width:78.01px;height:58px;"><p style="text-align:center;color:#000000;"></p><p style="text-align:center;"><span style="font-size:16px;">To add a level 2 flag, select <b>Add</b>.</span></p></div>
+</div>
+<div class="xplitem shape" id="Rectangle7" data-scale="1" data-rotate="0" style="position:absolute;left:777.19px;top:649.59px;width:80.37px;height:30px"><svg style="position:absolute;overflow:visible" width="80" height="30" viewBox="0 0 80 30"><rect class="xplsvgpath" fill="#F1F1F1" fill-rule="evenodd" stroke="none" x="0" y="0" width="80" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle8" data-scale="1" data-rotate="0" style="position:absolute;left:773.5px;top:610.14px;width:77.6px;height:30px"><svg style="position:absolute;overflow:visible" width="78" height="30" viewBox="0 0 78 30"><rect class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" x="0" y="0" width="78" height="30"></rect></svg>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide9" data-scale="1" data-rotate="0" data-frameindex="6" data-framew="904" data-frameh="714" data-framecx="542.41" data-framecy="-428.51" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:90.41px;top:-785.51px;width:904px;height:714px">
+<div class="xplitem image" id="capture9" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture9.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor9" data-scale="1" data-rotate="0" data-frameout="6,movefrom,78,117,1.12,0,Power1.easeOut,false" style="position:absolute;left:688px;top:141px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="6,flash,0,0,0.3,1.12,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle40" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,0.5,0,,false;6,wait,0,0,2.5,0,,false" style="position:absolute;left:250.58px;top:404.12px;width:471.21px;height:203.26px"><svg style="position:absolute;overflow:visible" width="471" height="203" viewBox="0 0 471 203"><defs><filter id="Rectangle40:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle40:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="471" height="203"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle54" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,0.5,2.5,,false;6,wait,0,0,8,0,,false" style="position:absolute;left:86.24px;top:127.87px;width:294.61px;height:30.21px"><svg style="position:absolute;overflow:visible" width="295" height="30" viewBox="0 0 295 30"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="293" height="28"></rect></svg>
+</div>
+<div class="xplitem text" id="Text51" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,1,2.5,,false" style="position:absolute;left:286.67px;top:445.57px;width:399.08px;height:20px"><div style="position:absolute;left:0px;top:0px;width:399.08px;height:20px;"><p style="font-size:16px;">First select the <b>Parent</b> (level 1 flag) from the drop-down list.</p></div>
+</div>
+<div class="xplitem shape" id="Rectangle55" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,0.5,8,,false;6,wait,0,0,13.5,0,,false" style="position:absolute;left:86.4px;top:159.21px;width:294.45px;height:30.49px"><svg style="position:absolute;overflow:visible" width="294" height="30" viewBox="0 0 294 30"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="292" height="28"></rect></svg>
+</div>
+<div class="xplitem text" id="Text53" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,1,8,,false" style="position:absolute;left:286.67px;top:499.85px;width:168.1px;height:20px"><div style="position:absolute;left:0px;top:0px;width:168.1px;height:20px;"><p style="font-size:16px;">Add a description.<b>&nbsp;</b></p></div>
+</div>
+<div class="xplitem shape" id="Rectangle58" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,0.5,13.5,,false;6,wait,0,0,19,0,,false" style="position:absolute;left:245.36px;top:368.4px;width:36.18px;height:28.33px"><svg style="position:absolute;overflow:visible" width="36" height="28" viewBox="0 0 36 28"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="34" height="26"></rect></svg>
+</div>
+<div class="xplitem text" id="Text55" data-scale="1" data-rotate="0" data-framein="6,scale,0,0,0.5,13.5,,false" style="position:absolute;left:290.37px;top:539.35px;width:378.76px;height:39px"><div style="position:absolute;left:0px;top:0px;width:378.76px;height:39px;"><p style="font-size:16px;">To publish this flag online, click on the check box, then select <b>Save and close.</b></p></div>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide10" data-scale="1" data-rotate="0" data-frameindex="7" data-framew="904" data-frameh="714" data-framecx="1627.43" data-framecy="-428.46" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:1175.43px;top:-785.46px;width:904px;height:714px">
+<div class="xplitem image" id="capture10" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture10.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor10" data-scale="1" data-rotate="0" data-frameout="7,movefrom,688,141,0.61,0,Power1.easeOut,false" style="position:absolute;left:346px;top:220px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="7,flash,0,0,0.3,0.61,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide13" data-scale="1" data-rotate="0" data-frameindex="8" data-framew="904" data-frameh="714" data-framecx="-1627.44" data-framecy="428.45" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-2079.44px;top:71.45px;width:904px;height:714px">
+<div class="xplitem image" id="capture13" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture13.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor13" data-scale="1" data-rotate="0" data-frameout="8,movefrom,346,220,0.5,0,Power1.easeOut,false" style="position:absolute;left:270.29px;top:388.95px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="8,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+</div>
+<div class="xplitem frame xplframe" id="Slide26" data-scale="1" data-rotate="0" data-frameindex="9" data-framew="904" data-frameh="714" data-framecx="-542.48" data-framecy="428.46" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:-994.48px;top:71.46px;width:904px;height:714px">
+<div class="xplitem image" id="Capture12" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture12.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="Cursor12" data-scale="1" data-rotate="0" data-frameout="9,movefrom,270.29,388.95,0.5,0,Power1.easeOut,false" style="position:absolute;left:226px;top:124px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="9,flash,0,0,0.3,0.5,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+</div>
+<div class="xplitem frame xplframe" id="Slide27" data-scale="1" data-rotate="0" data-frameindex="10" data-framew="904" data-frameh="714" data-framecx="542.41" data-framecy="428.41" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:90.41px;top:71.41px;width:904px;height:714px">
+<div class="xplitem image" id="Capture21" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture21.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle11" data-scale="1" data-rotate="0" style="position:absolute;left:768.88px;top:677.59px;width:76.68px;height:30px"><svg style="position:absolute;overflow:visible" width="77" height="30" viewBox="0 0 77 30"><rect class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" x="0" y="0" width="77" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle13" data-scale="1" data-rotate="0" style="position:absolute;left:761.49px;top:276.47px;width:80.37px;height:30px"><svg style="position:absolute;overflow:visible" width="80" height="30" viewBox="0 0 80 30"><rect class="xplsvgpath" fill="#F1F1F1" fill-rule="evenodd" stroke="none" x="0" y="0" width="80" height="30"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle59" data-scale="1" data-rotate="0" data-framein="10,scale,0,0,0.5,0,,false;10,wait,0,0,5.5,0,,false" style="position:absolute;left:171.25px;top:425.37px;width:383.3px;height:69.31px"><svg style="position:absolute;overflow:visible" width="383" height="69" viewBox="0 0 383 69"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="381" height="67"></rect></svg>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="slide17" data-scale="1" data-rotate="0" data-frameindex="11" data-framew="904" data-frameh="714" data-framecx="1627.43" data-framecy="428.46" data-framer="0" data-frametrans="0" data-frameshow="3" data-frameposition="fit" style="position:absolute;left:1175.43px;top:71.46px;width:904px;height:714px">
+<div class="xplitem image" id="capture17" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/capture17.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem cursor" id="cursor17" data-scale="1" data-rotate="0" data-frameout="11,movefrom,226,124,0.8,0,Power1.easeOut,false" style="position:absolute;left:626px;top:300px;width:69px;height:67px"><svg class="xplitem xplcursorflash" data-scale="1" data-frameout="11,flash,0,0,0.3,0.8,,false" ViewBox="0 0 100 100" style="position:absolute;display:none;left:-34.5px;top:-34.5px;width:69px;height:69px"><g style="fill:none;stroke:#ff0000;stroke-width:8px"><circle cx="50" cy="50" r="45" style="stroke-opacity:0.5"></circle><circle cx="50" cy="50" r="25" style="stroke-opacity:0.7"></circle><circle cx="50" cy="50" r="4" style="stroke-opacity:0.9"></circle></g></svg><img src="./_flagadd/cursor.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle60" data-scale="1" data-rotate="0" data-framein="11,scale,0,0,0.5,0,,false;11,wait,0,0,5.5,0,,false" style="position:absolute;left:288.58px;top:286.8px;width:216.08px;height:56.35px"><svg style="position:absolute;overflow:visible" width="216" height="56" viewBox="0 0 216 56"><rect class="xplsvgpath" fill="none" fill-rule="evenodd" stroke-width="2" stroke="#234B69" x="1" y="1" rx="15" ry="15" width="214" height="54"></rect></svg>
+</div>
+</div>
+<div class="xplitem frame xplframe" id="Slide22" data-scale="1" data-rotate="0" data-frameindex="12" data-framew="904" data-frameh="714" data-framecx="-1627.44" data-framecy="1285.38" data-framer="0" data-frametrans="0" data-frameshow="0" data-frameposition="fit" style="position:absolute;left:-2079.44px;top:928.38px;width:904px;height:714px">
+<div class="xplitem image" id="Capture23" data-scale="1" data-rotate="0" style="position:absolute;left:0px;top:0px;width:904px;height:714px"><img src="./_flagadd/Capture19.png" style="position:absolute;top:0;left:0;width:100%;height:100%" />
+</div>
+<div class="xplitem shape" id="Rectangle24" data-scale="1" data-rotate="0" style="position:absolute;left:199.21px;top:77.99px;width:701.8px;height:635.63px"><svg style="position:absolute;overflow:visible" width="702" height="636" viewBox="0 0 702 636"><rect class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="702" height="636"></rect></svg>
+</div>
+<div class="xplitem shape" id="Rectangle9" data-scale="1" data-rotate="0" data-framein="12,scale,0,0,0.5,0,,false" style="position:absolute;left:267.2px;top:121.37px;width:496.19px;height:231.02px"><svg style="position:absolute;overflow:visible" width="496" height="231" viewBox="0 0 496 231"><defs><filter id="Rectangle9:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="10.61" dy="10.61" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Rectangle9:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="496" height="231"></rect></svg>
+</div>
+<div class="xplitem text" id="Text49" data-scale="1" data-rotate="0" data-framein="12,scale,0,0,0.5,0.5,,false;12,wait,0,0,4,0,,false" style="position:absolute;left:344.84px;top:194.4px;width:408.38px;height:20px"><div style="position:absolute;left:0px;top:0px;width:408.38px;height:20px;"><p><span style="font-size:16px">Your level 1 and level 2 flags have been added.</span><span style="font-size:16px">&nbsp;</span></p></div>
+</div>
+<div class="xplitem text" id="Text56" data-scale="1" data-rotate="0" data-framein="12,rotate,0,0,0.5,4,,false;12,wait,0,0,9.5,0,,false" style="position:absolute;left:350.36px;top:265.31px;width:263.32px;height:26px"><div style="position:absolute;left:0px;top:0px;width:263.32px;height:26px;"><p><span style="font-size:21px"><span style="color: #808080">Try it out!</span></span></p></div>
+</div>
+<div class="xplitem shape" id="Close5" data-scale="1" data-rotate="0" data-framein="12,movebottom,0,0,2,9.5,,false" style="position:absolute;left:820.3px;top:25.96px;width:57.48px;height:57.26px"><svg style="position:absolute;overflow:visible" width="57" height="57" viewBox="0 0 57 57"><defs><filter id="Close5:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="2.12" dy="2.12" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><rect class="xplsvgpath" filter="url(#Close5:dropshadow)" fill="#E6E6E6" fill-rule="evenodd" stroke="none" x="0" y="0" rx="15" ry="15" width="57" height="57"></rect></svg>
+<div class="xplitem line" id="Line11" data-scale="1" data-rotate="132.94" style="position:absolute;left:46.72px;top:-11.68px;width:41.31px;height:2px;transform: rotate(132.94deg)"><svg style="position:absolute;overflow:visible" width="41" height="2" viewBox="0 0 41 2"><defs><filter id="Line11:dropshadow" x="-20%" y="-20%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" /><feOffset dx="2.12" dy="2.12" /><feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><path filter="url(#Line11:dropshadow)" fill="none" stroke-width="1" stroke="#E6E6E6" stroke-linecap="square" d="M22,1 L41.31,1 "></path><path data-type="startcap" filter="url(#Line11:dropshadow)" fill="#E6E6E6" stroke="none" d="M0,1 L22,12 L22,-10 Z "></path></svg>
+</div>
+</div>
+<div class="xplitem text" id="Text9" data-scale="1" data-rotate="0" data-framein="12,typetext,0,0,1,11.5,,false" style="position:absolute;left:826.33px;top:38.78px;width:45.78px;height:29px"><div style="position:absolute;left:0px;top:0px;width:45.78px;height:29px;"><p style="text-align:center;"><span style="font-family: 'Calibri'"><span style="font-size:12px;"><span style="color: #000000">Click to</span></span></span></p><p style="text-align:center;"><span style="font-family: 'Calibri'"><span style="font-size:12px;"><span style="color: #000000">&nbsp;close.</span></span></span></p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="xplviewportmask1" style="position:fixed;top:0;left:0;background:#000000"></div><div id="xplviewportmask2" style="position:fixed;top:0;left:0;background:#000000"></div>
+
+<div id="xplplayerloading"><svg class="xplspinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></div>
+<div id="xplplayercontrols" data-overlay="1">
+<div id="xplplayercontrolstitle">Add flags</div>
+<div id="xplplayerprogress"><div id="xplplayerprogressindicator"></div></div>
+
+<div id="xplplayerprev" class="button" title="Previous Slide" onclick="xplain.navigate(-1)">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M36,0 L36,36 L0,18 "></path></svg>
+</div>
+<div id="xplplayerplay" class="button" title="Play Slideshow" onclick="xplain.play()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M18,0 C8.07480144500732,0 0,8.07480144500732 0,18 C0,27.9251976013184 8.07480144500732,36 18,36 C27.9251976013184,36 36,27.9251976013184 36,18 C36,8.07480144500732 27.9251976013184,0 18,0 Z M27.3377933502197,18.4955997467041 L14.1378002166748,27.4955959320068 C14.03639793396,27.5645980834961 13.9181985855103,27.5999984741211 13.7999973297119,27.5999984741211 C13.7039985656738,27.5999984741211 13.6073999404907,27.5771961212158 13.5197982788086,27.5303974151611 C13.3229999542236,27.4265975952148 13.1999988555908,27.2225952148438 13.1999988555908,26.9999961853027 L13.1999988555908,9 C13.1999988555908,8.77740001678467 13.3229999542236,8.57339954376221 13.5197982788086,8.46960067749023 C13.7165994644165,8.36520004272461 13.9541997909546,8.37960147857666 14.1384019851685,8.5044002532959 L27.3383960723877,17.5044002532959 C27.5015983581543,17.6159992218018 27.5999984741211,17.801399230957 27.5999984741211,18 C27.5999984741211,18.1985988616943 27.5015983581543,18.3840026855469 27.3377933502197,18.4955997467041 Z "></path></svg>
+</div>
+<div id="xplplayerstop" class="button disabled" title="Stop Slideshow" onclick="xplain.stop()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M18,0 C8.09999942779541,0 0,8.09999942779541 0,18 C0,27.8999996185303 8.09999942779541,36 18,36 C27.8999996185303,36 36,27.8999996185303 36,18 C36,8.09999942779541 27.8999996185303,0 18,0 Z M16.1999988555908,25.1999950408936 L12.5999975204468,25.1999950408936 L12.5999975204468,10.8000001907349 L16.1999988555908,10.8000001907349 L16.1999988555908,25.1999950408936 Z M23.3999996185303,25.1999950408936 L19.8000030517578,25.1999950408936 L19.8000030517578,10.8000001907349 L23.3999996185303,10.8000001907349 L23.3999996185303,25.1999950408936 Z "></path></svg>
+</div>
+<div id="xplplayerreload" class="button disabled" title="Reload" onclick="xplain.reload()">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M4.80981111526489,28.3467464447021 C4.6999773979187,28.2292633056641 4.59349775314331,28.1051006317139 4.48701810836792,27.9810352325439 L9.43570709228516,23.873254776001 C9.53872871398926,23.994140625 9.64520835876465,24.1181926727295 9.75504302978516,24.2389602661133 C13.3335380554199,28.1344928741455 19.5631294250488,28.5328922271729 23.6600856781006,25.1304340362549 C27.7535839080811,21.7279930114746 28.17258644104,15.8078641891479 24.5941944122314,11.9123401641846 C21.118824005127,8.1311092376709 15.1432762145996,7.65109777450562 11.0463199615479,10.7466297149658 L16.503303527832,16.6862812042236 L0.5,15.6609811782837 L1.57140040397644,0.55221563577652 L1.63323414325714,0.5 L6.72267389297485,6.04124975204468 C13.5463933944702,0.679573059082031 23.6772727966309,1.42734527587891 29.5394287109375,7.80456066131592 C35.5011405944824,14.2960729598999 34.8039932250977,24.1606483459473 27.9802722930908,29.8292503356934 C21.1497402191162,35.5011405944824 10.7716302871704,34.8349723815918 4.80981111526489,28.3467464447021 Z"></path></svg>
+</div>
+<div id="xplplayernext" class="button" title="Next Slide" onclick="xplain.navigate(1)">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M0,0 L0,36 L36,18 "></path></svg>
+</div>
+<div id="xplplayershare" class="button" title="Share">
+<svg viewBox="0 0 36 36"><path d="M0,0 M36,36 M29.6664352416992,25.2563343048096 C28.18869972229,25.2563343048096 26.85671043396,25.7746276855469 25.8456344604492,26.6092643737793 L11.9915761947632,19.3088550567627 C12.0984897613525,18.9135246276855 12.1665735244751,18.5006542205811 12.1665735244751,18.0789699554443 C12.1665735244751,17.6572856903076 12.0984897613525,17.2444133758545 11.9915761947632,16.8490829467773 L25.699800491333,9.61892604827881 C26.7400417327881,10.497462272644 28.1303653717041,11.0421104431152 29.6664352416992,11.0421104431152 C32.8844985961914,11.0421104431152 35.4997253417969,8.67894840240479 35.4997253417969,5.77105522155762 C35.4997253417969,2.86316227912903 32.8844985961914,0.5 29.6664352416992,0.5 C26.4483757019043,0.5 23.8331470489502,2.86316227912903 23.8331470489502,5.77105522155762 C23.8331470489502,6.19273996353149 23.9012355804443,6.60561180114746 24.0081462860107,7.00094032287598 L10.2999229431152,14.2310161590576 C9.25968360900879,13.3524799346924 7.86935615539551,12.8078317642212 6.33328676223755,12.8078317642212 C3.11522674560547,12.8078317642212 0.5,15.1709928512573 0.5,18.0788860321045 C0.5,20.986780166626 3.11522674560547,23.3499412536621 6.33328676223755,23.3499412536621 C7.86935567855835,23.3499412536621 9.25968265533447,22.8052940368652 10.2999229431152,21.9267559051514 L24.1539821624756,29.227165222168 C24.0567283630371,29.5961418151855 23.9983940124512,29.9826583862305 23.9983940124512,30.377986907959 C23.9983940124512,33.2068138122559 26.5358753204346,35.4997253417969 29.6664352416992,35.4997253417969 C32.7970008850098,35.4997253417969 35.3344764709473,33.2068138122559 35.3344764709473,30.377986907959 C35.3344764709473,27.5491561889648 32.7970008850098,25.2563323974609 29.6664352416992,25.2563323974609 Z"></path></svg>
+
+<div id="xplplayersharepopup">
+<a id="xplShareFacebook" class="sharebutton" style="display:block" title="Share on Facebook" onclick="xplain.share('facebook')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<rect width="32" height="32" style="fill:#3B5998;stroke:none"></rect>
+<path d="M22,32V20h4l1-5h-5v-2c0-2,1.002-3,3-3h2V5c-1,0-2.24,0-4,0c-3.675,0-6,2.881-6,7v3h-4v5h4v12H22z" style="fill:#FFFFFF;stroke:none"></path>
+</svg>
+</a>
+<a id="xplShareX" class="sharebutton" style="display:block" title="Share on X" onclick="xplain.share('x')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#000000;stroke:none"></rect>
+<path class="xplsvgpath" fill="#FFFFFF" fill-rule="evenodd" stroke="none" d="M4,4 M28,28 M4.08,4 L12.97,17.1 L4,28 L6.41,28 L14.05,18.71 L20.35,28 L28,28 L20.25,13.61 L26.16,4 L23.75,4 L17.16,12.01 L11.73,4 L4.08,4 Z M7.77,6 L10.72,6 L24.31,26 L21.36,26 L7.77,6 Z "></path>
+</g>
+</svg>
+</a>
+<a id="xplShareLinkedin" class="sharebutton" style="display:block" title="Share on LinkedIn" onclick="xplain.share('linkedin')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#007BB6;stroke:none"></rect>
+<rect height="14" width="4" x="7" y="11" style="fill:#FFFFFF;stroke:none"></rect>
+<path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7 C25,14,24.479,11,20.499,11z" style="fill:#FFFFFF;stroke:none"></path>
+<circle cx="9" cy="8" r="2" style="fill:#FFFFFF;stroke:none"></circle>
+</g>
+</svg>
+</a>
+<a id="xplShareXing" class="sharebutton" style="display:none" title="Share on Xing" onclick="xplain.share('xing')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#174F50;stroke:none"></rect>
+<path d="M6.018,20.18l3.668-6.04L6.934,9.292h4.655l2.752,4.848l-3.667,6.04H6.018z M23.374,26.57h-4.938 l-4.729-8.288l7.338-12.854h4.938l-7.336,12.854L23.374,26.57z" style="fill:#FFFFFF;stroke:none"></path>
+</g>
+</svg>
+</a>
+<a id="xplShareEmail" class="sharebutton" style="display:block" title="Share by Email" onclick="xplain.share('email')">
+<svg viewBox="0 0 32 32" style="width:50px;height:50px">
+<g>
+<rect width="32" height="32" style="fill:#DD4B39;stroke:none"></rect>
+<path d="M15.5,17 L26.5,6 L4.5,6 L15.5,17 Z M12.5,16 L15.5,19 L18.5,16 L26.5,25 L4.5,25 L12.5,16 Z M4.5,24 L4.5,7 L11.5,15 L4.5,24 Z M27.5,25 L27.5,6 L19.5,15 L27.5,25 Z" style="fill:#FFFFFF;stroke:none"></path>
+</g>
+</svg>
+</a>
+<a class="sharebutton" title="Made with HelpXplain" href="http://helpxplain.com" target="_blank">
+<img src="./_flagadd/favicon.png" style="width:36px;height:36px;background:#404040;padding:7px"/>
+</a>
+</div>
+</div>
+
+</div>
+<div id="fallbackmessage" style="display:none;margin:0 auto">
+<img src="./_flagadd/preview.jpg" style="width:100%" />
+<div class="fallback">We are sorry, but your browser does not support HelpXplain. Please use a decent browser and turn Javascript on.</div>
+</div>
+<script src="js/xplainAni.js" type="text/javascript"></script>
+<script src="js/xplainCss.js" type="text/javascript"></script>
+<script src="js/xplainTime.js" type="text/javascript"></script>
+<script src="js/xplainEase.js" type="text/javascript"></script>
+<script src="js/xplainType.js" type="text/javascript"></script>
+<script src="js/xplain.js" type="text/javascript"></script>
+<script>
+xplain = initXplain(true,false,false,1);
+
+</script>
+<noscript><div style="margin: 0 auto; text-align:center">
+<img src="./_flagadd/preview.jpg" style="width:100%" />
+<div class="fallback">We are sorry, but your browser does not support HelpXplain. Please use a decent browser and turn Javascript on.</div>
+</div></noscript>
+</body>
+</html>
