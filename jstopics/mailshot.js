@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Mailshot",
 hmDescription:"Overview  Mailshots are essential for effective email marketing as well as stakeholder engagement. Connect with your audience, send event invitations and newsletters.  Topics",
-hmPrevLink:"textmessage.html",
+hmPrevLink:"whatsapp.html",
 hmNextLink:"interactions.html",
 hmParentLink:"devcommunication.html",
 hmBreadCrumbs:"<a href=\"devcommunication.html\">Communication<\/a>",
