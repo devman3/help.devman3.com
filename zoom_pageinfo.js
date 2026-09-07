@@ -75,7 +75,7 @@ pageinfo = [[1784816418,0,0,0,null],
 	[1748342508,0,0,0,null],
 	[1784802640,0,0,0,null],
 	[1784803566,0,0,0,null],
-	[1785138228,0,0,0,null],
+	[1788776446,0,0,0,null],
 	[1744285426,0,0,0,null],
 	[1744369944,0,0,0,null]];
 pagedata = [ ["./accountingsystemintegration.html","Accounting system integration","Overview  Reduce errors and increase productivity with a single point of entry. DevMan integrates to various finance and accounting systems, ...","./images/zoomimage.jpg"],
@@ -155,6 +155,6 @@ pagedata = [ ["./accountingsystemintegration.html","Accounting system integratio
 ["./subscription.html","Subscriptions","Overview  Centralise and streamline your communications with stakeholders, identify trends and develop targeted campaigns to generate growth....","./images/zoomimage.jpg"],
 ["./textmessage.html","SMS","Overview  Take advantage of SMS communication as an efficient way to engage stakeholders, complementing email communications and increasing e...","./images/zoomimage.jpg"],
 ["./whatsapp.html","WhatsApp","Overview  Meet your audience where they already are. Our new WhatsApp integration makes it easier than ever to boost response rates and inter...","./images/zoomimage.jpg"],
-["./whatsnew.html","What&#39;s new","New features in DevMan  Commitments  We have added some exciting new features to DevMan commitments. Change the commitment end date with...","./images/zoomimage.jpg"],
+["./whatsnew.html","What&#39;s new","New features in DevMan  New tax year filtering for section 18A receipts  DevMan has been updated to ensure that section 18A receipts inc...","./images/zoomimage.jpg"],
 ["./workflow.html","Workflow","Overview  Combine DevMan milestones and workflow features to manage key steps, communications, reminders and reporting.  Topics  Fe...","./images/zoomimage.jpg"],
 ["./yearendrollover.html","Year-end rollover","Overview   Topics  Features Track year-end status of all beneficiaries: Completed - Rollover Completed - Graduated Terminated Manage rol...","./images/zoomimage.jpg"]];
