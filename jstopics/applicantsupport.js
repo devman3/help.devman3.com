@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Applicant support",
 hmDescription:"Overview  If an applicant encounters difficulties when submitting their online application, check the topics below to see how you can assist.  Topics  \tReporting issues Get",
-hmPrevLink:"manageapplicationsinbulk.html",
+hmPrevLink:"applicationreports.html",
 hmNextLink:"searchreport.html",
 hmParentLink:"onlineapplications.html",
 hmBreadCrumbs:"<a href=\"devmanfunction.html\">DevMan functions<\/a> &gt; <a href=\"onlineapplications.html\">Online applications<\/a>",
